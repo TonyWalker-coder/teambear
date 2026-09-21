@@ -1,0 +1,21 @@
+
+    Directory: C:\Users\mrton\OneDrive\projects\teambear
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          21/09/2026    12:30                .ruff_cache
+lar--          21/09/2026    12:20                .venv
+d----          21/09/2026    12:43                core
+d----          21/09/2026    12:32                node_modules
+d----          21/09/2026    12:43                teambear
+la---          21/09/2026    12:42             91 .env
+la---          21/09/2026    12:20            373 .gitignore
+-a---          21/09/2026    12:43              0 db.sqlite3
+-a---          21/09/2026    12:45              0 dir.txt
+-a---          21/09/2026    12:38            361 eslint.config.mjs
+-a---          21/09/2026    12:25            686 manage.py
+-a---          21/09/2026    12:32          34436 package-lock.json
+-a---          21/09/2026    12:32            297 package.json
+-a---          21/09/2026    12:43            163 requirements.txt
+-a---          21/09/2026    12:30            210 ruff.toml
+
