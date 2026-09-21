@@ -1,0 +1,13 @@
+line-length = 88
+
+[lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = []
+
+exclude = [
+    "*/migrations/*",
+]
+
+[lint.per-file-ignores]
+"cocktails/urls.py" = ["E501"]
+"cocktails/views.py" = ["E501"]
