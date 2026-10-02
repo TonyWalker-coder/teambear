@@ -1,5 +1,146 @@
+:root{
+
+    /* Theme Tokens */
+
+--bg-page:#FCF8F2;
+--bg-card:#FFFDF9;
+--text-heading:#7B4B2A;
+--text-primary:#5D4331;
+--border-default:#D6B79A;
+--button-primary: #E87D0D;
+--button-primary-hover: #A85A08;
+--button-primary-text: #FFFFFF;
+
+/* Semantic Tokens */
+
+--message-success: #2e7d32;
+--message-warning: #ed6c02;
+--message-error: #d32f2f;
+--message-info: #0288d1;
+}
+
+[data-theme="christmas"] {
+--bg-page: #FFFDFB;
+--bg-card: #FFFFFF;
+--text-heading: #8B0000;
+--text-primary: #4C2A2A;
+--border-default: #D9C6C6;
+
+--button-primary: #2E7D32;
+--button-primary-hover: #1B5E20;
+}
+
+[data-theme="spring"] {
+--bg-page: #F8FCF5;
+--bg-card: #FFFFFF;
+
+--text-heading: #4F7D4A;
+--text-primary: #4A5A48;
+
+--border-default: #CFE3C6;
+
+--button-primary: #7EA33A;
+--button-primary-hover: #5F8428;
+}
+
+[data-theme="summer"] {
+--bg-page: #FFFDF5;
+--bg-card: #FFFFFF;
+
+--text-heading: #D68A00;
+--text-primary: #5E4B2B;
+
+--border-default: #F2D9A0;
+
+--button-primary: #F2B705;
+--button-primary-hover: #D99E03;
+}
+
+
+.button-primary {
+background: var(--button-primary);
+color: var(--button-primary-text);
+}
+
+.button-primary:hover {
+background: var(--button-primary-hover);
+}
+
+.message-success {
+background: var(--message-success);
+}
+
+.message-warning {
+background: var(--message-warning);
+}
+
+.message-error {
+background: var(--message-error);
+}
+
+.message-info {
+background: var(--message-info);
+}
+
+.icon {
+width: clamp(1.5rem, 2vw, 2.5rem);
+height: clamp(1.5rem, 2vw, 2.5rem);
+
+display: inline-block;
+object-fit: contain;
+
+filter: drop-shadow(
+1px 1px 2px rgb(0 0 0 / 0.25)
+);
+
+transition:
+transform 0.2s ease,
+filter 0.2s ease;
+}
+
+.icon:hover {
+transform: translateY(-2px);
+filter: drop-shadow(
+2px 2px 4px rgb(0 0 0 / 0.35)
+);
+}
+@media (max-width: 768px) {
+.icon {
+width: 2rem;
+height: 2rem;
+}
+}
+.icon {
+filter:
+drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15))
+drop-shadow(-1px -1px 1px rgb(255 255 255 / 0.4));
+}
+.icon-sm {
+width: 1.5rem;
+height: 1.5rem;
+}
+.icon-lg {
+width: 2.5rem;
+height: 2.5rem;
+}
+.hero {
+background-image: url("../images/hero-desktop.webp");
+background-position: center;
+}
+
+@media (max-width: 768px) {
+.hero {
+background-image: url("../images/hero-mobile.webp");
+}
+}
+
 body {
 
 font-family: sans-serif;
 
 }
+
+
+
+
+
