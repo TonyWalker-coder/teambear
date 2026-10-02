@@ -47,42 +47,39 @@
 
     {% block content %}
     {% endblock %}
+
+
+    {% if messages %}
+    <div id="messageModal" class="modal hidden" aria-modal="true">
+
+      {% for message in messages %}
+      {% with message.level as level %}
+      {% if level == 40 %}
+      {% include 'includes/toasts/toast_error.html' %}
+      {% elif level == 30 %}
+      {% include 'includes/toasts/toast_warning.html' %}
+      {% elif level == 25 %}
+      {% include 'includes/toasts/toast_success.html' %}
+      {% else %}
+      {% include 'includes/toasts/toast_info.html' %}
+      {% endif %}
+      {% endwith %}
+      {% endfor %}
+    </div>
+    {% endif %}
   </main>
 
   {% block postloadjs %}
 
-  <script {% static 'js/base.js' %}>
+  <script>
+
+    {% static 'js/base.js' %}>
 
   </script>
 
   {% endblock %}
-  {%block extrajs%}
-  {%endblock%}
-</body>
-
-</html>
-
-
-  {% if messages %}
-  <div id="messageModal"class="modal hidden" >
-    
-      {% for message in messages %}
-          {% with message.level as level %}
-              {% if level == 40 %}
-                  {% include 'includes/toasts/toast_error.html' %}
-              {% elif level == 30 %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-              {% elif level == 25 %}
-                  {% include 'includes/toasts/toast_success.html' %}
-              {% else %}
-                  {% include 'includes/toasts/toast_info.html' %}
-              {% endif %}
-          {% endwith %}
-      {% endfor %}
-  </div>
-  {% endif %}
-
-
+  {% block extraj s%}
+  {% endblock %}
 
 
 </body>
