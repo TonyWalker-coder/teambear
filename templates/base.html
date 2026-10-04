@@ -30,7 +30,7 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
   <!-- Stripe -->
-  <script src="https://js.stripe.com/v3/"></script>
+  <!--script src="https://js.stripe.com/v3/"></script-->
   {% endblock %}
   {% block extra_js %}
   {% endblock %}
@@ -71,11 +71,7 @@
 
   {% block postloadjs %}
 
-  <script>
-
-    {% static 'js/base.js' %}>
-
-  </script>
+  <script src="{% static 'js/base.js' %}"></script>
 
   {% endblock %}
   {% block extrajs %}

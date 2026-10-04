@@ -1,2 +1,1 @@
-
-
+const temp = "temp text";

@@ -1,3 +1,47 @@
+/*Media Queries for Responsive Design and hero loading*/
+:root {
+    --mobile: 480px;
+    --tablet: 768px;
+    --tablet-landscape: 768px;
+    --laptop: 1024px;
+    --desktop: 1280px;
+    --navbar-height-desktop: 60px;
+    --navbar-height-mobile: 50px;
+    --footer-height: 100px;
+}
+.hero {
+    background-image: url("/static/images/hero/hero-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - var(--navbar-height-mobile) - var(--footer-height));
+}
+/* Mobile Portrait */
+@media (max-width: var(--mobile)) and (orientation: portrait) {}
+
+/* Mobile Landscape */
+/* Short screens: mobile landscape, foldables, small embedded browsers */
+@media (orientation: landscape) and (max-height: 400px) {
+    .hero {
+        min-height: auto;
+    }
+}
+/* Tablet Portrait */
+@media (min-width: var(--tablet)) and (orientation: portrait) {
+
+    .hero {
+        background-image: url("/static/images/hero/hero-desktop.webp");
+        min-height: calc(100vh - var(--navbar-height-desktop) - var(--footer-height));
+    }
+}
+/* Tablet Landscape */
+@media (min-width: var(--tablet-landscape)) and (orientation: landscape) {}
+/* Laptop */
+@media (min-width: var(--laptop)) {}
+/* Desktop */
+@media (min-width: var(--desktop)) {}
+
+
 /* Footer Styles */
 .site-footer {
     padding: 0.5rem 1rem;
@@ -9,6 +53,7 @@
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .site-footer p {
     margin: 0.25rem 0;
 }
