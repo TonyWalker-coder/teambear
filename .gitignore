@@ -27,6 +27,7 @@ htmlcov/
 # Node
 node_modules/
 
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -38,3 +39,9 @@ eslint-output.txt
 .eslintcache
 
 ruff-output.txt
+
+
+#temporystorage
+
+static/images/bears/tmpstore/
+static/images/hero/tmpstore/
