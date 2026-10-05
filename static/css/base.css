@@ -4,7 +4,7 @@
     --tablet-landscape: 768px;
     --laptop: 1024px;
     --desktop: 1280px;
-    
+
     --navbar-height-desktop: 60px;
     --navbar-height-mobile: 50px;
     --footer-height: 50px;
@@ -21,53 +21,78 @@
 
 /*Media Queries for Responsive Design and hero loading*/
 .hero {
+
     height: 90vh;
-    background-color: yellow;
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/static/images/hero/hero-mobile.webp");
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10vh;
+}
+
+footer p {
+    font-size: 0.5rem;
 }
 
 /* Mobile Portrait */
 @media (max-width: 400px) {
-h1{
-    color:blue;
+    h1 {
+        color: blue;
+    }
 }
-}
+
 /* Mobile Landscape */
 /* Short screens: mobile landscape, foldables, small embedded browsers */
 @media (max-width: 700px) and (max-height: 400px) {
-    h1{
-    color:red;
+    .hero {
+        background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+
 }
-}
+
 /* Tablet Portrait */
 @media (min-width: 700px) and (min-height: 400px) {
-        h1{
-    color:green;
+    h1 {
+        color: green;
+    }
 }
-}
+
 /* Tablet Landscape */
 @media (min-width: 1280px) {
-    h1{
-    color:white;
+    h1 {
+        color: white;
+    }
 }
-}
+
 /* Laptop */
 @media (min-width: 2024px) {
-    h1{
-    color:orangered;
+    h1 {
+        color: orangered;
+    }
 }
-}
+
 /* Desktop */
 @media (min-width: 1280px) {
-    h1{
-    color:purple;
+    h1 {
+        color: purple;
+    }
 }
-}
-p{
+
+p {
     font-family: var(--font-body);
 }
-h1{
+
+h1 {
     font-family: var(--font-heading);
 }
+
 /* Hidden modal state */
 .modal.hidden {
     display: none;
