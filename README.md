@@ -5,9 +5,10 @@
 - [User Stories](#userstory)
 - [Intellectual Property & Educational Use](#ip)
 - [Image store and handling](#imagestore)
-
-
-- [Browser Support](#browsersupport)
+- [Acknowledgements](#acknowledgements)
+- [Deployment](#deployment)
+- [Colour Palette Strategy](#colours)
+- [Typography](#typography)
 
 
 <a id="userstory"></a>
@@ -287,4 +288,154 @@ This website is an Educational Project • Non-Commercial Use • No Affiliation
 
 A source image store was maintained during development containing original PNG assets. Optimised WebP versions were generated from these originals for deployment. This allowed assets to be modified and regenerated throughout testing without cumulative quality loss. Once testing was complete and the final optimised images were produced, the original working assets were removed from the deployed project.
 
+<a id="acknowledgements"></a>
 
+## Acknowledgements
+
+- Adobe Firefly
+    - used to create the product images
+    - https://firefly.adobe.com/
+- icons8
+    - https://icons8.com/icons
+    - Source for icon and svg used on the site
+
+
+## Deployment
+
+### Local Deployment
+
+Clone the repository:
+
+git clone https://github.com/TonyWalker-coder/teambear
+
+Change into the project directory:
+
+git checkout main
+
+cd teambear
+
+Create a virtual environment:
+
+python -m venv .venv
+
+Activate the virtual environment:
+
+.venv\Scripts\activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+This project uses a `.env` file for environment variables. Update the values to match your local configuration.
+
+Apply database migrations:
+
+python manage.py migrate
+
+Run the development server:
+
+python manage.py runserver
+
+Create a new application via your hosting provider dashboard.
+
+Configure all required environment variables, including:
+
+- SECRET_KEY
+- DATABASE_URL
+- DEBUG
+- ALLOWED_HOSTS
+
+Install project dependencies:
+
+pip install -r requirements.txt
+
+Apply database migrations:
+
+python manage.py migrate
+
+Ensure:
+
+DEBUG=False
+
+Start the application using the hosting provider's deployment settings.
+
+### Media Files
+
+This project uses Django ImageField and therefore requires the Pillow package.
+
+Pillow is included in requirements.txt and will be installed automatically during deployment.
+
+
+<a id="colours"></a>
+
+## Colour Palette Strategy 🎨
+
+Rather than implementing a traditional light and dark mode, TeamBear uses a palette-based theme system. This approach allows users to choose from a selection of carefully designed colour palettes while maintaining consistent branding, accessibility, and contrast standards across the application.
+
+Each palette is built from a shared set of semantic colour variables, allowing the visual appearance of the site to change without requiring modifications to individual components. This ensures a consistent user experience while providing greater visual flexibility and personalisation.
+
+The palette system offers several benefits:
+
+- Enhanced user customisation through multiple theme choices.
+- Consistent styling across all pages and components.
+- Simplified maintenance through centralised theme variables.
+- Improved accessibility through controlled contrast testing for each palette.
+- A scalable foundation for adding additional themes in future releases.
+
+The theme switcher updates the site's colour variables dynamically, enabling users to select a preferred visual style while preserving the overall layout, functionality, and accessibility of the application.
+
+### Example Palettes
+
+
+Classic Bear
+Primary:   #8B4513
+Secondary: #D2B48C
+Accent:    #FFD700
+
+Forest
+Primary:   #2F5D50
+Secondary: #8DB596
+Accent:    #F4D35E
+
+Football
+Primary:   #1E3A5F
+Secondary: #FFFFFF
+Accent:    #E63946
+
+Heritage
+Primary:   #5B4636
+Secondary: #E8D8C3
+Accent:    #C08A3E
+
+
+<a id="new"></a>
+
+## Typography
+
+TeamBear uses a combination of widely supported web-safe fonts to provide a consistent experience across browsers and devices without relying on external font services.
+
+### Headings
+
+`font-family: Georgia, serif;`
+
+Georgia is used for headings and key content areas. Its traditional serif design helps reinforce the heritage and collectible nature of the TeamBear brand while providing clear visual hierarchy throughout the site.
+
+### Body Text
+
+`font-family: Tahoma, sans-serif;`
+
+Tahoma is used for primary content and interface elements. Its clean sans-serif design offers excellent readability at a variety of screen sizes and supports a clear user experience across desktop, tablet, and mobile devices.
+
+### Font Strategy
+
+The typography strategy was chosen to:
+
+- Provide strong readability across devices.
+- Create a clear distinction between headings and body content.
+- Avoid external font dependencies.
+- Improve performance by using fonts commonly available on modern operating systems.
+- Maintain a professional and accessible presentation throughout the application.
+
+
+
+<a id="new"></a>
