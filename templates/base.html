@@ -41,12 +41,14 @@
 </head>
 
 <body>
+
   <main>
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
-    {% endblock %}
+    {% endblock content%}
+
 
 
     {% if messages %}
@@ -67,6 +69,16 @@
       {% endfor %}
     </div>
     {% endif %}
+    <footer class="site-footer">
+      <p>
+        © 2026 TeamBear. This website is provided for educational and demonstration purposes.
+      </p>
+      <p>
+        This website is an educational and demonstration project.
+        Any trademarks, product names or third-party content remain
+        the property of their respective owners.
+      </p>
+    </footer>
   </main>
 
   {% block postloadjs %}
@@ -78,16 +90,8 @@
   {% endblock %}
 
 
-  <footer class="site-footer">
-    <p>
-      © 2026 TeamBear. This website is provided for educational and demonstration purposes.
-    </p>
-    <p>
-      This website is an educational and demonstration project.
-      Any trademarks, product names or third-party content remain
-      the property of their respective owners.
-    </p>
-  </footer>
+
+
 
 </body>
 

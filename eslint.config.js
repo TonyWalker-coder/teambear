@@ -14,7 +14,7 @@ export default [
 
   {
     // ✅ Only lint YOUR JavaScript files
-    files: ["static/js/**/*.js"],
+    files: ["*.js"],
 
     languageOptions: {
       ecmaVersion: 2021,
