@@ -49,20 +49,32 @@
     {% endblock %}
 
     {% block content %}
-
-    <section class="hero">
-        <!--img src="assets/images/hero/hero-mobile.webp"-->
-    </section>
     {% endblock content%}
 
 
 
+    {% if messages %}
+    <div id="messageModal" class="modal hidden" aria-modal="true">
 
-    <footer>
+      {% for message in messages %}
+      {% with message.level as level %}
+      {% if level == 40 %}
+      {% include 'includes/toasts/toast_error.html' %}
+      {% elif level == 30 %}
+      {% include 'includes/toasts/toast_warning.html' %}
+      {% elif level == 25 %}
+      {% include 'includes/toasts/toast_success.html' %}
+      {% else %}
+      {% include 'includes/toasts/toast_info.html' %}
+      {% endif %}
+      {% endwith %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <footer class="site-footer">
       <p>
         © 2026 TeamBear. This website is provided for educational and demonstration purposes.
       </p>
-      
       <p>
         This website is an educational and demonstration project.
         Any trademarks, product names or third-party content remain
