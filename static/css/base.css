@@ -1,4 +1,3 @@
-/*Media Queries for Responsive Design and hero loading*/
 :root {
     --mobile: 480px;
     --tablet: 768px;
@@ -8,7 +7,12 @@
     --navbar-height-desktop: 60px;
     --navbar-height-mobile: 50px;
     --footer-height: 50px;
+
+    --font-heading: Georgia, serif;
+    --font-body: Tahoma, sans-serif;
 }
+/*Media Queries for Responsive Design and hero loading*/
+
 /*.hero {
     background-image: url("/static/images/hero/hero-mobile.webp");
     background-size: cover;
