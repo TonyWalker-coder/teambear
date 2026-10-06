@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block pagecomments %}
+404 created by Tony
+start 6/10/26
+{% endblock %}
+
+{% block extra_title %}
+Page Not Found
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+
+    <h1>Oops! The bears couldn't find that page.</h1>
+
+    <p>
+        The page you're looking for may have moved,
+        been renamed, or never existed.
+    </p>
+
+    {% url 'home' %}
+        Return Home
+    </a>
+
+</section>
+{% endblock %}
