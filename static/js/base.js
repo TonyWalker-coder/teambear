@@ -14,20 +14,22 @@ menuBtn.addEventListener("click", () => {
 
 });
 
-const themes = ["winter", "therapy", "light", "lightblue", "dark", "grey", "clasicbear", "darkheat"];
+const themes = ["light", "lightblue", "dark", "grey"];
 
 document.getElementById("themeToggle").addEventListener("click", () => {
+
+    console.log("theme clicked")
 
     const root = document.documentElement;
 
     const currentTheme =
-        root.getAttribute("data-theme") || THEMES[0];
+        root.getAttribute("data-theme") || themes[0];
 
     const currentIndex =
-        THEMES.indexOf(currentTheme);
+        themes.indexOf(currentTheme);
 
     const nextTheme =
-        THEMES[(currentIndex + 1) % THEMES.length];
+        themes[(currentIndex + 1) % themes.length];
 
     root.setAttribute("data-theme", nextTheme);
 

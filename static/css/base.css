@@ -55,9 +55,7 @@ body {
 
 /* Mobile Portrait */
 @media (max-width: 400px) {
-    h1 {
-        color: blue;
-    }
+
 }
 
 /* Mobile Landscape */
@@ -82,9 +80,7 @@ body {
 
 /* Tablet Portrait */
 @media (min-width: 700px) and (min-height: 400px) {
-    h1 {
-        color: green;
-    }
+
 
     .hero {
         background-image: url("/static/images/hero/mobil-portrait.webp");
@@ -93,16 +89,12 @@ body {
 
 /* Tablet Landscape */
 @media (min-width: 1280px) and (max-height: 800px){
-    h1 {
-        color: white;
-    }
+
 }
 
 /* Laptop */
 @media (min-width: 1280px) and (min-height: 801px){
-    h1 {
-        color: orangered;
-    }
+
 
     .desk-navbar {
         display: flex;
@@ -115,9 +107,7 @@ body {
 
 /* Desktop */
 @media (min-width: 1600px) {
-    h1 {
-        color: purple;
-    }
+
 }
 
 /* Medium shadow */
@@ -158,19 +148,21 @@ h1 {
 
 footer {
     height: 10vh;
-    background: #333;
-    color: white;
+    background: var(--bg-card);
+    color: currentColor;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 footer p {
     max-width: 80ch;
     margin: 0.25rem 0;
     font-size: clamp(0.5rem, 0.8vw, 0.7rem);
+    color: currentColor;
 }
 
 body {
@@ -199,8 +191,8 @@ Navbar styles
     box-sizing: border-box;
     height: var(--navbar-height-mobile);
 
-    /*⚠️ temp style delete when running themes*/
-    background: yellow;
+
+    background: var(--dark-banner);
 }
 
 .desk-navbar {
@@ -221,8 +213,7 @@ Navbar styles
     box-sizing: border-box;
     height: var(--navbar-height-mobile);
 
-    /*⚠️ temp style delete when running themes*/
-    background: lightgreen;
+    background: var(--dark-banner);
 }
 
 svg {
@@ -266,8 +257,7 @@ svg {
 .brand-name h1 {
     margin: 0;
     font-size: 1.5rem;
-     /*⚠️ temp style delete when running themes
-    color: currentColor;*/
+    color: currentColor;
 }
 
 .close-icon {
