@@ -45,6 +45,14 @@ body {
     height: 100vh;
 }
 
+.desk-navbar {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+}
+
 /* Mobile Portrait */
 @media (max-width: 400px) {
     h1 {
@@ -84,21 +92,29 @@ body {
 }
 
 /* Tablet Landscape */
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-height: 800px){
     h1 {
         color: white;
     }
 }
 
 /* Laptop */
-@media (min-width: 2024px) {
+@media (min-width: 1280px) and (min-height: 801px){
     h1 {
         color: orangered;
+    }
+
+    .desk-navbar {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
     }
 }
 
 /* Desktop */
-@media (min-width: 1280px) {
+@media (min-width: 1600px) {
     h1 {
         color: purple;
     }
@@ -172,7 +188,7 @@ Navbar styles
     width: 100%;
     z-index: 1000;
 
-    display: flex;
+
     justify-content: flex-end;
 
     background: var(--dark-banner);
@@ -185,6 +201,28 @@ Navbar styles
 
     /*⚠️ temp style delete when running themes*/
     background: yellow;
+}
+
+.desk-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+
+    justify-content: flex-start;
+
+    background: var(--dark-banner);
+
+    color: var(--text-heading);
+
+    padding: 0.75rem 0.5rem;
+    box-sizing: border-box;
+    height: var(--navbar-height-mobile);
+
+    /*⚠️ temp style delete when running themes*/
+    background: lightgreen;
 }
 
 svg {
@@ -228,7 +266,8 @@ svg {
 .brand-name h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: currentColor;
+     /*⚠️ temp style delete when running themes
+    color: currentColor;*/
 }
 
 .close-icon {
