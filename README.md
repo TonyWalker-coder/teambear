@@ -296,7 +296,9 @@ The website is non-commercial and has been developed exclusively for educational
 
 Educational Project Disclaimer
  
-This website is an Educational Project • Non-Commercial Use • No Affiliation with Any Football Club or Brand
+TeamBear. This website is provided for educational and demonstration purposes.
+
+This website is an educational and demonstration project. Any trademarks, product names or third-party content remain the property of their respective owners.
 
 <a id="imagestore"></a>
 

@@ -37,7 +37,9 @@
 }
 
 
-
+body {
+    height: 100vh;
+}
 /* Mobile Portrait */
 @media (max-width: 400px) {
     h1 {
@@ -49,7 +51,7 @@
 /* Short screens: mobile landscape, foldables, small embedded browsers */
 @media (max-width: 700px) and (max-height: 400px) {
     .hero {
-        background-image: url("/static/images/hero/mobil-portrait.webp");
+        background-image: url("/static/images/hero/hero-desktop.webp");
     }
 
     .hero {
@@ -57,6 +59,7 @@
     }
 
     body {
+        height:700px;
         overflow-y: auto;
     }
 
@@ -122,7 +125,6 @@ footer p {
 }
 
 body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
