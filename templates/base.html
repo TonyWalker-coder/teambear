@@ -22,7 +22,10 @@
   <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
     href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Englebert&display=swap">
   <link rel="icon" type="image/png" href="{% static 'images/favicon/faviobear.png' %}">
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!-- ⚠️ temporary version number to force mobile fetch and refresh 
+   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+   -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}?v=2">
   {% endblock %}
   {% block extra_css %}
   {% endblock %}

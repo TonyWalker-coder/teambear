@@ -9,6 +9,8 @@
 - [Deployment](#deployment)
 - [Colour Palette Strategy](#colours)
 - [Typography](#typography)
+- [Comments and symbols](#symbols)
+- [Technology Stack](#stack)
 
 
 <a id="userstory"></a>
@@ -437,5 +439,62 @@ The typography strategy was chosen to:
 - Maintain a professional and accessible presentation throughout the application.
 
 
+
+<a id="symbols"></a>
+
+## Comments and symbols
+
+All best efforts are made to try and follow a unified commenting practice throughout the documentation, in order to try a facilitate this here are some best practice examples used.
+
+⚠️ comment
+
+- these are temporary comments or coded sections that need to be removed before submission
+- example
+    - `<!-- ⚠️ temporary version number to force mobile fetch and refresh`
+    - `<link rel="stylesheet" href="{% static 'css/base.css' %}">-->`
+
+    - `<link rel="stylesheet" href="{% static 'css/base.css' %}?v=2">`
+
+
+<a id="stack"></a>
+
+## Technology Stack
+ 
+### Backend
+- Python 3
+- Django 6.1.1
+- Gunicorn
+ 
+### Database
+- SQLite (Development)
+- PostgreSQL (Production)
+ 
+### Frontend
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+ 
+### Media & Static Files
+- Pillow
+- WhiteNoise
+ 
+### Configuration & Deployment
+- python-dotenv
+- dj-database-url
+ 
+### Code Quality
+- Ruff
+- ESLite
+ 
+### Design & Planning
+- Balsamiq Wireframes
+- Microsoft Powerpoint (ERD)
+- Git & GitHub
+- GitHub Projects
+ 
+### Potential Future Technologies
+- Django Authentication
+- Django Allauth (under evaluation)
+- Stripe (under evaluation)
 
 <a id="new"></a>
