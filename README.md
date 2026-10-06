@@ -1,3 +1,17 @@
+<style>
+    h1{
+        color:blue;
+    }
+    h2{
+        color:darkblue;
+    }
+    h3{
+        color:lightblue;
+    }
+    h4{
+        color:skyblue;
+    }
+</style>
 # TeamBear
 
 ## Table of Contents
