@@ -46,17 +46,13 @@
   <title>TeamBear : {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body {% block body_class %}{% endblock %}>
-
+<body>
   <main>
     {% block page_header %}
-    {% endblock %}
+    {% endblock page_header %}
+    {% include "includes/mobile-nav.html" %}
 
     {% block content %}
-
-    <section class="hero">
-        <!--img src="assets/images/hero/hero-mobile.webp"-->
-    </section>
     {% endblock content%}
 
 
