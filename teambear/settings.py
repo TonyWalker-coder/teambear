@@ -34,7 +34,11 @@ DEBUG = os.getenv("DEBUG") == "True"
 CSS_VERSION = "1.0"
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+"teambear-tonywalker.pythonanywhere.com",
+"localhost",
+"127.0.0.1",
+]
 
 
 # Application definition
