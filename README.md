@@ -25,6 +25,7 @@
 - [Typography](#typography)
 - [Comments and symbols](#symbols)
 - [Technology Stack](#stack)
+- [Project Management](#git)
 
 
 <a id="userstory"></a>
@@ -35,9 +36,9 @@
  
 The purpose of TeamBear is to provide an e-commerce platform for selling bespoke teddy bears. The application is designed to allow customers to easily browse products, view detailed information, and complete purchases through a secure and intuitive interface.
  
-By focusing on usability, accessibility, and customer satisfaction, the site aims to encourage repeat
+By focusing on usability, accessibility, and customer satisfaction, the site aims to encourage repeat purchase.
 
-## Accessibility
+## Accessibility (*must have*)
  
 ### User Story
  
@@ -68,16 +69,16 @@ As a site owner, I want the website to be accessible and responsive so that all 
  
 ### Tasks
  
-- [ ] Create a light/dark theme.
-- [ ] Define design tokens in `styles.css`.
+- [ ] Create a colour changing theme system.
+- [ ] Define design tokens in `*.css`.
 - [ ] Create a fixed header/navigation bar.
 - [ ] Ensure full keyboard navigation.
-- [ ] Test compatibility with screen readers.
+- [ ] Test compatibility with screen readers etc with lighthouse.
 - [ ] Implement ARIA labels where appropriate.
 - [ ] Validate colour contrast against WCAG AA standards.
 - [ ] Test responsiveness across desktop, tablet, and mobile devices.
 
-## Homepage
+## Homepage (*must have*)
  
 ### User Story
  
@@ -95,15 +96,15 @@ As a site owner, I want the homepage to present the TeamBear brand in a clear an
 ### Tasks
  
 - [ ] Create a homepage template.
-- [ ] Include a themed hero image or banner.
-- [ ] Add a clear heading and introductory message.
+- [ ] Include a themed hero image or banner logo.
+- [ ] Add a clear heading.
 - [ ] Create call-to-action buttons linking to products.
 - [ ] Ensure the hero image scales appropriately across screen sizes.
 - [ ] Maintain branding and styling consistency throughout the site.
 - [ ] Test responsiveness on desktop, tablet, and mobile devices.
 
 
-## Navigation
+## Navigation (*must have*)
  
 ### User Story
  
@@ -118,13 +119,13 @@ As a visitor, I want to navigate the site intuitively and efficiently so that I 
  
 ### Tasks
  
-- [ ] Create a reusable navbar template.
+- [ ]  Create a reusable navbar template.
 - [ ]  Implement a responsive mobile navigation menu.
 - [ ]  Attach the navbar to a fixed header for persistent access during scrolling.
 - [ ]  Ensure navigation links are consistent across all pages.
 - [ ]  Test navbar functionality on desktop, tablet, and mobile devices.
 
-## Product range
+## Product range (*must have*)
  
 ### User Story
  
@@ -140,7 +141,7 @@ As a visitor, I want to search and browse the product range so that I can quickl
  
 ### Tasks
  
-- [ ] Create product search and filtering functionality.
+- [ ]  Create product search and filtering functionality.
 - [ ]  Implement category-based filtering options.
 - [ ]  Design and build a reusable product card component.
 - [ ]  Display all relevant product information within each card.
@@ -148,7 +149,7 @@ As a visitor, I want to search and browse the product range so that I can quickl
 - [ ]  Develop a responsive grid layout for product display.
 - [ ]  Test search and filtering functionality across different devices.
 
-## Product selection
+## Product selection (*must have*)
  
 ### User Story
  
@@ -172,7 +173,7 @@ As a visitor, I want to select products I wish to purchase so that I can add the
 - [ ] Update basket totals and item counts dynamically.
 - [ ] Test product selection and basket functionality across different devices.
 
-## Shopping basket
+## Shopping basket (*must have*)
  
 ### User Story
  
@@ -181,7 +182,7 @@ As a visitor, I want to view the products I have selected, along with their quan
 ### Acceptance Criteria
  
 - The shopping basket displays all selected products.
-- ach basket item shows the product name, quantity, and individual price.
+- Each basket item shows the product name, quantity, and individual price.
 - The subtotal for each product is calculated based on the item price multiplied by the selected quantity.
 - The basket displays the overall total cost of all selected products.
 - Basket contents update automatically when products are added, removed, or quantities are changed.
@@ -198,7 +199,7 @@ As a visitor, I want to view the products I have selected, along with their quan
 - [ ] Test basket calculations and updates across different devices.
 
 
-## Secure payment
+## Secure payment (*must have*)
  
 ### User Story
  
@@ -226,7 +227,7 @@ As a visitor, I want my payment information to be handled securely so that I can
 - [ ] Send an order confirmation email when requested.
 - [ ] Test payment workflows using Stripe test payments.
 
-## User Registration
+## User Registration (*must have*)
 
 ### User Story
 
@@ -253,9 +254,8 @@ As a visitor, I want to create an account so that I can access my order history,
 - [ ] Display registration and authentication messages.
 - [ ] Test registration, login, and account management features.
 
-## Order History
 
-## Product Maintenance
+## Product Maintenance (*should have*)
 
 ### User Story
 
@@ -512,5 +512,13 @@ All best efforts are made to try and follow a unified commenting practice throug
 - Django Authentication
 - Django Allauth (under evaluation)
 - Stripe (under evaluation)
+
+<a id="git"></a>
+
+## Project Management
+
+The site uses Git Hub project management to manage the project workflow
+
+<img  width=500px height=100% src="static/images/screenshots/git-prodject.png">
 
 <a id="new"></a>
