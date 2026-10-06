@@ -36,9 +36,7 @@
     margin-bottom: 10vh;
 }
 
-footer p {
-    font-size: 0.5rem;
-}
+
 
 /* Mobile Portrait */
 @media (max-width: 400px) {
@@ -52,6 +50,14 @@ footer p {
 @media (max-width: 700px) and (max-height: 400px) {
     .hero {
         background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    body {
+        overflow-y: auto;
     }
 
 
@@ -103,8 +109,16 @@ footer {
     background: #333;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+footer p {
+    max-width: 80ch;
+    margin: 0.25rem 0;
+    font-size: clamp(0.5rem, 0.8vw, 0.7rem);
 }
 
 body {

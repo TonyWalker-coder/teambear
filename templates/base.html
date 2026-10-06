@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<!--{% block pagecomments %}
+<!-- Page Metadata
+{% block pagecomments %}
 {% endblock %}
 -->
 <html lang="en">
@@ -42,7 +43,7 @@
   <title>TeamBear : {% block extra_title %}{% endblock %}</title>
 </head>
 
-<body>
+<body {% block body_class %}{% endblock %}>
 
   <main>
     {% block page_header %}
@@ -57,10 +58,10 @@
 
 
 
-
+    <!-- Footer provides copyright, ownership and educational-use notices. -->
     <footer>
       <p>
-        © 2026 TeamBear. This website is provided for educational and demonstration purposes.
+        &copy; {% now "Y" %} TeamBear. This website is provided for educational and demonstration purposes.
       </p>
       
       <p>
