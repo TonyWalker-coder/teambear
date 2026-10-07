@@ -26,6 +26,9 @@
 - [Comments and symbols](#symbols)
 - [Technology Stack](#stack)
 - [Project Management](#git)
+- [Entity Relationship Diagram (ERD)](#erd)
+- [Wire frame layout](#wire)
+- [Custom Error Pages](#404pages)
 
 
 <a id="userstory"></a>
@@ -317,6 +320,10 @@ A source image store was maintained during development containing original PNG a
     - https://icons8.com/icons
     - Source for icon and svg used on the site
 
+- Fonts
+    - Englebert font provided by Google Fonts
+    - Henny Penny font provided by Google Fonts
+
 
 ## Deployment
 
@@ -501,6 +508,13 @@ All best efforts are made to try and follow a unified commenting practice throug
 ### Code Quality
 - Ruff
 - ESLite
+
+### Design & Assets
+- Google Fonts
+- Englebert
+- Henny Penny
+- SVG Graphics
+- WebP Images
  
 ### Design & Planning
 - Balsamiq Wireframes
@@ -520,5 +534,44 @@ All best efforts are made to try and follow a unified commenting practice throug
 The site uses Git Hub project management to manage the project workflow
 
 <img  width=500px height=100% src="static/images/screenshots/git-prodject.png">
+
+<a id="erd"></a>
+
+## Entity Relationship Diagram (ERD)
+ 
+The TeamBear database was designed to support:
+ 
+- Teams and team information
+- Product inventory
+- Product details and descriptions
+- Customer sales
+- Django user accounts
+ 
+The completed ERD is shown below and was used to guide model creation and database relationships throughout the project.
+
+<img  width=500px height=100% src="static/images/screenshots/erd.png">
+
+<a id="wire"></a>
+
+## Wire frame layout
+
+The project will be using CSS responsive grid for product cards and responsive screen layouts for other screens
+
+<img  width=400px height=100% src="static/images/screenshots/wireframe.png">
+
+<a id="404pages"></a>
+
+## Custom Error Pages
+
+TeamBear includes customised error pages to provide a consistent user experience when unexpected situations occur.
+
+Instead of displaying Django's default error responses, branded TeamBear pages have been created for common HTTP errors including:
+
+- 404 (Page Not Found)
+- 403 (Access Denied)
+- 500 (Internal Server Error)
+
+Each page uses themed TeamBear artwork, consistent navigation, and user-friendly messaging designed to help visitors understand what has happened and how to continue using the website. This approach maintains visual consistency across the site and improves the overall user experience when errors occur.
+
 
 <a id="new"></a>

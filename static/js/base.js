@@ -16,26 +16,30 @@ menuBtn.addEventListener("click", () => {
 
 const themes = ["light", "lightblue", "dark", "grey"];
 
-document.getElementById("themeToggle").addEventListener("click", () => {
+document
+    .querySelectorAll(".theme-toggle-btn")
+    .forEach(button => {
 
-    console.log("theme clicked")
+        button.addEventListener("click", () => {
 
-    const root = document.documentElement;
+            console.log("theme clicked")
 
-    const currentTheme =
-        root.getAttribute("data-theme") || themes[0];
+            const root = document.documentElement;
 
-    const currentIndex =
-        themes.indexOf(currentTheme);
+            const currentTheme =
+                root.getAttribute("data-theme") || themes[0];
 
-    const nextTheme =
-        themes[(currentIndex + 1) % themes.length];
+            const currentIndex =
+                themes.indexOf(currentTheme);
 
-    root.setAttribute("data-theme", nextTheme);
+            const nextTheme =
+                themes[(currentIndex + 1) % themes.length];
 
-    localStorage.setItem("theme", nextTheme);
+            root.setAttribute("data-theme", nextTheme);
 
-});
+            localStorage.setItem("theme", nextTheme);
+        });
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme") || "spring";

@@ -11,6 +11,7 @@
 
     --font-heading: Georgia, serif;
     --font-body: Tahoma, sans-serif;
+    --font-brand: "Englebert", cursive;
 
     --black: (black);
     --white: (white);
@@ -263,6 +264,11 @@ svg {
     margin: 0;
     font-size: 1.5rem;
     color: currentColor;
+    font-family: "Englebert", cursive, sans-serif;
+    letter-spacing: 0.06em;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: normal;
+    margin-left: 0.25rem;
 }
 
 .close-icon {
@@ -319,4 +325,28 @@ svg {
 .theme-responsive {
     font-size: clamp(1.75rem, 3vw, 3rem);
     margin: 0;
+}
+
+.desk-navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--navbar-height-mobile);
+    padding-top: 0.5rem;
+}
+
+.desk-nav-links {
+    display: flex;
+    gap: 1rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.desk-nav-links a {
+margin: 0 2rem;
+}
+
+.theme-toggle {
+    margin-left: auto;
 }
