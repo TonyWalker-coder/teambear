@@ -122,10 +122,12 @@
 </div>
 
 <nav id="mobileMenu" class="mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="#">Placeholder 1</a>
-    <a href="#">Placeholder 2</a>
-    <button id="themeToggle" class="theme-toggle theme-toggle-btn" aria-label="Change site theme" title="Change site theme">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a>Benefits</a>
+    <a>Contact</a>
+    <button id="themeToggle" class="theme-toggle theme-toggle-btn" aria-label="Change site theme"
+        title="Change site theme">
         <span class="theme-responsive" aria-hidden="true">🎨</span>
     </button>
 </nav>

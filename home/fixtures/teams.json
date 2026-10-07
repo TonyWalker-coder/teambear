@@ -1,0 +1,262 @@
+[
+  {
+    "model": "home.team",
+    "pk": 1,
+    "fields": {
+      "team_name": "Arsenal",
+      "nickname": "Gunners",
+      "ground": "Emirates Stadium",
+      "history": "Founded 1886. Historic London club with a long tradition of success."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 2,
+    "fields": {
+      "team_name": "Aston Villa",
+      "nickname": "Villans",
+      "ground": "Villa Park",
+      "history": "Founded 1874. One of England's oldest football clubs."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 3,
+    "fields": {
+      "team_name": "Bournemouth",
+      "nickname": "Cherries",
+      "ground": "Vitality Stadium",
+      "history": "Founded 1899. South coast football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 4,
+    "fields": {
+      "team_name": "Brentford",
+      "nickname": "Bees",
+      "ground": "Gtech Community Stadium",
+      "history": "Founded 1889. Community-focused club from West London."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 5,
+    "fields": {
+      "team_name": "Brighton And Hove Albion",
+      "nickname": "Seagulls",
+      "ground": "Amex Stadium",
+      "history": "Founded 1901. South coast club with modern ambitions."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 6,
+    "fields": {
+      "team_name": "Burnley",
+      "nickname": "Clarets",
+      "ground": "Turf Moor",
+      "history": "Founded 1882. Traditional Lancashire football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 7,
+    "fields": {
+      "team_name": "Chelsea",
+      "nickname": "Blues",
+      "ground": "Stamford Bridge",
+      "history": "Founded 1905. London club with domestic and European success."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 8,
+    "fields": {
+      "team_name": "Crystal Palace",
+      "nickname": "Eagles",
+      "ground": "Selhurst Park",
+      "history": "Founded 1905. South London club with loyal support."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 9,
+    "fields": {
+      "team_name": "Everton",
+      "nickname": "Toffees",
+      "ground": "Goodison Park",
+      "history": "Founded 1878. Historic Merseyside football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 10,
+    "fields": {
+      "team_name": "Fulham",
+      "nickname": "Cottagers",
+      "ground": "Craven Cottage",
+      "history": "Founded 1879. London's oldest professional football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 11,
+    "fields": {
+      "team_name": "Leeds United",
+      "nickname": "Whites",
+      "ground": "Elland Road",
+      "history": "Founded 1919. Yorkshire club with strong traditions."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 12,
+    "fields": {
+      "team_name": "Liverpool",
+      "nickname": "Reds",
+      "ground": "Anfield",
+      "history": "Founded 1892. One of England's most recognised football clubs."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 13,
+    "fields": {
+      "team_name": "Manchester City",
+      "nickname": "Citizens",
+      "ground": "Etihad Stadium",
+      "history": "Founded 1880. Modern football powerhouse."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 14,
+    "fields": {
+      "team_name": "Manchester United",
+      "nickname": "Red Devils",
+      "ground": "Old Trafford",
+      "history": "Founded 1878. One of the world's most famous football clubs."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 15,
+    "fields": {
+      "team_name": "Newcastle United",
+      "nickname": "Magpies",
+      "ground": "St James' Park",
+      "history": "Founded 1892. Historic North East football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 16,
+    "fields": {
+      "team_name": "Nottingham Forest",
+      "nickname": "Tricky Trees",
+      "ground": "City Ground",
+      "history": "Founded 1865. Historic club with notable achievements."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 17,
+    "fields": {
+      "team_name": "Sunderland",
+      "nickname": "Black Cats",
+      "ground": "Stadium Of Light",
+      "history": "Founded 1879. Traditional North East football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 18,
+    "fields": {
+      "team_name": "Tottenham Hotspur",
+      "nickname": "Spurs",
+      "ground": "Tottenham Hotspur Stadium",
+      "history": "Founded 1882. North London club known for attacking football."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 19,
+    "fields": {
+      "team_name": "West Ham United",
+      "nickname": "Hammers",
+      "ground": "London Stadium",
+      "history": "Founded 1895. East London club famous for youth development."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 20,
+    "fields": {
+      "team_name": "Wolverhampton Wanderers",
+      "nickname": "Wolves",
+      "ground": "Molineux Stadium",
+      "history": "Founded 1877. Historic Midlands football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 21,
+    "fields": {
+      "team_name": "Real Madrid",
+      "nickname": "Los Blancos",
+      "ground": "Santiago Bernabeu",
+      "history": "Founded 1902. One of the world's most successful clubs."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 22,
+    "fields": {
+      "team_name": "Rangers",
+      "nickname": "Gers",
+      "ground": "Ibrox Stadium",
+      "history": "Founded 1872. Historic Scottish football club."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 23,
+    "fields": {
+      "team_name": "Celtic",
+      "nickname": "Hoops",
+      "ground": "Celtic Park",
+      "history": "Founded 1887. Scottish club with a rich football tradition."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 24,
+    "fields": {
+      "team_name": "Ajax",
+      "nickname": "Godenzonen",
+      "ground": "Johan Cruyff Arena",
+      "history": "Founded 1900. Dutch club renowned for youth development."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 25,
+    "fields": {
+      "team_name": "England",
+      "nickname": "Three Lions",
+      "ground": "Wembley Stadium",
+      "history": "National football team representing England."
+    }
+  },
+  {
+    "model": "home.team",
+    "pk": 26,
+    "fields": {
+      "team_name": "Wales",
+      "nickname": "Dragons",
+      "ground": "Cardiff City Stadium",
+      "history": "National football team representing Wales."
+    }
+  }
+]

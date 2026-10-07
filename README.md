@@ -29,6 +29,7 @@
 - [Entity Relationship Diagram (ERD)](#erd)
 - [Wire frame layout](#wire)
 - [Custom Error Pages](#404pages)
+- [Team Data](#data)
 
 
 <a id="userstory"></a>
@@ -324,6 +325,8 @@ A source image store was maintained during development containing original PNG a
     - Englebert font provided by Google Fonts
     - Henny Penny font provided by Google Fonts
 
+- Microsoft Co-Pilot
+    - Used to gather real team data for the team model
 
 ## Deployment
 
@@ -574,4 +577,15 @@ Instead of displaying Django's default error responses, branded TeamBear pages h
 Each page uses themed TeamBear artwork, consistent navigation, and user-friendly messaging designed to help visitors understand what has happened and how to continue using the website. This approach maintains visual consistency across the site and improves the overall user experience when errors occur.
 
 
-<a id="new"></a>
+<a id="data"></a>
+
+
+## Team Data
+
+An initial team dataset was generated with assistance from Microsoft Copilot and manually reviewed before import into the TeamBear database.
+
+The dataset is intended to provide realistic club names, nicknames, grounds and short historical descriptions for demonstration, testing and educational purposes. Whilst reasonable efforts have been made to ensure that the information is broadly accurate, the team records should not be considered an authoritative source of football statistics or historical records.
+
+The primary purpose of the dataset is to support application functionality including product categorisation, searching, filtering and database relationships.
+
+<a id="data"></a>
