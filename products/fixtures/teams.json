@@ -1,6 +1,6 @@
 [
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 1,
     "fields": {
       "team_name": "Arsenal",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 2,
     "fields": {
       "team_name": "Aston Villa",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 3,
     "fields": {
       "team_name": "Bournemouth",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 4,
     "fields": {
       "team_name": "Brentford",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 5,
     "fields": {
       "team_name": "Brighton And Hove Albion",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 6,
     "fields": {
       "team_name": "Burnley",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 7,
     "fields": {
       "team_name": "Chelsea",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 8,
     "fields": {
       "team_name": "Crystal Palace",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 9,
     "fields": {
       "team_name": "Everton",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 10,
     "fields": {
       "team_name": "Fulham",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 11,
     "fields": {
       "team_name": "Leeds United",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 12,
     "fields": {
       "team_name": "Liverpool",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 13,
     "fields": {
       "team_name": "Manchester City",
@@ -130,7 +130,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 14,
     "fields": {
       "team_name": "Manchester United",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 15,
     "fields": {
       "team_name": "Newcastle United",
@@ -150,7 +150,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 16,
     "fields": {
       "team_name": "Nottingham Forest",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 17,
     "fields": {
       "team_name": "Sunderland",
@@ -170,7 +170,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 18,
     "fields": {
       "team_name": "Tottenham Hotspur",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 19,
     "fields": {
       "team_name": "West Ham United",
@@ -190,7 +190,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 20,
     "fields": {
       "team_name": "Wolverhampton Wanderers",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 21,
     "fields": {
       "team_name": "Real Madrid",
@@ -210,7 +210,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 22,
     "fields": {
       "team_name": "Rangers",
@@ -220,7 +220,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 23,
     "fields": {
       "team_name": "Celtic",
@@ -230,7 +230,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 24,
     "fields": {
       "team_name": "Ajax",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 25,
     "fields": {
       "team_name": "England",
@@ -250,7 +250,7 @@
     }
   },
   {
-    "model": "home.team",
+    "model": "products.team",
     "pk": 26,
     "fields": {
       "team_name": "Wales",
