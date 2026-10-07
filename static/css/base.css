@@ -40,6 +40,17 @@
     z-index: 0;
 }
 
+.hero-404 {
+    background-image: url("/static/images/hero/404.webp");
+}
+
+.hero-403 {
+    background-image: url("/static/images/hero/404.webp");
+}
+
+.hero-500 {
+    background-image: url("/static/images/hero/404.webp");
+}
 
 body {
     height: 100vh;
@@ -54,9 +65,7 @@ body {
 }
 
 /* Mobile Portrait */
-@media (max-width: 400px) {
-
-}
+@media (max-width: 400px) {}
 
 /* Mobile Landscape */
 /* Short screens: mobile landscape, foldables, small embedded browsers */
@@ -88,12 +97,10 @@ body {
 }
 
 /* Tablet Landscape */
-@media (min-width: 1280px) and (max-height: 800px){
-
-}
+@media (min-width: 1280px) and (max-height: 800px) {}
 
 /* Laptop */
-@media (min-width: 1280px) and (min-height: 801px){
+@media (min-width: 1280px) and (min-height: 801px) {
 
 
     .desk-navbar {
@@ -106,9 +113,7 @@ body {
 }
 
 /* Desktop */
-@media (min-width: 1600px) {
-
-}
+@media (min-width: 1600px) {}
 
 /* Medium shadow */
 .shadow-medium {
