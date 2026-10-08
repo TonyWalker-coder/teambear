@@ -69,6 +69,7 @@ body {
 @media (max-width: 400px) {
     .hero-404 {
         background-image: url("/static/images/hero/404-mobile.webp");
+        margin-bottom: 0;
     }
 }
 
