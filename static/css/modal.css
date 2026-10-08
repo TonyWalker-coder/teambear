@@ -1,0 +1,9 @@
+/* Hidden modal state */
+.modal.hidden {
+    display: none;
+}
+
+/* Visible modal state */
+.modal:not(.hidden) {
+    opacity: 1;
+}
