@@ -41,14 +41,9 @@
 
 /* try and keep error pages inline with teambear theme*/
 .error-pages {
-
+position: relative;
     height: 90vh;
     width: 100%;
-    background: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -397,4 +392,69 @@ svg, .error-pages svg {
 .about h2 {
     color: var(--text-heading);
     margin-bottom: 25px;
+}
+/*error pages*/
+.error-pages {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-404 {
+    background-image: url("/static/images/hero/404.webp");
+}
+
+.home-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+    background: rgb(0 0 0 / 70%);
+    color: white;
+
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+.error-pages h2 {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 0.75rem 1.5rem;
+
+    background: rgb(0 0 0 / 70%);
+    color: white;
+    border-radius: 999px;
+
+    text-align: center;
+    max-width: 90%;
+}
+
+.error-pages p {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 0.75rem 1.5rem;
+
+    background: rgb(0 0 0 / 70%);
+    color: white;
+    border-radius: 999px;
+
+    text-align: center;
+    max-width: 90%;
 }
