@@ -38,6 +38,7 @@
     margin-bottom: 10vh;
     z-index: 0;
 }
+
 /* try and keep error pages inline with teambear theme*/
 .error-pages {
 
@@ -69,6 +70,7 @@
 body {
     height: 100vh;
 }
+
 /* mobile or desktop navbar toggle*/
 .desk-navbar {
     display: none;
@@ -77,6 +79,7 @@ body {
 .navbar {
     display: flex;
 }
+
 /*BREAK POINTS*/
 /* Mobile Portrait */
 @media (max-width: 400px) {
@@ -93,7 +96,8 @@ body {
     }
 
     /*small height add scrollbar*/
-    .hero, .error-pages {
+    .hero,
+    .error-pages {
         min-height: 90vh;
     }
 
@@ -120,7 +124,11 @@ body {
 }
 
 /* Tablet Landscape */
-@media (min-width: 1280px) and (max-height: 800px) {}
+@media (min-width: 1280px) and (max-height: 800px) {
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+}
 
 /* Laptop */
 @media (min-width: 1280px) and (min-height: 801px) {
@@ -243,7 +251,7 @@ Navbar styles
     background: var(--dark-banner);
 }
 
-svg {
+svg, .error-pages svg {
     width: 40px;
     height: 40px;
     fill: currentColor;
