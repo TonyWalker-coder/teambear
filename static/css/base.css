@@ -66,7 +66,11 @@ body {
 }
 
 /* Mobile Portrait */
-@media (max-width: 400px) {}
+@media (max-width: 400px) {
+    .hero-404 {
+        background-image: url("/static/images/hero/404-mobile.webp");
+    }
+}
 
 /* Mobile Landscape */
 /* Short screens: mobile landscape, foldables, small embedded browsers */
@@ -342,8 +346,9 @@ svg {
     margin-right: auto;
 
 }
+
 .desk-nav-links a {
-margin: 0 2rem;
+    margin: 0 2rem;
 }
 
 .theme-toggle {
@@ -352,8 +357,8 @@ margin: 0 2rem;
 
 
 /*styles for about*/
-.about{
-    height:90vh;
+.about {
+    height: 90vh;
     padding-top: calc(var(--navbar-height-mobile) + 50px);
     background-color: var(--bg-page);
     color: currentColor;
@@ -363,7 +368,8 @@ margin: 0 2rem;
     align-items: center;
     text-align: center;
 }
-.about h2{
-    color:var(--text-heading);
+
+.about h2 {
+    color: var(--text-heading);
     margin-bottom: 25px;
 }
