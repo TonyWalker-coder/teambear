@@ -1,12 +1,12 @@
 {% load static %}
-<div class="message-modal">
+<div class="message-modal hidden">
     <div class="message-modal-header">
         <h2 class="message-modal-title">Message Model</h2>
     </div>
     <div>
         <img src="{% static 'images/icons/info.png' %}" class="message-info bear-toggle message-icon hidden">
         <img src="{% static 'images/icons/warning.png' %}" class="message-warning bear-toggle message-icon hidden">
-        <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle message-icon">
+        <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle message-icon hidden">
     </div>
 
     <div class="message-modal-content">

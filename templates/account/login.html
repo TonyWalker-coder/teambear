@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block pagecomments %}
+login created by Tony
+start 8/10/26
+{% endblock %}
+
+{% block content %}
+
+<section class="auth-layout">
+
+    <div class="auth-info">
+
+        <h1>Welcome Back</h1>
+
+        <p>
+            Log in to access your TeamBear account, save favourites,
+            track your bears and manage your account.
+        </p>
+
+    </div>
+
+    <div class="auth-form">
+
+        <form method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="btn">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

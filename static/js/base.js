@@ -1,3 +1,12 @@
+const theme =
+    localStorage.getItem("theme") ||
+    "lightblue";
+
+
+if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", theme);
+}
+    
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
 
