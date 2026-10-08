@@ -311,7 +311,7 @@ svg,
 .brand-name h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: currentColor;
+    color: var(--text-heading);
     font-family: "Englebert", cursive, sans-serif;
     letter-spacing: 0.06em;
     font-size: clamp(2rem, 3vw, 2.5rem);
@@ -352,14 +352,24 @@ svg,
 .mobile-menu.open {
     max-height: 500px;
 }
-
+.theme-responsive:hover  {
+    fill: red;
+    color:red;
+}
 .mobile-menu a,
-.theme-toggle {
+.theme-toggle,
+.login-toggle {
     padding: 1rem;
 
     text-decoration: none;
     color: currentColor;
 
+    border-bottom: 1px solid var(--border-light);
+}
+.login-toggle {
+    padding: 1rem;
+
+    text-decoration: none;
     border-bottom: 1px solid var(--border-light);
 }
 
