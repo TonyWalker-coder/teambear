@@ -385,14 +385,18 @@ svg,
 .desk-nav-links {
     display: flex;
     gap: 1rem;
-
     margin-left: auto;
     margin-right: auto;
+    
 
 }
 
 .desk-nav-links a {
     margin: 0 2rem;
+    color: var(--text-primary);
+}
+.desk-nav-links a::after {
+    color: var(--dark-text-primary);
 }
 
 .theme-toggle {
@@ -412,13 +416,14 @@ svg,
     align-items: center;
     text-align: center;
 }
-
+/*styles for about*/
 .about h2 {
     color: var(--text-heading);
     margin-bottom: 25px;
 }
 
 /*error pages*/
+/*background images loaded in the media queries*/
 .error-pages {
     padding-top: 80px;
     position: relative;
@@ -428,7 +433,10 @@ svg,
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.error-pages svg{
+    fill: black;
+}
+/* ⚠️ old code 
 .home-link {
     position: absolute;
     top: 1rem;
@@ -447,8 +455,8 @@ svg,
 
     font-size: 1.5rem;
     z-index: 2;
-}
-
+}*/
+/*colours here are fixed and sit outside the site theme*/
 .error-pages h2 {
     margin-top: 40px;
     position: absolute;
@@ -483,5 +491,4 @@ svg,
     max-width: 90%;
     font-size: clamp(0.5rem, 2vw, 1.25rem);
 }
-
 /*end error pages*/

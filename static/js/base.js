@@ -31,7 +31,6 @@ document
 
         button.addEventListener("click", () => {
 
-            console.log("theme clicked")
 
             const root = document.documentElement;
 
