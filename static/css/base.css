@@ -82,6 +82,20 @@ body {
     .hero-404 {
         background-image: url("/static/images/hero/404-mobile.webp");
     }
+
+    .message-modal {
+        width: min(95%, 24rem);
+        padding: 1rem;
+    }
+
+    .message-icon {
+        width: 3rem;
+    }
+
+    .message-modal-content {
+        gap: 0.75rem;
+    }
+
 }
 
 /* Mobile Landscape */

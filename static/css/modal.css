@@ -1,9 +1,135 @@
 /* Hidden modal state */
-.modal.hidden {
+.hidden {
     display: none;
 }
 
 /* Visible modal state */
-.modal:not(.hidden) {
+.message-modal:not(.hidden) {
     opacity: 1;
 }
+.message-modal {
+    position: fixed;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(90%, 40rem);
+
+    background: var(--colour-surface, #fff);
+    color: var(--colour-text, #222);
+
+    border-radius: 1rem;
+    padding: 1.5rem;
+
+    border: 2px solid var(--colour-primary, #2c6e49);
+
+    box-shadow:
+        0 0.5rem 1rem rgba(0, 0, 0, 0.25),
+        0 1.5rem 3rem rgba(0, 0, 0, 0.35);
+
+    z-index: 2000;
+}
+.message-modal-backdrop {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+
+    z-index: 1999;
+}
+.message-modal-title {
+    font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.message-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.message-modal-close {
+    padding: 0.75rem 1.5rem;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    background: var(--colour-primary, #2c6e49);
+    color: #fff;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.message-modal-close:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modal-pop {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.message-modal {
+    animation: modal-pop 0.25s ease-out;
+}
+.message-modal-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+.message-icon {
+    width: 4rem;
+    flex-shrink: 0;
+}
+.message-info {
+    border-left: 0.5rem solid #3b82f6;
+    padding-left: 0.5rem;
+}
+
+.message-warning {
+    border-left: 0.5rem solid #f59e0b;
+    padding-left: 0.5rem;
+}
+
+.message-error {
+    border-left: 0.5rem solid #dc2626;
+    padding-left: 0.5rem;
+}
+.message-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+.message-modal-text {
+    font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.message-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
