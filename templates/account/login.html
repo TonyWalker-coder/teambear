@@ -5,35 +5,93 @@ start 8/10/26
 {% endblock %}
 
 {% block content %}
+<div style="min-height: 90vh;">
 
-<section class="auth-layout">
+    <section class="auth-layout account-wrapper">
 
-    <div class="auth-info">
+        <div class="auth-info">
 
-        <h1>Welcome Back</h1>
+            <section user-toggle hidden>
+                <h2>Login Successful. Welcome Back</h2>
 
-        <p>
-            Log in to access your TeamBear account, save favourites,
-            track your bears and manage your account.
-        </p>
+                <p>
+                    Last logged in;...
 
-    </div>
+                    From here personal details;...
 
-    <div class="auth-form">
+                    Theme preference;...
 
-        <form method="post">
-            {% csrf_token %}
+                    list for site contact with replies;...
 
-            {{ form.as_p }}
+                    order history list;...
+                </p>
+            </section>
 
-            <button type="submit" class="btn">
-                Login
-            </button>
+            <section class="user-toggle register-benefits nothidden">
+                <h2>Join the Team Bear Community</h2>
 
-        </form>
+                <p class="intro">
+                    Creating an account is quick, free, and gives you access to a range of member benefits.
+                </p>
 
-    </div>
+                <ul>
+                    <li>Exclusive member discounts and special offers</li>
+                    <li>Reduced delivery costs on eligible orders</li>
+                    <li>Personalised account settings and preferences</li>
+                    <li>Easy access to your order history</li>
+                    <li>Faster checkout on future purchases</li>
+                    <li>A convenient way to manage your favourite Team Bears</li>
+                </ul>
+            </section>
 
-</section>
+        </div>
 
+        <div class="auth-form">
+
+            <section login-toggle nothidden>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button type="submit" class="btn">
+                        Login
+                    </button>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'account_logoutrf_token' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">
+                            Sign Out
+                        </button>
+                    </form>
+                    {% endif %}
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+
+                </form>
+            </section>
+            <section login-toggle nothidden>
+
+                <h2>register form here</h2>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+
+
+                    <button type="submit" class="btn">
+                        Register
+                    </button>
+
+                </form>
+            </section>
+
+        </div>
+
+    </section>
+</div>
 {% endblock %}

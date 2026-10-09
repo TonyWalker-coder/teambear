@@ -112,30 +112,42 @@
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'about' %}">About</a>
         <a>#Benefits</a>
-        <a>#Contact</a>
+        <a>#Register</a>
     </nav>
 
     <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
         <span class="theme-responsive" aria-hidden="true">🎨</span>
     </button>
-    <div class="login-toggle login-toggle-btn" aria-label="Secure login">
-        <span class="theme-responsive hidden" aria-hidden="true">
-            <svg width="1em" height="1em" viewBox="0 0 24 24">
-                <title>lock-filled</title>
-                <path fill="currentColor" fill-rule="evenodd"
-                    d="M7.5 9V6.5a4.5 4.5 0 0 1 9 0V9H19a1 1 0 0 1 1 .999V21a.997.997 0 0 1-1 1H5a1 1 0 0 1-1-.999V10a.997.997 0 0 1 1-1zM9 9h6V6.5a3 3 0 0 0-6 0zm2.4 6.875V18h1.2v-2.125a1.5 1.5 0 1 0-1.2 0" />
-            </svg>
-            <p>Login</p>
-        </span>
-        <span class="theme-responsive nothidden" aria-hidden="true">
-            <svg width="1em" height="1em" viewBox="0 0 24 24">
-                <title>user-filled</title>
-                <path fill="currentColor"
-                    d="M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3z" />
-            </svg>
-            <p style="font-size: 1rem;">Sign Out</p>
-        </span>
-    </div>
+
+
+
+    {% if user.is_authenticated %}
+<!-- account icon -->
+<a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+    <span class="theme-responsive" aria-hidden="true">
+        <svg width="1em" height="1em" viewBox="0 0 24 24">
+            <title>user-filled</title>
+            <path fill="currentColor"
+                d="M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3z" />
+        </svg>
+    </span>
+</a>
+
+{% else %}
+<!-- lock icon -->
+<a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+    <span class="theme-responsive" aria-hidden="true">
+        <svg width="1em" height="1em" viewBox="0 0 24 24">
+            <title>lock-filled</title>
+            <path fill="currentColor" fill-rule="evenodd"
+                d="M7.5 9V6.5a4.5 4.5 0 0 1 9 0V9H19a1 1 0 0 1 1 .999V21a.997.997 0 0 1-1 1H5a1 1 0 0 1-1-.999V10a.997.997 0 0 1 1-1zM9 9h6V6.5a3 3 0 0 0-6 0zm2.4 6.875V18h1.2v-2.125a1.5 1.5 0 1 0-1.2 0" />
+        </svg>
+    </span>
+</a>
+{% endif %}
+
+
+
     <div>
         <span class="theme-responsive">
             <svg width="1em" height="1em" viewBox="0 0 48 48">
@@ -155,3 +167,6 @@
     </div>
 
 </div>
+
+
+

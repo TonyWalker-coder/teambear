@@ -11,7 +11,7 @@
 
     --font-heading: Georgia, serif;
     --font-body: Tahoma, sans-serif;
-    --font-brand: "Englebert", cursive;
+    --font-brand: "DynaPuff", cursive;
 
 }
 
@@ -312,7 +312,7 @@ svg,
     margin: 0;
     font-size: 1.5rem;
     color: var(--text-heading);
-    font-family: "Englebert", cursive, sans-serif;
+    font-family: "DynaPuff", cursive, sans-serif;
     letter-spacing: 0.06em;
     font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: normal;
@@ -502,3 +502,16 @@ svg,
     font-size: clamp(0.5rem, 2vw, 1.25rem);
 }
 /*end error pages*/
+
+/*nav*/
+.login-toggle-btn {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
+}

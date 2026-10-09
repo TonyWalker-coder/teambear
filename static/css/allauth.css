@@ -4,7 +4,7 @@
 .auth-form input {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid var(--colour-primary);
+    border: 2px solid var(--border-dark);
     border-radius: 0.5rem;
 }
 .auth-layout {
@@ -30,7 +30,7 @@
 
     border-radius: 1rem;
 
-    background: var(--colour-surface);
+    background: var(--bg-card);
 
     box-shadow:
         0 0.5rem 1rem rgba(0,0,0,.15);
@@ -40,7 +40,7 @@
 
     border-radius: 1rem;
 
-    background: var(--colour-surface);
+    background: var(--bg-card);
 
     box-shadow:
         0 0.5rem 1rem rgba(0,0,0,.15);
@@ -50,7 +50,7 @@
 
     padding: 0.75rem;
 
-    border: 2px solid var(--colour-primary);
+    border: 2px solid var(--bg-card);
 
     border-radius: 0.5rem;
 
@@ -75,7 +75,7 @@
 
     border-radius: 0.5rem;
 
-    background: var(--colour-primary);
+    background: var(--button);
 
     color: white;
 
@@ -88,7 +88,7 @@
     width: 100%;
     padding: 0.75rem;
 
-    border: 2px solid var(--colour-primary);
+    border: 2px solid var(--border-dark);
     border-radius: 0.5rem;
 
     margin-top: 0.25rem;
@@ -107,8 +107,84 @@
     border: none;
     border-radius: 0.5rem;
 
-    background: var(--colour-primary);
-    color: white;
+    background: var(--button);
+    color: var(--text-primary);;
 
     font-weight: 600;
+}
+
+body{
+    flex: 1;
+}
+
+.register-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40rem;
+    padding: 1.5rem;
+    border: 2px solid var(--border-dark, #222);
+    border-radius: 1rem;
+    background: var(--bg-page, #fff);
+    box-shadow: 6px 6px 0 #000;
+    line-height: 1.1;
+}
+.account-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.register-benefits h2 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    text-align: center;
+    color: var(--text-heading)
+}
+
+.register-benefits .intro {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #555;
+}
+
+.register-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.register-benefits li {
+    position: relative;
+    padding: 0.75rem 0.75rem 0.75rem 2rem;
+    margin-bottom: 0.75rem;
+    background: var(--bg-card);
+    border-radius: 0.5rem;
+    transition: transform .2s ease;
+}
+
+.register-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0.75rem;
+    color: var(--text-heading);
+    font-weight: bold;
+}
+.register-benefits li:hover {
+    transform: translateX(4px);
+}
+
+.btn-primary {
+    background: #6f42ff;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+input[type="checkbox"] {
+    transform: scale(1.3);
+    margin-top: .5rem;
 }
