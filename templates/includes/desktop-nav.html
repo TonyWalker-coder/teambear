@@ -112,8 +112,10 @@
         <a href="{% url 'home' %}">Home</a>
         <a href="{% url 'about' %}">About</a>
         <a>#Benefits</a>
-        <a>#Register</a>
+        <a href="{% url 'signup' %}" aria-label="Account registration">Register</a>
     </nav>
+
+    
 
     <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
         <span class="theme-responsive" aria-hidden="true">🎨</span>

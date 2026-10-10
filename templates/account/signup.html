@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block pagecomments %}
+login created by Tony
+start 8/10/26
+{% endblock %}
+
+{% block content %}
+<div style="min-height: 90vh;">
+
+    <section class="auth-layout account-wrapper">
+
+        <div class="auth-info">
+
+            <section class="user-toggle register-benefits nothidden">
+                <h2>Join the Team Bear Community</h2>
+
+                <p class="intro">
+                    Creating an account is quick, free, and gives you access to a range of member benefits.
+                </p>
+
+                <ul>
+                    <li>Exclusive member discounts and special offers</li>
+                    <li>Reduced delivery costs on eligible orders</li>
+                    <li>Personalised account settings and preferences</li>
+                    <li>Easy access to your order history</li>
+                    <li>Faster checkout on future purchases</li>
+                    <li>A convenient way to manage your favourite Team Bears</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <div class="auth-form">
+
+            <section login-toggle>
+
+                <h2>register form here</h2>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+
+
+
+                    <button type="submit" class="btn">
+                        Register
+                    </button>
+
+                </form>
+            </section>
+
+        </div>
+
+    </section>
+</div>
+{% endblock %}

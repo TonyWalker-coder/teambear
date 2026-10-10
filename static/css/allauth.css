@@ -17,6 +17,13 @@
 
     padding: 8rem 0 4rem;
 }
+@media (max-width: 76px) {
+
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 @media (min-width: 768px) {
 
@@ -133,6 +140,8 @@ body{
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .register-benefits h2 {
@@ -140,6 +149,12 @@ body{
     font-size: clamp(1.5rem, 2vw, 2rem);
     text-align: center;
     color: var(--text-heading)
+}
+.register-benefits h3 {
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.5rem, 1vw, 1.5rem);
+    text-align: center;
+    color: var(--dark-text-heading)
 }
 
 .register-benefits .intro {

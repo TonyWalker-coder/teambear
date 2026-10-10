@@ -11,38 +11,24 @@ start 8/10/26
 
         <div class="auth-info">
 
-            <section user-toggle hidden>
-                <h2>Login Successful. Welcome Back</h2>
-
-                <p>
-                    Last logged in;...
-
-                    From here personal details;...
-
-                    Theme preference;...
-
-                    list for site contact with replies;...
-
-                    order history list;...
-                </p>
-            </section>
-
             <section class="user-toggle register-benefits nothidden">
-                <h2>Join the Team Bear Community</h2>
+                <h2>Welcome Back to TeamBear</h2>
 
                 <p class="intro">
-                    Creating an account is quick, free, and gives you access to a range of member benefits.
+                    We're delighted to see you again.
                 </p>
 
                 <ul>
-                    <li>Exclusive member discounts and special offers</li>
-                    <li>Reduced delivery costs on eligible orders</li>
-                    <li>Personalised account settings and preferences</li>
-                    <li>Easy access to your order history</li>
-                    <li>Faster checkout on future purchases</li>
-                    <li>A convenient way to manage your favourite Team Bears</li>
+                    <li>View your account details</li>
+                    <li>Check your order history</li>
+                    <li>Manage saved preferences</li>
+                    <li>Continue browsing your favourite bears</li>
                 </ul>
+
+                <h3>Thank You for Being Part of TeamBear</h3>
             </section>
+
+            
 
         </div>
 
@@ -72,23 +58,7 @@ start 8/10/26
 
                 </form>
             </section>
-            <section login-toggle nothidden>
 
-                <h2>register form here</h2>
-
-                <form method="post">
-                    {% csrf_token %}
-
-                    {{ form.as_p }}
-
-
-
-                    <button type="submit" class="btn">
-                        Register
-                    </button>
-
-                </form>
-            </section>
 
         </div>
 
