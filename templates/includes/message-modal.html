@@ -1,16 +1,31 @@
 {% load static %}
-<div class="message-modal hidden">
-    <div class="message-modal-header">
-        <h2 class="message-modal-title">Message Model</h2>
-    </div>
-    <div>
-        <img src="{% static 'images/icons/info.png' %}" class="message-info bear-toggle message-icon hidden">
-        <img src="{% static 'images/icons/warning.png' %}" class="message-warning bear-toggle message-icon hidden">
-        <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle message-icon hidden">
-    </div>
+<div class="message-modal nothidden">
+    <button type="button" class="message-modal-close"
+          aria-label="Close MessageModal">&times;</button>
 
-    <div class="message-modal-content">
-        <div class="message-modal-text">
+    <div class="message-modal-header">
+        <h2 class="title-info hidden">Information</h2>
+        <h2 class="title-success hidden">Success</h2>
+        <h2 class="title-warning hidden">Warning</h2>
+        <h2 class="title-error nothidden">Error</h2>
+    </div>
+    <div class="message-grid">
+        <div>
+            <img src="{% static 'images/icons/info.png' %}" class="message-info bear-toggle message-icon hidden">
+            <img src="{% static 'images/icons/info.png' %}" class="message-success bear-toggle message-icon hidden">
+            <img src="{% static 'images/icons/warning.png' %}" class="message-warning bear-toggle message-icon hidden">
+            <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle message-icon nothidden">
+        </div>
+        <div>
+            <div class="message-modal-content">
+                <h3>placeholder</h3>
+                <span class="message-modal-text">
+                    <p>placeholder</p>
+                </span>
+            </div>
+
         </div>
     </div>
+
+
 </div>
