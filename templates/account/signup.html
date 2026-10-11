@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block pagecomments %}
 login created by Tony
-start 8/10/26
+start 11/10/26
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@ start 8/10/26
 
         <div class="auth-info">
 
-            <section class="user-toggle register-benefits nothidden">
+            <section class="user-toggle register-benefits">
                 <h2>Join the Team Bear Community</h2>
 
                 <p class="intro">
@@ -30,78 +30,48 @@ start 8/10/26
 
         </div>
 
+
+
         <div class="auth-form">
 
-            <section login-toggle>
-
-                <h2>register form here</h2>
-
-                <form method="post">
-                    {% csrf_token %}
-
-                    {{ form.as_p }}
+            <section class="user-toggle register-benefits">
 
 
 
+                <h2>Register With TeamBear</h2>
 
-                    <button type="submit" class="btn">
-                        Register
-                    </button>
+                {% load allauth i18n %}
 
-                </form>
-            </section>
+                {% if not SOCIALACCOUNT_ONLY %}
 
-        </div>
+                {% url 'account_signup' as action_url %}
 
-    </section>
-</div>
-{% endblock %}
-
-
-
-
-{% extends "account/base_entrance.html" %}
-{% load allauth i18n %}
-{% block head_title %}
-    {% trans "Signup" %}
-{% endblock head_title %}
-{% block content %}
-    {% element h1 %}
-        {% trans "Sign Up" %}
-    {% endelement %}
-    {% setvar link %}
-        <a href="{{ login_url }}">
-        {% endsetvar %}
-        {% setvar end_link %}
-        </a>
-    {% endsetvar %}
-    {% element p %}
-        {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% url 'account_signup' as action_url %}
-        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
-            {% slot body %}
+                {% element form form=form method="post" action=action_url %}
+                {% slot body %}
                 {% csrf_token %}
                 {% element fields form=form unlabeled=True %}
                 {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
+                {% endslot %}
+
+                {% slot actions %}
+                {% element button type="submit" %}
+                Sign Up
                 {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if PASSKEY_SIGNUP_ENABLED %}
-        {% element hr %}
-        {% endelement %}
-        {% element button href=signup_by_passkey_url tags="prominent,signup,outline,primary" %}
-            {% trans "Sign up using a passkey" %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
-{% endblock content %}
+                {% endslot %}
+
+                {% endelement %}
+
+                {% endif %}
+
+            </section>
+        </div>
+
+
+
+
+    </section>
+
+
+
+</div>
+{% endblock %}

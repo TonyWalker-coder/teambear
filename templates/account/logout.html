@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block pagecomments %}
 login created by Tony
 start 8/10/26
@@ -11,7 +12,7 @@ start 8/10/26
 
         <div class="auth-info">
 
-            <section class="user-toggle register-benefits nothidden">
+            <section>
                 <h2>Goodbye From TeamBear</h2>
 
                 <p class="intro">
@@ -31,30 +32,22 @@ start 8/10/26
 
         <div class="auth-form">
 
-            <section login-toggle nothidden>
 
-                <form method="post">
-                    {% csrf_token %}
 
-                    {{ form.as_p }}
+            {% if user.is_authenticated %}
+            <form method="post" action="{% url 'account_logout' %}">
 
-                    <button type="submit" class="btn">
-                        Login
-                    </button>
-                    {% if user.is_authenticated %}
-                    <form action="{% url 'logout' %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn">
-                            Sign Out
-                        </button>
-                    </form>
-                    {% endif %}
-                    <button type="submit" class="btn btn-primary">
-                        Register
-                    </button>
-                </form>
 
-            </section>
+                {% csrf_token %}
+
+                <button type="submit" class="btn">
+                    Sign Out
+                </button>
+            </form>
+
+
+            {% endif %}
+
 
 
         </div>

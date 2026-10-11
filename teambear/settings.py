@@ -70,14 +70,14 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "account"
 LOGOUT_REDIRECT_URL = "/"
 
 
-#ACCOUNT_LOGIN_METHODS = {"username", "email"}
 ACCOUNT_LOGIN_METHODS = {"email"}
+ACCOUNT_SESSION_REMEMBER = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

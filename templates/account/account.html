@@ -1,13 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block pagecomments %}
+login created by Tony
+start 8/10/26
+{% endblock %}
+
+{% block content %}
+<div style="min-height: 90vh; padding-top: 150px;">
 {% if user.is_authenticated %}
 
 <h2>Welcome {{ user.username }}</h2>
 
+<p>Last Login: {{ user.last_login|date:"d M Y H:i" }}</p>
+
+<hr>
+
 <p>Orders: Coming Soon</p>
 <p>Messages: Coming Soon</p>
 
-<form methodunt_logout' %}
+
+<form method="post" action="{% url 'account_change_password' %}">
     {% csrf_token %}
-    <button type="submit">
+    <button type="submit" class="btn">
+        Change Password
+    </button>
+</form>
+
+
+<form method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn">
         Sign Out
     </button>
 </form>
@@ -17,3 +40,6 @@
 <p>Please login.</p>
 
 {% endif %}
+</div>
+
+{% endblock %}

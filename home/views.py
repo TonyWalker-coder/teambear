@@ -6,8 +6,5 @@ def home(request):
 def account(request):
     return render(request, "account/account.html")
 
-def signup(request):
-    return render(request, "account/signup.html")
-
 def logout(request):
     return render(request, "account/logout.html")
