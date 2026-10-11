@@ -1,25 +1,64 @@
-{% extends "account/base_manage.html" %}
-{% load allauth i18n %}
-{% block head_title %}
-    {% trans "Sign Out" %}
-{% endblock head_title %}
+{% extends "base.html" %}
+{% block pagecomments %}
+login created by Tony
+start 8/10/26
+{% endblock %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign Out" %}
-    {% endelement %}
-    {% element p %}
-        {% trans 'Are you sure you want to sign out?' %}
-    {% endelement %}
-    {% url 'account_logout' as action_url %}
-    {% element form method="post" action=action_url no_visible_fields=True %}
-        {% slot body %}
-            {% csrf_token %}
-            {{ redirect_field }}
-        {% endslot %}
-        {% slot actions %}
-            {% element button type="submit" %}
-                {% trans 'Sign Out' %}
-            {% endelement %}
-        {% endslot %}
-    {% endelement %}
-{% endblock content %}
+<div style="min-height: 90vh;">
+
+    <section class="auth-layout account-wrapper">
+
+        <div class="auth-info">
+
+            <section class="user-toggle register-benefits nothidden">
+                <h2>Goodbye From TeamBear</h2>
+
+                <p class="intro">
+                    We will be delighted to see you again.
+                </p>
+
+                <ul>
+                    <li>Thank you for your purchase/sorry you didn't find what you wanted today.</li>
+                    <li>You seem to have items in your shopping basket</li>
+                </ul>
+
+            </section>
+
+
+
+        </div>
+
+        <div class="auth-form">
+
+            <section login-toggle nothidden>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button type="submit" class="btn">
+                        Login
+                    </button>
+                    {% if user.is_authenticated %}
+                    <form action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">
+                            Sign Out
+                        </button>
+                    </form>
+                    {% endif %}
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </form>
+
+            </section>
+
+
+        </div>
+
+    </section>
+</div>
+{% endblock %}

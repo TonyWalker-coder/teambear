@@ -367,7 +367,6 @@ svg,
     text-decoration: none;
     color: currentColor;
 
-    border-bottom: 1px solid var(--border-light);
 }
 .login-toggle {
     padding: 1rem;
