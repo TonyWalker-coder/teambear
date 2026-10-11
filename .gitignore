@@ -46,3 +46,4 @@ ruff-output.txt
 static/images/bears/tmpstore/
 static/images/hero/tmpstore/
 tmp*.*
+testing.md

@@ -1,30 +1,31 @@
 {% load static %}
 <div class="message-modal nothidden">
-    <button type="button" class="message-modal-close"
-          aria-label="Close MessageModal">&times;</button>
 
     <div class="message-modal-header">
-        <h2 class="title-info hidden">Information</h2>
-        <h2 class="title-success hidden">Success</h2>
-        <h2 class="title-warning hidden">Warning</h2>
-        <h2 class="title-error nothidden">Error</h2>
+        <h2 class="message-title"></h2>
+
+        <button type="button" class="message-modal-close" aria-label="Close Message Modal">
+            &times;
+        </button>
     </div>
-    <div class="message-grid">
-        <div>
-            <img src="{% static 'images/icons/info.png' %}" class="message-info bear-toggle message-icon hidden">
-            <img src="{% static 'images/icons/info.png' %}" class="message-success bear-toggle message-icon hidden">
-            <img src="{% static 'images/icons/warning.png' %}" class="message-warning bear-toggle message-icon hidden">
-            <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle message-icon nothidden">
-        </div>
-        <div>
-            <div class="message-modal-content">
-                <h3>placeholder</h3>
-                <span class="message-modal-text">
-                    <p>placeholder</p>
-                </span>
-            </div>
+    <div class="message-body">
+
+        <div class="message-icon-container">
+
+            <img src="{% static 'images/icons/info.png' %}" class="message-info bear-toggle hidden">
+            <img src="{% static 'images/icons/info.png' %}" class="message-success bear-toggle hidden">
+            <img src="{% static 'images/icons/warning.png' %}" class="message-warning bear-toggle hidden">
+            <img src="{% static 'images/icons/error.png' %}" class="message-error bear-toggle nothidden">
+            
 
         </div>
+
+        <div class="message-modal-content">
+
+            <p class="message-modal-text"></p>
+
+        </div>
+
     </div>
 
 

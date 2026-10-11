@@ -352,13 +352,16 @@ svg,
 .mobile-menu.open {
     max-height: 500px;
 }
-.theme-responsive:hover  {
+#navbar .theme-responsive:hover,
+#navbar a:hover   {
     fill: red;
     color:red;
 }
-.mobile-menu a,
-.theme-toggle,
-.login-toggle {
+#navbar .mobile-menu a,
+#navbar .theme-toggle,
+#navbar .login-toggle,
+#navbar span 
+{
     padding: 1rem;
 
     text-decoration: none;
@@ -404,6 +407,7 @@ svg,
 .desk-nav-links a {
     margin: 0 2rem;
     color: var(--text-primary);
+    text-decoration: none;
 }
 .desk-nav-links a::after {
     color: var(--dark-text-primary);

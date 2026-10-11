@@ -40,25 +40,26 @@
 
     z-index: 1999;
 }
-
+/*
 
 .message-modal-actions {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
     margin-top: 1.5rem;
-}
+}*/
 .message-modal-close {
-    padding: 0.75rem 1.5rem;
-
+    background: transparent;
     border: none;
-    border-radius: 0.5rem;
 
-    background:  #7bce9f;
-    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+
+    padding: 0;
+    margin: 0;
 
     cursor: pointer;
-    transition: all 0.25s ease;
+    color: inherit;
 }
 
 .message-modal-close:hover {
@@ -89,10 +90,11 @@
     gap: 1rem;
     align-items: start;
 }
+/*
 .message-icon {
     width: 4rem;
     flex-shrink: 0;
-}
+}*/
 .message-info {
     border-left: 0.5rem solid green;
     padding-left: 0.5rem;
@@ -102,13 +104,14 @@
     padding-left: 0.5rem;
 }
 .message-warning {
-    border-left: 0.5rem solid rgb(255, 255, 0);
+    border-left: 0.5rem solid #b8860b;
     padding-left: 0.5rem;
 }
 .message-error {
     border-left: 0.5rem solid red;
     padding-left: 0.5rem;
 }
+/*
 .title-info {
     color: green;
 }
@@ -116,13 +119,18 @@
     color: darkblue;
 }
 .title-warning {
-    color: rgb(255, 255, 0);
+    color: #b8860b;
 }
 .title-error {
     color: red;
 }
-
-
+*/
+.message-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+}
 
 
 
@@ -130,11 +138,11 @@
 
 .message-modal-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-
-    margin-bottom: 1rem;
 }
+
+
 .message-modal-header h2 {
     font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
     font-weight: 700;
