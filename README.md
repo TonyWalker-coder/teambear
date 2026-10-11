@@ -30,6 +30,9 @@
 - [Wire frame layout](#wire)
 - [Custom Error Pages](#404pages)
 - [Team Data](#data)
+- [Security Considerations](#security)
+- [User Feedback Strategy](#feedback)
+
 
 
 <a id="userstory"></a>
@@ -587,5 +590,18 @@ An initial team dataset was generated with assistance from Microsoft Copilot and
 The dataset is intended to provide realistic club names, nicknames, grounds and short historical descriptions for demonstration, testing and educational purposes. Whilst reasonable efforts have been made to ensure that the information is broadly accurate, the team records should not be considered an authoritative source of football statistics or historical records.
 
 The primary purpose of the dataset is to support application functionality including product categorisation, searching, filtering and database relationships.
+
+<a id="data"></a>
+
+## Security Considerations
+
+This project follows Django's standard authentication and authorisation model, separating access between anonymous users, authenticated customers, and administrative users. For simplicity and maintainability within an educational environment, a small number of trusted superuser accounts are used for site administration. Although more granular permission structures can be implemented using Django Groups and custom permissions, the chosen approach is proportionate to the project's scope while maintaining appropriate access controls. All administrative actions remain restricted to authorised accounts, and user-facing functionality is protected by server-side authentication and authorisation checks.
+
+<a id="feedback"></a>
+
+## User Feedback Strategy
+
+TeamBear uses a combination of explicit and implicit feedback mechanisms. Critical actions, including successful purchases, account updates, and form submissions, are acknowledged through visible confirmation messages. However, actions where success is immediately evident through a change in interface state, such as user authentication or redirection to a protected area of the site, rely on contextual feedback rather than additional notifications. This design choice aims to reduce interface clutter and support a smoother, less intrusive user experience.
+
 
 <a id="data"></a>
