@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block pagecomments %}
+login created by Tony
+start 8/10/26
+{% endblock %}
+
+{% block content %}
+
+<div style="min-height: 90vh; padding-top: 150px;">
+
+
+    {% if user.is_staff %}
+    <div class="account-card">
+        <h2>Admin Tools</h2>
+
+        <a {% url 'admin_panel' %}>Open Admin Dashboard</a>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

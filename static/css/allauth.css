@@ -53,7 +53,8 @@
         0 0.5rem 1rem rgba(0,0,0,.15);
 
     min-width: 25vw;
-    /*place holder*/
+    min-width: clamp(320px, 25vw, 500px);
+
 }
 .auth-form input {
     width: 100%;
@@ -205,4 +206,12 @@ body{
 input[type="checkbox"] {
     transform: scale(1.3);
     margin-top: .5rem;
+}
+.intro {
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+section p + p {
+    margin-top: 1rem;
 }

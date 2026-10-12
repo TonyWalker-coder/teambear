@@ -78,6 +78,7 @@ LOGOUT_REDIRECT_URL = "/"
 
 ACCOUNT_LOGIN_METHODS = {"email"}
 ACCOUNT_SESSION_REMEMBER = False
+DEFAULT_FROM_EMAIL = "TeamBear <teambear.products@gmail.com>"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

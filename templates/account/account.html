@@ -1,45 +1,65 @@
 {% extends "base.html" %}
-
-
 {% block pagecomments %}
 login created by Tony
 start 8/10/26
 {% endblock %}
 
 {% block content %}
-<div style="min-height: 90vh; padding-top: 150px;">
-{% if user.is_authenticated %}
 
-<h2>Welcome {{ user.username }}</h2>
+<div style="min-height: 90vh;">
 
-<p>Last Login: {{ user.last_login|date:"d M Y H:i" }}</p>
+    <section class="auth-layout account-wrapper">
 
-<hr>
+        <div class="auth-info">
 
-<p>Orders: Coming Soon</p>
-<p>Messages: Coming Soon</p>
+            <section class="user-toggle register-benefits">
+                <h2>
+                    <h2>Welcome {{ user.username }}</h2>
+                </h2>
+                <p>Last Login: {{ user.last_login|date:"d M Y H:i" }}</p>
 
+                <hr>
 
-<form method="post" action="{% url 'account_change_password' %}">
-    {% csrf_token %}
-    <button type="submit" class="btn">
-        Change Password
-    </button>
-</form>
+                <h3 class="intro">Personal Information.</h3>
 
 
-<form method="post" action="{% url 'account_logout' %}">
-    {% csrf_token %}
-    <button type="submit" class="btn">
-        Sign Out
-    </button>
-</form>
+                <hr>
 
-{% else %}
 
-<p>Please login.</p>
+                <h3 class="intro">Account Management.</h3>
 
-{% endif %}
+                <form method="post" action="{% url 'account_change_password' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">
+                        Change Password
+                    </button>
+                </form>
+
+
+                <form method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">
+                        Sign Out
+                    </button>
+                </form>
+            </section>
+
+
+
+        </div>
+
+        <div class="auth-form">
+
+
+            <section class="user-toggle register-benefits">
+
+                <h3>place holder</h3>
+            </section>
+
+
+        </div>
+
+    </section>
 </div>
 
 {% endblock %}

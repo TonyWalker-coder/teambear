@@ -32,6 +32,9 @@
 - [Team Data](#data)
 - [Security Considerations](#security)
 - [User Feedback Strategy](#feedback)
+- [Testing Stripe Notice:](#stripe)
+
+
 
 
 
@@ -603,5 +606,11 @@ This project follows Django's standard authentication and authorisation model, s
 
 TeamBear uses a combination of explicit and implicit feedback mechanisms. Critical actions, including successful purchases, account updates, and form submissions, are acknowledged through visible confirmation messages. However, actions where success is immediately evident through a change in interface state, such as user authentication or redirection to a protected area of the site, rely on contextual feedback rather than additional notifications. This design choice aims to reduce interface clutter and support a smoother, less intrusive user experience.
 
+
+<a id="stripe"></a>
+
+## Testing Stripe Notice:
+
+TeamBear uses Stripe's publicly available test card numbers for development and assessment purposes. These cards do not represent real payment methods and cannot process actual transactions. In a production environment, payment details would never be stored in plain text and would be handled securely through Stripe's payment infrastructure.
 
 <a id="data"></a>
