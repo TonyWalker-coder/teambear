@@ -505,3 +505,8 @@ svg,
     width: 3rem;
     height: 3rem;
 }
+.pagefiller{
+    height: 90vh;
+    padding-top: var( --navbar-height-mobile);
+    background-color: var(--bg-page);
+}

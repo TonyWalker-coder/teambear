@@ -1,41 +1,88 @@
 {% extends "base.html" %}
+{% block pagecomments %}
+product_grid created by Tony
+start 12/10/26
+{% endblock %}
 
 {% block content %}
 
-<div style="min-height: 90vh;">
+<div class="pagefiller">
 
-    <section class="account-card-container">
+    <div class="top-panel">
 
-        <div class="account-card">
 
-            <h1>Products</h1>
 
-            <p>
-                Welcome to the TeamBear product catalogue.
-                Browse our growing collection of bears, gifts and collectables.
-            </p>
-
-            <hr>
-
-            <h2>Browse Categories</h2>
-
-            <div class="product-category-list">
-
-                <button type="button">🐻 All Bears</button>
-                <button type="button">🧸 Teddy Bears</button>
-                <button type="button">⭐ Featured</button>
-                <button type="button">🎄 Seasonal</button>
-                <button type="button">🔥 Sale</button>
-
-            </div>
-
+        <div class="category-card">
+            <h3>All Teams</h3>
+            <p>23 Products</p>
         </div>
 
-    </section>
+        <div class="category-card">
+            <div class="inside-category-card" style="border: 2px solid black" ;>
+                <h3>Arsenal</h3>
+                <p>10 Products</p>
+            </div>
+
+            <div class="category-grid nothidden">
+                <h3>All</h3>
+                <p>10 Products</p>
+                <h3>Mugs</h3>
+                <p>1 Products</p>
+                <h3>Bedding</h3>
+                <p>3 Products</p>
+                <h3>Bears</h3>
+                <p>6 Product</p>
+            </div>
+        </div>
+
+
+        <div class="category-card">
+            <h3>Spurs</h3>
+            <p>6 Products</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Liverpool</h3>
+            <p>0 Products</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Man Utd</h3>
+            <p>7 Products</p>
+        </div>
+
+        <div class="category-card">
+            <h3>All Products</h3>
+            <p>23 Items</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Mugs</h3>
+            <p>5 Items</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Towels</h3>
+            <p>7 Items</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Big Bear</h3>
+            <p>3 Items</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Med Bear</h3>
+            <p>8 Items</p>
+        </div>
+
+
+    </div>
+
 
     <section class="product-grid-placeholder">
 
-        <h2>Available Products</h2>
+
 
         <div class="product-grid">
 
@@ -74,5 +121,6 @@
     </section>
 
 </div>
+
 
 {% endblock %}

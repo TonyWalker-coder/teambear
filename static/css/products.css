@@ -1,8 +1,9 @@
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
     gap: 2rem;
     margin: 2rem 0;
+    justify-content: center;
 }
 
 .product-card {
@@ -10,4 +11,111 @@
     border-radius: 1rem;
     background: var(--colour-panel, #8f8cff);
     text-align: center;
+    width: 300px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+@media (max-width: 576px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-card {
+    background: var(--colour-panel, #8f8cff);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    min-height: auto;
+    width: 300px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    display:block;
+}
+.inside-category-card {
+    background: var(--colour-panel, #8f8cff);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    min-height: auto;
+    max-width: 300px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+}
+.category-card.active {
+    border: 3px solid white;
+}
+
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+
+.top-panel {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+
+
+@media (max-width: 400px) {
+    .top-panel {
+        grid-template-columns: 1fr;
+    }
+}
+/* Mobile Landscape */
+/* Short screens: mobile landscape, foldables, small embedded browsers */
+@media (max-width: 699px) and (max-height: 400px) {
+
+    .top-panel {
+        grid-template-columns: 1fr 1fr;;
+    }
+
+}
+
+/* Tablet Portrait */
+@media (min-width: 700px) and (min-height: 400px) {
+.top-panel {
+        grid-template-columns: 1fr 1fr 1fr;;
+    }
+
+}
+
+/* Tablet Landscape */
+@media (min-width: 1280px) and (max-height: 800px) {
+.top-panel {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1280px) and (min-height: 801px) {
+.top-panel {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    .top-panel {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
