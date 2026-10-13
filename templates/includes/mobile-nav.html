@@ -99,7 +99,7 @@
         </svg>
     </div>
     <div class="brand-name left">
-        <h1>TeamBear</h1>
+        <h1>TeamBear....</TeamBear></h1>
     </div>
 
     <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
@@ -122,12 +122,94 @@
 </div>
 
 <nav id="mobileMenu" class="mobile-menu">
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'about' %}">About</a>
-    <a>Benefits</a>
-    <a>Contact</a>
-    <button id="themeToggle" class="theme-toggle theme-toggle-btn" aria-label="Change site theme"
-        title="Change site theme">
+
+
+    <a href="{% url 'home' %}">Home:</a>
+    <a href="{% url 'about' %}">AboutUs:</a>
+    <a href="{% url 'products' %}">Meet The Bears:</a>
+    <a>ContactUs:</a>
+    <a>🔥 Specials:</a>
+
+    {% if user.is_authenticated %}
+    <!-- Account signout -->
+    <a href="{% url 'logout' %}" aria-label="Account registration">Sign Out:</a>
+
+    {% else %}
+    <!-- Account register -->
+    <a href="{% url 'account_signup' %}" aria-label="Account registration">Register:</a>
+    {% endif %}
+
+    <!--Theme toggle icon-->
+    <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
         <span class="theme-responsive" aria-hidden="true">🎨</span>
     </button>
+    <!--Theme toggle svg-->
+    <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
+        <span class="theme-responsive" aria-hidden="true">
+            <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <title>paint-palette</title>
+                <path fill="currentColor"
+                    d="M12 22A10 10 0 0 1 2 12A10 10 0 0 1 12 2c5.5 0 10 4 10 9a6 6 0 0 1-6 6h-1.8c-.3 0-.5.2-.5.5c0 .1.1.2.1.3c.4.5.6 1.1.6 1.7c.1 1.4-1 2.5-2.4 2.5m0-18a8 8 0 0 0-8 8a8 8 0 0 0 8 8c.3 0 .5-.2.5-.5c0-.2-.1-.3-.1-.4c-.4-.5-.6-1-.6-1.6c0-1.4 1.1-2.5 2.5-2.5H16a4 4 0 0 0 4-4c0-3.9-3.6-7-8-7m-5.5 6c.8 0 1.5.7 1.5 1.5S7.3 13 6.5 13S5 12.3 5 11.5S5.7 10 6.5 10m3-4c.8 0 1.5.7 1.5 1.5S10.3 9 9.5 9S8 8.3 8 7.5S8.7 6 9.5 6m5 0c.8 0 1.5.7 1.5 1.5S15.3 9 14.5 9S13 8.3 13 7.5S13.7 6 14.5 6m3 4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5" />
+            </svg>
+        </span>
+    </button>
+
+    <!--Registered user space-->
+    {% if user.is_authenticated %}
+    <!-- account icon -->
+    <a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <span class="theme-responsive" aria-hidden="true">
+            <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <title>user-filled</title>
+                <path fill="currentColor"
+                    d="M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3z" />
+            </svg>
+        </span>
+    </a>
+    {% else %}
+    <!--Login icon-->
+    <a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <span class="theme-responsive" aria-hidden="true">
+            <svg width="1em" height="1em" viewBox="0 0 24 24">
+                <title>lock-filled</title>
+                <path fill="currentColor" fill-rule="evenodd"
+                    d="M7.5 9V6.5a4.5 4.5 0 0 1 9 0V9H19a1 1 0 0 1 1 .999V21a.997.997 0 0 1-1 1H5a1 1 0 0 1-1-.999V10a.997.997 0 0 1 1-1zM9 9h6V6.5a3 3 0 0 0-6 0zm2.4 6.875V18h1.2v-2.125a1.5 1.5 0 1 0-1.2 0" />
+            </svg>
+        </span>
+    </a>
+    {% endif %}
+    <!--Admin space-->
+    {% if user.is_superuser %}
+    <!-- account icon -->
+    <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <span class="colorred" aria-hidden="true">
+            <svg x width="1em" height="1em" viewBox="0 0 24 24">
+                <title>admin-sheild</title>
+                <path fill="currentColor"
+                    d="M12 23C6.443 21.765 2 16.522 2 11V5l10-4l10 4v6c0 5.524-4.443 10.765-10 12M4 6v5a10.58 10.58 0 0 0 8 10a10.58 10.58 0 0 0 8-10V6l-8-3Z" />
+                <circle cx="12" cy="8.5" r="2.5" fill="currentColor" />
+                <path fill="currentColor"
+                    d="M7 15a5.78 5.78 0 0 0 5 3a5.78 5.78 0 0 0 5-3c-.025-1.896-3.342-3-5-3c-1.667 0-4.975 1.104-5 3" />
+            </svg>
+        </span>
+    </a>
+    {% endif %}
+    <!--Shopping basket-->
+    <div>
+        <span class="theme-responsive">
+            <svg width="1em" height="1em" viewBox="0 0 48 48">
+                <title>shopping-basket</title>
+                <g fill="none">
+                    <path d="M39 32H13L8 12h36z" />
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                        d="M3 6h3.5L8 12m0 0l5 20h26l5-20z" />
+                    <circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="4" />
+                    <circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="4" />
+                </g>
+            </svg>
+        </span>
+
+    </div>
 </nav>
