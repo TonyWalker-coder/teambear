@@ -6,7 +6,7 @@ start 8/10/26
 
 {% block content %}
 
-<div style="min-height: 90vh;">
+<div class="pagefiller">
 
     <section class="auth-layout account-wrapper">
 
@@ -16,7 +16,7 @@ start 8/10/26
                 <h2>
                     <h2>Welcome {{ user.username }}</h2>
                 </h2>
-<!--⚠️ remove last login is it wont show the true data-->
+<!--⚠️ remove last login is, if it wont show the true data-->
                 <p>Last Login: {{ user.last_login|date:"d M Y H:i" }}</p>
 
                 <hr>

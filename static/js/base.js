@@ -1,3 +1,4 @@
+//ensure we have a theme to load on a new system
 const theme =
     localStorage.getItem("theme") ||
     "lightblue";
@@ -7,6 +8,8 @@ if (!localStorage.getItem("theme")) {
     localStorage.setItem("theme", theme);
 }
 
+document.documentElement.setAttribute("data-theme", theme);
+//The mobile hamburger toggle
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
 
@@ -22,7 +25,7 @@ menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("open", isOpen);
 
 });
-
+//The theme toggle
 const themes = ["light", "lightblue", "dark", "grey"];
 
 document
@@ -53,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme") || "spring";
     document.documentElement.setAttribute("data-theme", savedTheme);
 });
-
+//The message modal system
 function messageModal(type, title, message) {
     
     modal.classList.remove(

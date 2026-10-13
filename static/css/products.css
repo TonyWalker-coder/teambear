@@ -27,10 +27,9 @@
 }
 
 .category-card {
-    border: solid 10px var(--dark-banner);
-    background: var(--bg-card);
+    background: var(--dark-banner);
     box-shadow:
-        0 0.5rem 1rem rgba(0,0,5,.55);
+        0 0.5rem 1rem rgba(0,0,0,.15);
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 0.75rem;
@@ -40,6 +39,16 @@
     align-content: flex-start;
     justify-content: space-between;
     display: block;
+}
+.category-card-container {
+    padding: 1rem;
+
+    border-radius: 1rem;
+
+    background: var(--bg-card);
+
+    box-shadow:
+        0 0.5rem 1rem rgba(0,0,0,.15);
 }
 
 
