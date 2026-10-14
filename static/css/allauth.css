@@ -123,10 +123,10 @@
 
     font-weight: 600;
 }
-
+/*⚠️
 body{
     flex: 1;
-}
+}*/
 
 .register-benefits {
     display: flex;

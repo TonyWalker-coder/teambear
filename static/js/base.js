@@ -97,3 +97,25 @@ function messageModal(type, title, message) {
 
     modal.classList.remove("hidden");
 }
+//open the product selection card close any open cards
+document.querySelectorAll('.inside-category-card').forEach(card => {
+    card.addEventListener('click', () => {
+
+        const current = card
+            .closest('.category-card')
+            .querySelector('.proditems');
+
+        const isOpening = current.classList.contains('hidden');
+
+        document.querySelectorAll('.proditems').forEach(item => {
+            item.classList.add('hidden');
+        });
+
+        if (isOpening) {
+            current.classList.remove('hidden');
+
+            // Future refresh call
+            console.log('Category opened');
+        }
+    });
+});

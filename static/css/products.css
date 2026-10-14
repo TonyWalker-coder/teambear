@@ -29,7 +29,7 @@
 .category-card {
     background: var(--dark-banner);
     box-shadow:
-        0 0.5rem 1rem rgba(0,0,0,.15);
+        0 0.5rem 1rem rgba(0, 0, 0, .15);
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 0.75rem;
@@ -40,6 +40,7 @@
     justify-content: space-between;
     display: block;
 }
+
 .category-card-container {
     padding: 1rem;
 
@@ -48,7 +49,9 @@
     background: var(--bg-card);
 
     box-shadow:
-        0 0.5rem 1rem rgba(0,0,0,.15);
+        0 0.5rem 1rem rgba(0, 0, 0, .15);
+    display: flex;
+    align-items: flex-start;
 }
 
 
@@ -87,6 +90,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     justify-items: center;
+    align-items: start;
 }
 
 

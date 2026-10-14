@@ -10,13 +10,13 @@ start 8/10/26
 
     <section class="auth-layout account-wrapper">
 
-        <div class="auth-info">
+        <div class="auth-info auth-form">
 
             <section class="user-toggle register-benefits">
                 <h2>
                     <h2>Welcome {{ user.username }}</h2>
                 </h2>
-<!--⚠️ remove last login is, if it wont show the true data-->
+                <!--⚠️ remove last login is, if it wont show the true data-->
                 <p>Last Login: {{ user.last_login|date:"d M Y H:i" }}</p>
 
                 <hr>
@@ -44,7 +44,6 @@ start 8/10/26
                     </button>
                 </form>
             </section>
-
 
 
         </div>

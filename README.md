@@ -113,6 +113,56 @@ As a site owner, I want the homepage to present the TeamBear brand in a clear an
 - [ ] Maintain branding and styling consistency throughout the site.
 - [ ] Test responsiveness on desktop, tablet, and mobile devices.
 
+Site Design
+
+When discussing UX decisions:
+
+TeamBear avoids forcing users through registration loops. Features are designed to encourage registration through rewards and convenience rather than access restrictions.
+
+Assessment Reflection
+
+This one is particularly strong because assessors like seeing reasoning.
+
+You could write:
+
+During development, guest user journeys became a key consideration. Rather than restricting core functionality behind authentication, the project adopted the principle "Registration enhances the experience. It does not unlock the basic experience." This influenced the design of navigation, product browsing, contact forms, special offers, and checkout functionality.
+
+
+
+Guest Access (must have)
+User Story
+
+As a guest visitor, I want to browse products, contact the site owner, and complete purchases without being forced to create an account so that I can use the website without unnecessary barriers.
+
+Acceptance Criteria
+Guests can access all public pages of the website.
+Guests can browse and search the product catalogue.
+Guests can add products to a shopping basket.
+Guests can proceed through checkout without mandatory account registration.
+Guests can contact the site owner using the contact page.
+Guests are not redirected to registration pages unless they attempt to access account-specific features.
+The website clearly identifies features that require an authenticated account.
+Tasks
+ Configure public product browsing for anonymous users.
+ Implement guest basket functionality using sessions.
+ Allow guest checkout.
+ Create guest contact form functionality.
+ Protect account-only areas using authentication checks.
+ Redirect guests to login only when accessing restricted features.
+ Test complete guest user journeys.
+
+
+"Registration enhances the experience. It does not unlock the basic experience."
+Under Guest Access:
+
+Design Principle: Registration enhances the experience. It does not unlock the basic experience.
+
+
+Under Project Goals:
+
+TeamBear is designed around the principle that registration enhances the user experience rather than unlocking the basic user experience. Visitors can browse products, contact TeamBear, and complete purchases without creating an account. Registration provides additional benefits such as discounts, order history, and member rewards.
+
+
 
 ## Navigation (*must have*)
  
