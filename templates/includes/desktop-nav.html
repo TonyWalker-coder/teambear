@@ -113,8 +113,8 @@
         <a href="{% url 'home' %}">🛖 Home:</a>
         <a href="{% url 'about' %}">AboutUs:</a>
         <a href="{% url 'products' %}">Meet The Bears:</a>
-        <a">ContactUs:</a>
-        <a">🔥 Specials:</a>
+        <a href="{% url 'contact' %}">📩 ContactUs:</a>
+        <a href="{% url 'specials' %}">🔥 Specials:</a>
         {% if user.is_authenticated %}
 <!-- Account signout -->
         <a href="{% url 'logout' %}" aria-label="Account registration">Sign Out:</a>

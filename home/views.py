@@ -17,4 +17,10 @@ def admin_panel(request):
     return render(request, "account/admin_panel.html")
 
 def products(request):
-    return render(request, "products_grid.html")
+    return render(request, "products/products_grid.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
+def specials(request):
+    return render(request, "products/specials.html")
