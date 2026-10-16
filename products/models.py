@@ -11,6 +11,30 @@ class Team(models.Model):
     def __str__(self):
         return self.team_name
 
+class ProductType(models.Model):
+    name = models.CharField(
+        max_length=50,
+        unique=True
+    )
+
+    slug = models.SlugField(
+        unique=True
+    )
+
+    created_on = models.DateTimeField(
+        auto_now_add=True
+    )
+
+    updated_on = models.DateTimeField(
+        auto_now=True
+    )
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return self.name
+
 class Product(models.Model):
     bear_name = models.CharField(max_length=100)
 
@@ -32,10 +56,20 @@ class Product(models.Model):
 
     description = models.TextField()
 
+    product_type = models.ForeignKey(
+        ProductType,
+        on_delete=models.PROTECT,
+        related_name="products",
+        null=True,
+        blank=True,
+    )
+
     team = models.ForeignKey(
         Team,
         on_delete=models.CASCADE,
-        related_name="products"
+        related_name="products",
+        null=True,
+        blank=True,
     )
 
 
@@ -112,3 +146,5 @@ class SaleItem(models.Model):
 
     def __str__(self):
         return f"{self.product} x {self.qty}"
+
+

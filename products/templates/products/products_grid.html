@@ -12,100 +12,73 @@ start 12/10/26
 
 
         <div class="category-card-container">
-            <div class="category-card">
-                <div class="inside-category-card" style="border: 2px solid black" ;>
-                    <h3>All Teams</h3>
-                    <p>23 Products</p>
-                </div>
-            </div>
-        </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <div class="inside-category-card" style="border: 2px solid black" ;>
-                    <h3>Arsenal</h3>
-                    <p>10 Products</p>
-                </div>
-                <div class="proditems hidden">
 
-                    <div class="category-grid">
-                        <h3>All</h3>
-                        <p>10 Products</p>
-                        <h3>Mugs</h3>
-                        <p>1 Products</p>
-                        <h3>Bedding</h3>
-                        <p>3 Products</p>
-                        <h3>Bears</h3>
-                        <p>6 Product</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="category-card-container">
             <div class="category-card">
-                <div class="inside-category-card" ;>
-                    <h3>Spurs</h3>
-                    <p>6 Products</p>
-                </div>
-                <div class="proditems hidden">
 
-                    <div class="category-grid">
-                        <h3>All</h3>
-                        <p>6 Products</p>
-                        <h3>Mugs</h3>
-                        <p>1 Products</p>
-                        <h3>Bedding</h3>
-                        <p>2 Products</p>
-                        <h3>Bears</h3>
-                        <p>2 Product</p>
-                        <h3>Game</h3>
-                        <p>1 Product</p>
-                    </div>
+                <div class="inside-category-card">
+
+                    <h3>Browse Teams</h3>
+
+                    <p>{{ teams|length }} Teams</p>
+
+
                 </div>
-            </div>
-        </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <h3>Liverpool</h3>
-                <p>0 Products</p>
-            </div>
-        </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <h3>Man Utd</h3>
-                <p>7 Products</p>
-            </div>
-        </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <h3>All Products</h3>
-                <p>23 Items</p>
             </div>
         </div>
 
+        {% for team in teams %}
+
         <div class="category-card-container">
+
             <div class="category-card">
-                <h3>Mugs</h3>
-                <p>5 Items</p>
+
+                <div class="inside-category-card">
+
+                    <h3>{{ team.team_name }}</h3>
+
+                    <p>{{ team.product_count }} Products</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+        <div class="category-card-container">
+
+            <div class="category-card">
+
+                <div class="inside-category-card">
+
+                    <h3>Browse Product</h3>
+
+                    <p>{{ product_types|length }} Product</p>
+
+
+                </div>
             </div>
         </div>
+
+        {% for product_type in product_types %}
         <div class="category-card-container">
+
             <div class="category-card">
-                <h3>Towels</h3>
-                <p>7 Items</p>
+
+                <div class="inside-category-card">
+
+                    <h3>{{ product_type.name }}</h3>
+
+                    <p>{{ product_type.product_count }} Products</p>
+
+
+                </div>
             </div>
         </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <h3>Big Bear</h3>
-                <p>3 Items</p>
-            </div>
-        </div>
-        <div class="category-card-container">
-            <div class="category-card">
-                <h3>Med Bear</h3>
-                <p>8 Items</p>
-            </div>
-        </div>
+
+        {% endfor %}
+
 
     </div>
 
@@ -115,26 +88,6 @@ start 12/10/26
 
 
         <div class="product-grid">
-
-            <div class="product-card">
-                <h3>Bear Name</h3>
-                <p>Product Placeholder</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Bear Name</h3>
-                <p>Product Placeholder</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Bear Name</h3>
-                <p>Product Placeholder</p>
-            </div>
-
-            <div class="product-card">
-                <h3>Bear Name</h3>
-                <p>Product Placeholder</p>
-            </div>
 
             <div class="product-card">
                 <h3>Bear Name</h3>

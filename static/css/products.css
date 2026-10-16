@@ -29,7 +29,7 @@
 .category-card {
     background: var(--dark-banner);
     box-shadow:
-        0 0.5rem 1rem rgba(0, 0, 0, .15);
+        0 0.5rem 1rem rgba(0, 0, 0, .25);
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 0.75rem;
