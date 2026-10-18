@@ -1,7 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block pagecomments %}
 product_grid created by Tony
 start 12/10/26
+{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}?v=2">
 {% endblock %}
 
 {% block content %}
@@ -23,6 +27,13 @@ start 12/10/26
 
 
                 </div>
+                <div class="proditems hidden" data-product="Browse_Teams">
+
+                    <div class="category-grid">
+                        <h4>Browse {{ teams|length }} teams</h4>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -32,12 +43,22 @@ start 12/10/26
 
             <div class="category-card">
 
-                <div class="inside-category-card">
+                <div class="inside-category-card" data-product="{{team.team_name}}">
 
                     <h3>{{ team.team_name }}</h3>
 
                     <p>{{ team.product_count }} Products</p>
 
+                </div>
+                <div class="proditems hidden" data-product="{{team.team_name}}">
+
+                    <div class="category-grid">
+                        <h4>All</h4>
+                        <p>10 Products</p>
+                        <h4>Mugs</h4>
+                        <p>1 Products</p>
+
+                    </div>
                 </div>
 
             </div>
@@ -58,6 +79,12 @@ start 12/10/26
 
 
                 </div>
+                <div class="proditems hidden" data-product="Browse_Product">
+
+                    <div class="category-grid">
+                        <h4>Browse {{ product_types|length }} product</h4>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -66,13 +93,23 @@ start 12/10/26
 
             <div class="category-card">
 
-                <div class="inside-category-card">
+                <div class="inside-category-card" data-product="{{ product_type.name }}">
 
                     <h3>{{ product_type.name }}</h3>
 
                     <p>{{ product_type.product_count }} Products</p>
 
 
+                </div>
+                <div class="proditems hidden" data-product="{{ product_type.name }}">
+
+                    <div class="category-grid">
+                        <h4>All</h4>
+                        <p>10 Products</p>
+                        <h3>Mugs</h3>
+                        <p>1 Products</p>
+
+                    </div>
                 </div>
             </div>
         </div>

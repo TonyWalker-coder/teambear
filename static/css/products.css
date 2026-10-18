@@ -66,6 +66,10 @@
     display: flex;
     align-content: flex-start;
     justify-content: space-between;
+    cursor: pointer;
+}
+.inside-category-card:hover {
+    background-color: var(--bg-card);
 }
 
 .category-card:hover {

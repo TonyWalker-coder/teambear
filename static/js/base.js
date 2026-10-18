@@ -119,3 +119,6 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
         }
     });
 });
+
+
+
