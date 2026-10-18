@@ -3,7 +3,10 @@
 login created by Tony
 start 8/10/26
 {% endblock %}
-
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/allauth.css' %}?v=2">
+{% endblock %}
 {% block content %}
 <div class="pagefiller">
 
