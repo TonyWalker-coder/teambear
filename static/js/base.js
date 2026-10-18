@@ -9,7 +9,8 @@ if (!localStorage.getItem("theme")) {
 }
 
 document.documentElement.setAttribute("data-theme", theme);
-//The mobile hamburger toggle
+
+//the mobile hamburger toggle
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
 
@@ -25,7 +26,7 @@ menuBtn.addEventListener("click", () => {
     menuBtn.classList.toggle("open", isOpen);
 
 });
-//The theme toggle
+//the theme toggle
 const themes = ["light", "lightblue", "dark", "grey"];
 
 document
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedTheme = localStorage.getItem("theme") || "spring";
     document.documentElement.setAttribute("data-theme", savedTheme);
 });
-//The message modal system
+//the message modal system
 function messageModal(type, title, message) {
     
     modal.classList.remove(
@@ -97,7 +98,8 @@ function messageModal(type, title, message) {
 
     modal.classList.remove("hidden");
 }
-//open the product selection card close any open cards
+//open the product selection panel card and close any open cards
+//now changes aria collapses state of panel
 document.querySelectorAll('.inside-category-card').forEach(card => {
     card.addEventListener('click', () => {
 
@@ -109,12 +111,12 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
 
         const isOpening = current.classList.contains('hidden');
 
-        // Close all panels
+        // close all panels
         document.querySelectorAll('.proditems').forEach(item => {
             item.classList.add('hidden');
         });
 
-        // Reset all aria-expanded values
+        // reset all aria-expanded values
         document.querySelectorAll('.inside-category-card button').forEach(btn => {
             btn.setAttribute('aria-expanded', 'false');
         });
@@ -122,10 +124,10 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
         if (isOpening) {
             current.classList.remove('hidden');
 
-            // Update the clicked button
+            // update the clicked button
             button.setAttribute('aria-expanded', 'true');
 
-            // Future refresh call
+// ⚠️ state check for future refresh call
             console.log('Category opened');
         }
     });
