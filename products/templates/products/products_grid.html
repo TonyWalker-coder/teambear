@@ -21,12 +21,12 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button aria-label="Browse all the teams" aria-expanded="false" >Browse all <span>{{ teams|length }} Teams</span></button>
+                    <button aria-controls="Browse_Teams-panel" data-product="Browse_Teams" aria-label="Browse all the teams" aria-expanded="false" >Browse all <span>{{ teams|length }} Teams</span></button>
 
 
 
                 </div>
-                <div class="proditems hidden" data-product="Browse_Teams">
+                <div id="Browse_Teams-panel" class="proditems hidden" >
 
                     <div class="category-grid">
                         <h4>Browse {{ teams|length }} teams</h4>
@@ -42,12 +42,12 @@ start 12/10/26
 
             <div class="category-card">
 
-                <div class="inside-category-card" data-product="{{team.team_name}}">
+                <div class="inside-category-card">
 
-                    <button aria-label="Select the {{ team.team_name }} submenu of {{ team.product_count }} products" aria-expanded="false" >{{ team.team_name }} <span>{{ team.product_count }} Products</span></button>
+                    <button aria-controls="{{team.team_name}}-panel" data-product="{{team.team_name}}" aria-label="Expand {{ team.team_name }} product categories" aria-expanded="false" >{{ team.team_name }} <span>{{ team.product_count }} Products</span></button>
 
                 </div>
-                <div class="proditems hidden" data-product="{{team.team_name}}">
+                <div id="{{team.team_name}}-panel" class="proditems hidden">
 
                     <div class="category-grid">
                         <h4>All</h4>
@@ -70,12 +70,13 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button aria-label="Browse all the product" aria-expanded="false" >Browse all <span>{{ product_types|length }} Product</span></button>
+                    <button aria-controls="Browse_Product-panel" data-product="Browse_Product" aria-label="Browse all the product" aria-expanded="false" >
+                        Browse all <span>{{ product_types|length }} Product</span></button>
 
 
 
                 </div>
-                <div class="proditems hidden" data-product="Browse_Product">
+                <div id="Browse_Product-panel"  class="proditems hidden" >
 
                     <div class="category-grid">
                         <h4>Browse {{ product_types|length }} product</h4>
@@ -89,14 +90,14 @@ start 12/10/26
 
             <div class="category-card">
 
-                <div class="inside-category-card" data-product="{{ product_type.name }}">
+                <div class="inside-category-card" >
 
-                    <button aria-label="Select the {{ product_type.name }} submenu of {{ product_type.product_count }} products" aria-expanded="false">{{ product_type.name }} <span>{{ product_type.product_count }} Products</span></button>
+                    <button aria-controls="{{ product_type.name }}-panel" data-product="{{ product_type.name }}" aria-label="Expand {{ product_type.name }} product categories" aria-expanded="false">{{ product_type.name }} <span>{{ product_type.product_count }} Products</span></button>
 
 
 
                 </div>
-                <div class="proditems hidden" data-product="{{ product_type.name }}">
+                <div id="{{ product_type.name }}-panel" class="proditems hidden">
 
                     <div class="category-grid">
                         <h4>All</h4>

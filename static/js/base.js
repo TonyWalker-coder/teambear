@@ -101,24 +101,32 @@ function messageModal(type, title, message) {
 document.querySelectorAll('.inside-category-card').forEach(card => {
     card.addEventListener('click', () => {
 
+        const button = card.querySelector('button');
+
         const current = card
             .closest('.category-card')
             .querySelector('.proditems');
 
         const isOpening = current.classList.contains('hidden');
 
+        // Close all panels
         document.querySelectorAll('.proditems').forEach(item => {
             item.classList.add('hidden');
         });
 
+        // Reset all aria-expanded values
+        document.querySelectorAll('.inside-category-card button').forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
+        });
+
         if (isOpening) {
             current.classList.remove('hidden');
+
+            // Update the clicked button
+            button.setAttribute('aria-expanded', 'true');
 
             // Future refresh call
             console.log('Category opened');
         }
     });
 });
-
-
-
