@@ -68,9 +68,28 @@
     justify-content: space-between;
     cursor: pointer;
 }
-.inside-category-card:hover {
+
+.top-panel button{
+    border: 2px solid var(--border-dark);
+    font-size: 1.5rem;
+    background-color: inherit;
+    color:var(--text-heading);
+    width: 90%;
+    border-radius: 15px;
+    padding: 3px 8px;
+}
+.top-panel button:hover{
     background-color: var(--bg-card);
 }
+.top-panel button::after{
+    background-color: var(--bg-card);
+}
+.top-panel button span{
+    font-size: 1rem;
+    color:var(--text-primary);
+
+}
+
 
 .category-card:hover {
     transform: translateY(-2px);

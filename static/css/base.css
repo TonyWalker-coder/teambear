@@ -502,7 +502,7 @@ svg,
 }
 .pagefiller{
     min-height: 90vh;
-    width: 100%;
+    width: 100vw;
     padding-top: var( --navbar-height-mobile);
     background-color: var(--bg-page);
 }
