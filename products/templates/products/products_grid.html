@@ -21,7 +21,7 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button aria-controls="Browse_Teams-panel" data-product="Browse_Teams" aria-label="Browse all the teams" aria-expanded="false" >Browse all <span>{{ teams|length }} Teams</span></button>
+                    <button class="category-button" aria-controls="Browse_Teams-panel" data-product="Browse_Teams" aria-label="Browse all the teams" aria-expanded="false" >Browse all <span>{{ teams|length }} Teams</span></button>
 
 
 
@@ -44,7 +44,7 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button aria-controls="{{team.team_name}}-panel" data-product="{{team.team_name}}" aria-label="Expand {{ team.team_name }} product categories" aria-expanded="false" >{{ team.team_name }} <span>{{ team.product_count }} Products</span></button>
+                    <button class="category-button" aria-controls="{{team.team_name}}-panel" data-product="{{team.team_name}}" aria-label="Expand {{ team.team_name }} product categories" aria-expanded="false" >{{ team.team_name }} <span>{{ team.product_count }} Products</span></button>
 
                 </div>
                 <div id="{{team.team_name}}-panel" class="proditems hidden">
@@ -70,7 +70,7 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button aria-controls="Browse_Product-panel" data-product="Browse_Product" aria-label="Browse all the product" aria-expanded="false" >
+                    <button class="category-button" aria-controls="Browse_Product-panel" data-product="Browse_Product" aria-label="Browse all the product" aria-expanded="false" >
                         Browse all <span>{{ product_types|length }} Product</span></button>
 
 
@@ -92,7 +92,7 @@ start 12/10/26
 
                 <div class="inside-category-card" >
 
-                    <button aria-controls="{{ product_type.name }}-panel" data-product="{{ product_type.name }}" aria-label="Expand {{ product_type.name }} product categories" aria-expanded="false">{{ product_type.name }} <span>{{ product_type.product_count }} Products</span></button>
+                    <button class="category-button" aria-controls="{{ product_type.name }}-panel" data-product="{{ product_type.name }}" aria-label="Expand {{ product_type.name }} product categories" aria-expanded="false">{{ product_type.name }} <span>{{ product_type.product_count }} Products</span></button>
 
 
 

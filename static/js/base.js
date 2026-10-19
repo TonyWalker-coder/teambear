@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 //the message modal system
 function messageModal(type, title, message) {
-    
+
     modal.classList.remove(
         "info",
         "success",
@@ -114,21 +114,54 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
         // close all panels
         document.querySelectorAll('.proditems').forEach(item => {
             item.classList.add('hidden');
+
+
+
         });
+
 
         // reset all aria-expanded values
         document.querySelectorAll('.inside-category-card button').forEach(btn => {
             btn.setAttribute('aria-expanded', 'false');
-        });
 
+        });
+// remove active from all buttons
+document
+    .querySelectorAll('.category-button')
+    .forEach(button => {
+        button.classList.remove('active');
+    });
+
+if (isOpening) {
+
+    current.classList.remove('hidden');
+
+    button.setAttribute('aria-expanded', 'true');
+
+    button.classList.add('active');
+
+} else {
+
+    button.setAttribute('aria-expanded', 'false');
+
+}
         if (isOpening) {
             current.classList.remove('hidden');
 
             // update the clicked button
             button.setAttribute('aria-expanded', 'true');
 
-// ⚠️ state check for future refresh call
+            btn.classList.add("active");
+
+
+            // ⚠️ state check for future refresh call
             console.log('Category opened');
         }
     });
+});
+document.querySelectorAll('.proditems').forEach(item => {
+    item.classList.add('hidden');
+});
+document.querySelectorAll('.category-button').forEach(button => {
+    button.classList.remove('active');
 });
