@@ -1,10 +1,13 @@
 <div id="navbar" class="desk-navbar">
 
-    <div>
-        <svg width="1056.661756pt" height="1488.508813pt" viewBox="0 0 1056.661756 1488.508813"
-            preserveAspectRatio="xMidYMid meet">
-            <g transform="translate(-471.748039,1742.722480) scale(0.100000,-0.100000)" stroke="none">
-                <path d="M6420 17424 c-131 -15 -211 -31 -375 -77 -169 -47 -429 -181 -597
+
+    <div class="toprow ">
+        <div class="brand-group">
+            <div>
+                <svg width="1056.661756pt" height="1488.508813pt" viewBox="0 0 1056.661756 1488.508813"
+                    preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(-471.748039,1742.722480) scale(0.100000,-0.100000)" stroke="none">
+                        <path d="M6420 17424 c-131 -15 -211 -31 -375 -77 -169 -47 -429 -181 -597
                             -307 -401 -301 -639 -713 -719 -1245 -15 -101 -15 -365 0 -470 42 -285 149
                             -565 311 -808 76 -115 212 -260 340 -363 77 -62 278 -192 366 -237 61 -31 219
                             -87 245 -87 30 0 33 -25 16 -109 -8 -42 -21 -110 -27 -151 -7 -41 -18 -111
@@ -78,14 +81,14 @@
                             -225 -140 -436 -223 -710 -279 -134 -28 -464 -26 -590 4 -276 65 -467 173
                             -666 378 -230 238 -341 493 -380 871 -19 183 6 385 78 628 65 220 139 381 266
                             577 270 415 677 721 1144 858 222 66 500 79 718 35z" />
-                <path d="M8027 13084 c-242 -75 -381 -336 -301 -568 44 -129 142 -240 259
+                        <path d="M8027 13084 c-242 -75 -381 -336 -301 -568 44 -129 142 -240 259
                             -297 62 -30 79 -33 155 -34 131 0 216 40 323 151 153 160 196 335 120 497 -36
                             76 -116 166 -181 204 -103 60 -265 81 -375 47z" />
-                <path d="M11750 13082 c-101 -38 -172 -93 -226 -177 -43 -69 -64 -144 -64
+                        <path d="M11750 13082 c-101 -38 -172 -93 -226 -177 -43 -69 -64 -144 -64
                             -235 0 -97 21 -168 76 -252 60 -93 125 -153 212 -195 70 -34 76 -35 170 -31
                             124 4 186 33 287 133 121 122 171 249 146 381 -31 171 -150 311 -316 373 -71
                             27 -217 28 -285 3z" />
-                <path d="M9780 12354 c-275 -32 -503 -105 -576 -186 -77 -84 -76 -204 3 -324
+                        <path d="M9780 12354 c-275 -32 -503 -105 -576 -186 -77 -84 -76 -204 3 -324
                             45 -69 181 -198 271 -258 75 -49 242 -135 345 -176 31 -12 60 -27 64 -33 3 -6
                             9 -123 13 -261 8 -286 8 -288 -67 -356 -85 -80 -172 -98 -305 -64 -145 37
                             -250 124 -338 279 -81 145 -135 176 -202 116 -31 -28 -33 -33 -33 -98 0 -59 5
@@ -96,99 +99,101 @@
                             -219 -58 -81 -1 -94 1 -134 26 -56 34 -126 101 -147 140 -15 26 -17 63 -16
                             273 1 278 -3 266 91 296 98 31 227 97 343 175 121 83 271 242 307 328 17 42
                             20 134 4 175 -50 132 -291 227 -669 263 -177 17 -279 17 -432 -1z" />
-            </g>
-        </svg>
-    </div>
+                    </g>
+                </svg>
+            </div>
 
-    <div class="brand-name">
+            <div class="brand-name">
 
+                <h1>TeamBear</h1>
 
-
-        <h1>TeamBear</h1>
-
-    </div>
-
-    <nav class="desk-nav-links">
-
-        <a href="{% url 'home' %}">🛖 Home:</a>
-        <a href="{% url 'about' %}">AboutUs:</a>
-        <a href="{% url 'products' %}">Meet The Bears:</a>
-        <a href="{% url 'contact' %}">📩 ContactUs:</a>
-        <a href="{% url 'specials' %}">🔥 Specials:</a>
+            </div>
+        </div>
+        <!--Registered user space-->
         {% if user.is_authenticated %}
-<!-- Account signout -->
-        <a href="{% url 'logout' %}" aria-label="Account registration">Sign Out:</a>
-
+        <!-- account icon -->
+        <a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+            <span class="theme-responsive" aria-hidden="true">
+                <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <title>user-filled</title>
+                    <path fill="currentColor"
+                        d="M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3z" />
+                </svg>
+            </span>
+        </a>
         {% else %}
-<!-- Account register -->
-        <a href="{% url 'account_signup' %}" aria-label="Account registration">Register:</a>
+        <!--Login icon-->
+        <a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+            <span class="theme-responsive" aria-hidden="true">
+                <svg width="1em" height="1em" viewBox="0 0 24 24">
+                    <title>lock-filled</title>
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M7.5 9V6.5a4.5 4.5 0 0 1 9 0V9H19a1 1 0 0 1 1 .999V21a.997.997 0 0 1-1 1H5a1 1 0 0 1-1-.999V10a.997.997 0 0 1 1-1zM9 9h6V6.5a3 3 0 0 0-6 0zm2.4 6.875V18h1.2v-2.125a1.5 1.5 0 1 0-1.2 0" />
+                </svg>
+            </span>
+        </a>
         {% endif %}
-    </nav>
+        <!--Admin space-->
+        {% if user.is_superuser %}
+        <!-- account icon -->
+        <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+            <span class="colorred" aria-hidden="true">
+                <svg x width="1em" height="1em" viewBox="0 0 24 24">
+                    <title>admin-sheild</title>
+                    <path fill="currentColor"
+                        d="M12 23C6.443 21.765 2 16.522 2 11V5l10-4l10 4v6c0 5.524-4.443 10.765-10 12M4 6v5a10.58 10.58 0 0 0 8 10a10.58 10.58 0 0 0 8-10V6l-8-3Z" />
+                    <circle cx="12" cy="8.5" r="2.5" fill="currentColor" />
+                    <path fill="currentColor"
+                        d="M7 15a5.78 5.78 0 0 0 5 3a5.78 5.78 0 0 0 5-3c-.025-1.896-3.342-3-5-3c-1.667 0-4.975 1.104-5 3" />
+                </svg>
+            </span>
+        </a>
+        {% endif %}
+        <!--Shopping basket-->
+        <div>
+            <span class="theme-responsive">
+                <svg width="1em" height="1em" viewBox="0 0 48 48">
+                    <title>shopping-basket</title>
+                    <g fill="none">
+                        <path d="M39 32H13L8 12h36z" />
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                            d="M3 6h3.5L8 12m0 0l5 20h26l5-20z" />
+                        <circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="4" />
+                        <circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="4" />
+                    </g>
+                </svg>
+            </span>
+
+        </div>
+        <!--Theme toggle icon   -->
+        <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
+            <span class="theme-responsive" aria-hidden="true">🎨</span>
+        </button>
 
 
+    </div>
 
-<!--Theme toggle icon-->
-    <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
-        <span class="theme-responsive" aria-hidden="true">🎨</span>
-    </button>
 
-<!--Registered user space-->
-    {% if user.is_authenticated %}
-    <!-- account icon -->
-    <a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
-        <span class="theme-responsive" aria-hidden="true">
-            <svg width="1em" height="1em" viewBox="0 0 24 24">
-                <title>user-filled</title>
-                <path fill="currentColor"
-                    d="M6.5 7.5a5.5 5.5 0 1 1 11 0a5.5 5.5 0 0 1-11 0M3 19a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v3H3z" />
-            </svg>
-        </span>
-    </a>
-    {% else %}
-<!--Login icon-->
-    <a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
-        <span class="theme-responsive" aria-hidden="true">
-            <svg width="1em" height="1em" viewBox="0 0 24 24">
-                <title>lock-filled</title>
-                <path fill="currentColor" fill-rule="evenodd"
-                    d="M7.5 9V6.5a4.5 4.5 0 0 1 9 0V9H19a1 1 0 0 1 1 .999V21a.997.997 0 0 1-1 1H5a1 1 0 0 1-1-.999V10a.997.997 0 0 1 1-1zM9 9h6V6.5a3 3 0 0 0-6 0zm2.4 6.875V18h1.2v-2.125a1.5 1.5 0 1 0-1.2 0" />
-            </svg>
-        </span>
-    </a>
-    {% endif %}
-<!--Admin space-->
-    {% if user.is_superuser %}
-    <!-- account icon -->
-    <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
-        <span class="colorred" aria-hidden="true">
-            <svg x width="1em" height="1em" viewBox="0 0 24 24">
-                <title>admin-sheild</title>
-                <path fill="currentColor"
-                    d="M12 23C6.443 21.765 2 16.522 2 11V5l10-4l10 4v6c0 5.524-4.443 10.765-10 12M4 6v5a10.58 10.58 0 0 0 8 10a10.58 10.58 0 0 0 8-10V6l-8-3Z" />
-                <circle cx="12" cy="8.5" r="2.5" fill="currentColor" />
-                <path fill="currentColor"
-                    d="M7 15a5.78 5.78 0 0 0 5 3a5.78 5.78 0 0 0 5-3c-.025-1.896-3.342-3-5-3c-1.667 0-4.975 1.104-5 3" />
-            </svg>
-        </span>
-    </a>
-    {% endif %}
-<!--Shopping basket-->
-    <div>
-        <span class="theme-responsive">
-            <svg width="1em" height="1em" viewBox="0 0 48 48">
-                <title>shopping-basket</title>
-                <g fill="none">
-                    <path d="M39 32H13L8 12h36z" />
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
-                        d="M3 6h3.5L8 12m0 0l5 20h26l5-20z" />
-                    <circle cx="13" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="4" />
-                    <circle cx="39" cy="39" r="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="4" />
-                </g>
-            </svg>
-        </span>
+    <div class="botrow">
+        <nav>
 
+            <a href="{% url 'home' %}">🛖 Home:</a>
+            <a href="{% url 'products' %}">🐻 Meet The Bears:</a>
+            <a href="{% url 'about' %}">👥 AboutUs:</a>
+            <a href="{% url 'contact' %}">📩 ContactUs:</a>
+            <a href="{% url 'specials' %}">🔥 Specials:</a>
+            {% if user.is_authenticated %}
+            <!-- Account signout -->
+            <a href="{% url 'logout' %}" aria-label="Account registration">👋 Sign Out:</a>
+
+            {% else %}
+            <!-- Account register -->
+            <a href="{% url 'account_signup' %}" aria-label="Account registration">Register:</a>
+            {% endif %}
+
+        </nav>
     </div>
 
 </div>

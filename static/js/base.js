@@ -99,7 +99,8 @@ function messageModal(type, title, message) {
     modal.classList.remove("hidden");
 }
 //open the product selection panel card and close any open cards
-//now changes aria collapses state of panel
+//changes aria collapses state of panel
+//active high lighting included now
 document.querySelectorAll('.inside-category-card').forEach(card => {
     card.addEventListener('click', () => {
 
@@ -159,9 +160,9 @@ if (isOpening) {
         }
     });
 });
-document.querySelectorAll('.proditems').forEach(item => {
-    item.classList.add('hidden');
-});
-document.querySelectorAll('.category-button').forEach(button => {
-    button.classList.remove('active');
-});
+//document.querySelectorAll('.proditems').forEach(item => {
+//    item.classList.add('hidden');
+//});
+//document.querySelectorAll('.category-button').forEach(button => {
+//    button.classList.remove('active');
+//});

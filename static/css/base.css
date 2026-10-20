@@ -5,8 +5,9 @@
     --laptop: 1024px;
     --desktop: 1280px;
 
-    --navbar-height-desktop: 60px;
-    --navbar-height-mobile: 70px;
+    --navbar-height-desktop: 110px;
+    --navbar-height-desktop-row2: 35px;
+    --navbar-height-mobile: 60px;
     --footer-height: 50px;
 
     --font-heading: Georgia, serif;
@@ -63,16 +64,115 @@
     background-image: url("/static/images/hero/404.webp");
 }
 
-
-
-/* mobile or desktop navbar toggle*/
+/* desktop navbar*/
 .desk-navbar {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: flex-start;
+    background: var(--dark-banner);
+    color: var(--text-heading);
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    height: var(--navbar-height-desktop);
 }
 
-.navbar {
-    display: flex;
+.toprow {
+    display:flex; 
+    flex-direction: row; 
+    align-items: center;
+    height: 55px;
+
 }
+.brand-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: auto;
+}
+.brand-name h1 {
+    margin: 0;
+    color: var(--text-heading);
+    font-family: "DynaPuff", cursive, sans-serif;
+    letter-spacing: 0.06em;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: normal;
+    margin-left: 0.25rem;
+}
+#navbar .mobile-menu a,
+#navbar .theme-toggle,
+#navbar .login-toggle,
+#navbar span 
+{
+    padding: .5rem;
+    text-decoration: none;
+    color: currentColor;
+
+}
+.login-toggle {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+.login-toggle-btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+}
+.theme-responsive {
+    font-size: clamp(1.75rem, 2vw, 2.5rem);
+    margin: 0;
+}
+#navbar .theme-responsive:hover,
+#navbar a:hover   {
+    fill: red;
+    color:red;
+}
+#navbar .colorred {
+    font-size: clamp(1.75rem, 2vw, 2.5rem);
+    margin: 0;
+    fill:red;
+    color:red;
+}
+#navbar svg {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+}
+.botrow {
+    display:flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin:0;
+    font-size: clamp(1rem, 1.75vw, 2rem);
+    height: auto;
+}
+#navbar a {
+    margin: 0 2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+#navbar a::after {
+    color: var(--dark-text-primary);
+}
+
+
 
 /*BREAK POINTS*/
 /* Mobile Portrait */
@@ -145,10 +245,6 @@
         background-image: url("/static/images/hero/404.webp");
     }
 
-
-    .desk-navbar {
-        display: flex;
-    }
 
     .navbar {
         display: none;
@@ -235,34 +331,16 @@ Navbar styles
 
     color: var(--text-heading);
 
-    padding: 0.75rem 0.5rem;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    height: var(--navbar-height-mobile);
+    height: var(--navbar-height-desktop);
 
 
     background: var(--dark-banner);
 }
 
-.desk-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
 
-
-    justify-content: flex-start;
-
-    background: var(--dark-banner);
-
-    color: var(--text-heading);
-
-    padding: 0.75rem 0.5rem;
-    box-sizing: border-box;
-    height: var(--navbar-height-mobile);
-
-    background: var(--dark-banner);
-}
 
 svg,
 .error-pages svg {
@@ -299,20 +377,9 @@ svg,
     display: inline;
 }
 
-.left {
-    margin-right: 0;
-}
 
-.brand-name h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--text-heading);
-    font-family: "DynaPuff", cursive, sans-serif;
-    letter-spacing: 0.06em;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    font-weight: normal;
-    margin-left: 0.25rem;
-}
+
+
 
 .close-icon {
     display: none;
@@ -347,75 +414,36 @@ svg,
 .mobile-menu.open {
     max-height: 500px;
 }
-#navbar .theme-responsive:hover,
-#navbar a:hover   {
-    fill: red;
-    color:red;
-}
-#navbar .mobile-menu a,
-#navbar .theme-toggle,
-#navbar .login-toggle,
-#navbar span 
-{
-    padding: 1rem;
 
-    text-decoration: none;
-    color: currentColor;
 
-}
-.login-toggle {
-    padding: 1rem;
 
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-light);
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-}
-
-.theme-responsive {
-    font-size: clamp(1.75rem, 2vw, 2.5rem);
-    margin: 0;
-}
-#navbar .colorred {
-    font-size: clamp(1.75rem, 2vw, 2.5rem);
-    margin: 0;
-    fill:red;
-    color:red;
-}
-
-.desk-navbar {
-    align-items: center;
-    width: 100%;
-    height: var(--navbar-height-mobile);
-    padding-top: 0.5rem;
-}
 
 .desk-nav-links {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    margin:0;
+    font-size: clamp(1rem, 1.75vw, 2rem);
+    background-color: var(--dark-banner);
+    min-width: 100vw;
+    width: 100%;
+    height:var(--navbar-height-desktop-row2);
+    align-items: center;
+
+}
+.navbar-top {
+    padding: 0;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/*.theme-toggle {
     margin-left: auto;
-    margin-right: auto;
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
-
-}
-
-.desk-nav-links a {
-    margin: 0 2rem;
-    color: var(--text-primary);
-    text-decoration: none;
-}
-.desk-nav-links a::after {
-    color: var(--dark-text-primary);
-}
-
-.theme-toggle {
-    margin-left: auto;
-}
+}*/
 
 
 /*styles for about*/
@@ -489,21 +517,11 @@ svg,
 /*end error pages*/
 
 /*nav*/
-.login-toggle-btn {
-    all: unset;
-    cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 3rem;
-    height: 3rem;
-}
 .pagefiller{
     min-height: 90vh;
     max-width: 100vw;
-    padding-top: var( --navbar-height-mobile);
+    padding-top: var( --navbar-height-desktop);
     background-color: var(--bg-page);
     overflow-x: hidden;
 }
