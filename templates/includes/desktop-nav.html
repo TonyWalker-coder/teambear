@@ -112,7 +112,7 @@
         <!--Registered user space-->
         {% if user.is_authenticated %}
         <!-- account icon -->
-        <a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <a href="{% url 'account' %}" class="login-toggle login-toggle-btn" aria-label="Log in">
             <span class="theme-responsive" aria-hidden="true">
                 <svg width="1em" height="1em" viewBox="0 0 24 24">
                     <title>user-filled</title>
@@ -123,7 +123,7 @@
         </a>
         {% else %}
         <!--Login icon-->
-        <a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <a href="{% url 'account_login' %}" class="login-toggle login-toggle-btn" aria-label="Link to the login">
             <span class="theme-responsive" aria-hidden="true">
                 <svg width="1em" height="1em" viewBox="0 0 24 24">
                     <title>lock-filled</title>
@@ -136,7 +136,7 @@
         <!--Admin space-->
         {% if user.is_superuser %}
         <!-- account icon -->
-        <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Login or account">
+        <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Link to the administrator page">
             <span class="colorred" aria-hidden="true">
                 <svg x width="1em" height="1em" viewBox="0 0 24 24">
                     <title>admin-sheild</title>
@@ -152,6 +152,7 @@
         <!--Shopping basket-->
         <div>
             <span class="theme-responsive">
+                <a aria-label="Link to the shopping basket">
                 <svg width="1em" height="1em" viewBox="0 0 48 48">
                     <title>shopping-basket</title>
                     <g fill="none">
@@ -164,11 +165,12 @@
                             stroke-linejoin="round" stroke-width="4" />
                     </g>
                 </svg>
+                </a>
             </span>
 
         </div>
         <!--Theme toggle icon   -->
-        <button class="theme-toggle theme-toggle-btn" aria-label="Colour theme toggle">
+        <button type="button" class="theme-toggle theme-toggle-btn" aria-label="Toggle colour theme">
             <span class="theme-responsive" aria-hidden="true">🎨</span>
         </button>
 
@@ -176,21 +178,21 @@
     </div>
 
 
-    <div class="botrow">
-        <nav>
+    <div id="botrow"  class="botrow">
+        <nav aria-label="Primary navigation">
 
-            <a href="{% url 'home' %}">🛖 Home:</a>
-            <a href="{% url 'products' %}">🐻 Meet The Bears:</a>
-            <a href="{% url 'about' %}">👥 AboutUs:</a>
-            <a href="{% url 'contact' %}">📩 ContactUs:</a>
-            <a href="{% url 'specials' %}">🔥 Specials:</a>
+            <a href="{% url 'home' %}" aria-label="Link to homepage"><span class="ico">🛖</span><span class="lnk">Home:</span></a>
+            <a href="{% url 'products' %}" aria-label="Link to the product search page"><span>🐻</span><span class="lnk">Meet The Bears:</span></a>
+            <a href="{% url 'about' %}" aria-label="About us"><span class="ico">ℹ️</span><span class="lnk">AboutUs:</span></a>
+            <a href="{% url 'contact' %}" aria-label="Contact us"><span class="ico">📩</span><span class="lnk">ContactUs:</span></a>
+            <a href="{% url 'specials' %}" aria-label="Special offers"><span class="ico">🔥</span><span class="lnk">Specials:</span></a>
             {% if user.is_authenticated %}
             <!-- Account signout -->
-            <a href="{% url 'logout' %}" aria-label="Account registration">👋 Sign Out:</a>
+            <a href="{% url 'logout' %}" aria-label="Account sign in for registered users"><span>👋</span><span class="lnk">Sign Out:</a>
 
             {% else %}
             <!-- Account register -->
-            <a href="{% url 'account_signup' %}" aria-label="Account registration">Register:</a>
+            <a href="{% url 'account_signup' %}" aria-label="Account registration"><span class="lnk">Register:</span></a>
             {% endif %}
 
         </nav>

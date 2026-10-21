@@ -49,13 +49,11 @@
   {% block extra_js %}
   {% endblock %}
 
-
-
   <title>TeamBear : {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
-  <main>
+  <main role="main">
     
     {% block page_header %}
     {% endblock page_header %}
@@ -64,11 +62,7 @@
 
     {% block content %}
     {% endblock content%}
-
-
-
-
-    
+ 
   </main>
   <!-- Footer provides copyright, ownership and educational-use notices. -->
     <footer>
@@ -92,14 +86,5 @@
   {% block extrajs %}
   {% endblock %}
 
-
-
-
-
-    
-
-
 </body>
-
-
 </html>

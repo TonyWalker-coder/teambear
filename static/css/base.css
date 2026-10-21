@@ -69,6 +69,7 @@
     display: flex;
     flex-direction: column;
     max-width: 100vw;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -80,7 +81,25 @@
     margin:0;
     box-sizing: border-box;
     height: var(--navbar-height-desktop);
+    padding: 0;
+    margin: 0;
 }
+/*⚠️ redundant?
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: flex-end;
+    background: var(--dark-banner);
+    color: var(--text-heading);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: var(--navbar-height-desktop);
+    background: var(--dark-banner);
+}*/
 
 .toprow {
     display:flex; 
@@ -100,9 +119,12 @@
     color: var(--text-heading);
     font-family: "DynaPuff", cursive, sans-serif;
     letter-spacing: 0.06em;
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1rem, 2.5vw, 3rem);
     font-weight: normal;
     margin-left: 0.25rem;
+}
+#botrow span{
+   font-size: (.5rem, 1vw, .75rem); 
 }
 #navbar .mobile-menu a,
 #navbar .theme-toggle,
@@ -160,19 +182,24 @@
     justify-content: center;
     gap: 3rem;
     margin:0;
-    font-size: clamp(1rem, 1.75vw, 2rem);
     height: auto;
 }
-#navbar a {
+#botrow .ico {
+    font-size: 1.5rem;
+}
+#botrow .lnk {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+#botrow a {
     margin: 0 2rem;
     color: var(--text-primary);
     text-decoration: none;
+    
 }
 #navbar a::after {
     color: var(--dark-text-primary);
 }
-
-
+/* end desktop navbar*/
 
 /*BREAK POINTS*/
 /* Mobile Portrait */
@@ -257,7 +284,7 @@
         background-image: url("/static/images/hero/404.webp");
     }
 }
-
+/*standard sizing for site*/
 /* Medium shadow */
 .shadow-medium {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -291,6 +318,7 @@ h3,
 h4 {
     font-family: var(--font-heading);
 }
+/*end standard sizing for site*/
 
 
 footer {
