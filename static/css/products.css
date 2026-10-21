@@ -14,6 +14,17 @@
     width: 300px;
 }
 
+.product-name {
+    display: block;
+    width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-align: left;
+}
+
 .category-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -71,7 +82,7 @@
     cursor: pointer;
 }
 
-.top-panel button{
+.top-panel-button{
     border: 2px solid var(--border-dark);
     font-size: 1.5rem;
     background-color: inherit;
@@ -83,9 +94,54 @@
     flex-direction: column;
     align-items: center;
 }
-.top-panel button:hover{
+.top-panel-button:hover{
     background-color: var(--bg-card);
 }
+.product-button {
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 0.5rem;
+    color: var(--text-heading);
+
+    background-color: var(--dark-banner);
+    border: 1px solid var(--border-dark);
+    border-radius: 15px;
+}
+.product-button:hover {
+    width: max-content;
+    background-color: var(--bg-card);
+    white-space: nowrap;
+    min-width: 100%;
+}
+.product-name {
+    display: block;
+    width: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-align: left;
+    font-size: 1.5rem;
+    background-color: inherit;
+    color:var(--text-heading);
+    border-radius: 15px;
+    padding: 3px 8px;
+}
+.product-stock {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+}
+.product-button:hover .product-name {
+    overflow: visible;
+}
+
+
 .category-button.active{
     background-color: var(--bg-card);
     box-shadow: 0 0 8px rgba(255,255,255,.4);
@@ -122,60 +178,3 @@
     align-items: start;
     padding: 15px;
 }
-/*
-.top-panel {
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    justify-items: center;
-    align-items: start;
-}
-
-
-@media (max-width: 400px) {
-    .top-panel {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 699px) and (max-height: 400px) {
-
-    .top-panel {
-        grid-template-columns: 1fr 1fr;
-        ;
-    }
-
-}
-
-
-@media (min-width: 700px) and (min-height: 400px) {
-    .top-panel {
-        grid-template-columns: 1fr 1fr 1fr;
-        ;
-    }
-
-}
-
-
-@media (min-width: 1280px) and (max-height: 800px) {
-    .top-panel {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media (min-width: 1280px) and (min-height: 801px) {
-    .top-panel {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}
-
-
-@media (min-width: 1600px) {
-    .top-panel {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}*/

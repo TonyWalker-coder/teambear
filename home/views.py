@@ -31,6 +31,7 @@ def products(request):
 
     teams = (
         Team.objects
+        .prefetch_related("products")
         .annotate(
             product_count=Count("products")
         )
@@ -40,9 +41,11 @@ def products(request):
 
     product_types = (
         ProductType.objects
-            .annotate(
-                product_count=Count("products")
+        .prefetch_related("products")
+        .annotate(
+            product_count=Count("products")
         )
+        
         .filter(product_count__gt=0)
         .order_by("name")
     )
