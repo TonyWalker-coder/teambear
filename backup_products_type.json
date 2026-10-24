@@ -1,0 +1,42 @@
+[
+{
+    "model": "products.producttype",
+    "pk": 1,
+    "fields": {
+        "name": "Bear",
+        "slug": "bear",
+        "created_on": "2026-10-14T14:27:38.855Z",
+        "updated_on": "2026-10-14T14:27:38.855Z"
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 2,
+    "fields": {
+        "name": "Novelty",
+        "slug": "novelty",
+        "created_on": "2026-10-14T14:31:05.750Z",
+        "updated_on": "2026-10-14T14:31:05.750Z"
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 3,
+    "fields": {
+        "name": "Household",
+        "slug": "household",
+        "created_on": "2026-10-21T12:59:07.188Z",
+        "updated_on": "2026-10-21T12:59:07.188Z"
+    }
+},
+{
+    "model": "products.producttype",
+    "pk": 4,
+    "fields": {
+        "name": "Game",
+        "slug": "game",
+        "created_on": "2026-10-21T12:59:31.279Z",
+        "updated_on": "2026-10-21T12:59:31.279Z"
+    }
+}
+]
