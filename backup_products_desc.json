@@ -1,0 +1,98 @@
+[
+{
+    "model": "products.productdescription",
+    "pk": 1,
+    "fields": {
+        "product_type": 2,
+        "item_name": "Mug"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 2,
+    "fields": {
+        "product_type": 2,
+        "item_name": "Key Fob"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 3,
+    "fields": {
+        "product_type": 2,
+        "item_name": "Travel Cup"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 4,
+    "fields": {
+        "product_type": 3,
+        "item_name": "Floor Mat"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 5,
+    "fields": {
+        "product_type": 3,
+        "item_name": "Towel Set"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 6,
+    "fields": {
+        "product_type": 3,
+        "item_name": "Bedding"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 7,
+    "fields": {
+        "product_type": 1,
+        "item_name": "Medium sized bear"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 8,
+    "fields": {
+        "product_type": 1,
+        "item_name": "Cute cuddly bear"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 9,
+    "fields": {
+        "product_type": 1,
+        "item_name": "Large mascot teddy bear"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 10,
+    "fields": {
+        "product_type": 4,
+        "item_name": "BOX game"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 11,
+    "fields": {
+        "product_type": 4,
+        "item_name": "PS Gaming"
+    }
+},
+{
+    "model": "products.productdescription",
+    "pk": 12,
+    "fields": {
+        "product_type": 4,
+        "item_name": "Physical Gaming"
+    }
+}
+]
