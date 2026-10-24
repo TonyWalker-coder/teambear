@@ -69,10 +69,6 @@ class Product(models.Model):
         max_length=255
     )
 
-    size = models.PositiveIntegerField()
-
-    size_unit = models.CharField(max_length=10)
-
     description = models.TextField()
 
     product_description = models.ForeignKey(
