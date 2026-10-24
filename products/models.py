@@ -11,6 +11,8 @@ class Team(models.Model):
     def __str__(self):
         return self.team_name
 
+
+
 class ProductType(models.Model):
     name = models.CharField(
         max_length=50,
@@ -35,6 +37,23 @@ class ProductType(models.Model):
     def __str__(self):
         return self.name
 
+class ProductDescription(models.Model):
+    product_type = models.ForeignKey(
+        ProductType,
+        on_delete=models.CASCADE,
+        related_name="descriptions"
+    )
+
+    item_name = models.CharField(
+        max_length=100
+    )
+
+    class Meta:
+        ordering = ["item_name"]
+
+    def __str__(self):
+        return self.item_name
+
 class Product(models.Model):
     bear_name = models.CharField(max_length=100)
 
@@ -55,6 +74,14 @@ class Product(models.Model):
     size_unit = models.CharField(max_length=10)
 
     description = models.TextField()
+
+    product_description = models.ForeignKey(
+        ProductDescription,
+        on_delete=models.PROTECT,
+        related_name="products",
+        null=True,
+        blank=True,
+    )
 
     product_type = models.ForeignKey(
         ProductType,

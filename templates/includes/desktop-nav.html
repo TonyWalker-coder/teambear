@@ -1,6 +1,4 @@
 <div id="navbar" class="desk-navbar">
-
-
     <div class="toprow ">
         <div class="brand-group">
             <div>
@@ -134,11 +132,11 @@
         </a>
         {% endif %}
         <!--Admin space-->
-        {% if user.is_superuser %}
+         {% if user.is_superuser %}
         <!-- account icon -->
         <a href="{% url 'admin_panel' %}" class="login-toggle login-toggle-btn" aria-label="Link to the administrator page">
             <span class="colorred" aria-hidden="true">
-                <svg x width="1em" height="1em" viewBox="0 0 24 24">
+               <svg x width="1em" height="1em" viewBox="0 0 24 24">
                     <title>admin-sheild</title>
                     <path fill="currentColor"
                         d="M12 23C6.443 21.765 2 16.522 2 11V5l10-4l10 4v6c0 5.524-4.443 10.765-10 12M4 6v5a10.58 10.58 0 0 0 8 10a10.58 10.58 0 0 0 8-10V6l-8-3Z" />

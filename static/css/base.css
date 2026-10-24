@@ -552,6 +552,8 @@ svg,
     padding-top: var( --navbar-height-desktop);
     background-color: var(--bg-page);
     overflow-x: hidden;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 body {
     min-height: 100vh;

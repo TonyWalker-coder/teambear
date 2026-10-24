@@ -1,14 +1,17 @@
 //ensure we have a theme to load on a new system
-const theme =
-    localStorage.getItem("theme") ||
-    "lightblue";
+const themes = ["light", "lightblue", "dark", "grey"];
 
+let theme = localStorage.getItem("theme");
 
-if (!localStorage.getItem("theme")) {
+if (!themes.includes(theme)) {
+    console.warn(`Unknown theme: ${theme}`);
+    theme = "lightblue";
     localStorage.setItem("theme", theme);
 }
 
 document.documentElement.setAttribute("data-theme", theme);
+
+
 
 //the mobile hamburger toggle
 const menuBtn = document.getElementById("menuBtn");
@@ -27,7 +30,6 @@ menuBtn.addEventListener("click", () => {
 
 });
 //the theme toggle
-const themes = ["light", "lightblue", "dark", "grey"];
 
 document
     .querySelectorAll(".theme-toggle-btn")
@@ -152,7 +154,7 @@ if (isOpening) {
             // update the clicked button
             button.setAttribute('aria-expanded', 'true');
 
-            btn.classList.add("active");
+            button.classList.add("active");
 
 
             // ⚠️ state check for future refresh call
@@ -160,9 +162,3 @@ if (isOpening) {
         }
     });
 });
-//document.querySelectorAll('.proditems').forEach(item => {
-//    item.classList.add('hidden');
-//});
-//document.querySelectorAll('.category-button').forEach(button => {
-//    button.classList.remove('active');
-//});

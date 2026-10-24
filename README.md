@@ -344,7 +344,7 @@ This website is an educational and demonstration project. Any trademarks, produc
 
 <a id="imagestore"></a>
 
-### Image store and handling
+## Image store and handling
 
 A source image store was maintained during development containing original PNG assets. Optimised WebP versions were generated from these originals for deployment. This allowed assets to be modified and regenerated throughout testing without cumulative quality loss. Once testing was complete and the final optimised images were produced, the original working assets were removed from the deployed project.
 
@@ -434,6 +434,7 @@ This is an example of deploying to PA on one of their payment tiers.
 2-1 `cd ~`
 3 git clone https://github.com/TonyWalker-coder/teambear
 4 cd teambear
+4-1 git pull
 5 mkvirtualenv --python=/usr/bin/python3.13 venv
 6 source ~/.virtualenvs/venv/bin/activate
 7 pip install -r requirements.txt
@@ -458,15 +459,15 @@ This is an example of deploying to PA on one of their payment tiers.
 import os
 import sys
 os.environ["SECRET_KEY"] = "<your-secret-key>"
-# add your project directory to the sys.path
+`# add your project directory to the sys.path`
 project_home = '/home/TonyWalker/teambear'
 if project_home not in sys.path:
     sys.path.insert(0, project_home)
 
-# set environment variable to tell django where your settings.py is
+`# set environment` variable to tell django where your settings.py is
 os.environ['DJANGO_SETTINGS_MODULE'] = 'teambear.settings'
 
-# serve django via WSGI
+`# serve django via WSGI`
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
@@ -487,7 +488,7 @@ the whole process is documented on PA help and blog pages
 
 https://help.pythonanywhere.com/pages/DeployExistingDjangoProject
 
-### Media Files
+## Media Files
 
 This project uses Django ImageField and therefore requires the Pillow package.
 
@@ -511,29 +512,6 @@ The palette system offers several benefits:
 - A scalable foundation for adding additional themes in future releases.
 
 The theme switcher updates the site's colour variables dynamically, enabling users to select a preferred visual style while preserving the overall layout, functionality, and accessibility of the application.
-
-### Example Palettes
-
-
-Classic Bear
-Primary:   #8B4513
-Secondary: #D2B48C
-Accent:    #FFD700
-
-Forest
-Primary:   #2F5D50
-Secondary: #8DB596
-Accent:    #F4D35E
-
-Football
-Primary:   #1E3A5F
-Secondary: #FFFFFF
-Accent:    #E63946
-
-Heritage
-Primary:   #5B4636
-Secondary: #E8D8C3
-Accent:    #C08A3E
 
 
 <a id="new"></a>

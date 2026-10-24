@@ -1,7 +1,7 @@
 from django.shortcuts import render 
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Count
-from products.models import Team, ProductType
+from products.models import Team, ProductType, ProductDescription
 
 def home(request):
     return render(request, "home/home.html")
@@ -41,13 +41,20 @@ def products(request):
 
     product_types = (
         ProductType.objects
-        .prefetch_related("products")
+        .prefetch_related("descriptions")
         .annotate(
             product_count=Count("products")
         )
         
         .filter(product_count__gt=0)
-        .order_by("name")
+    )
+
+    descriptions = (
+        ProductDescription.objects
+        .annotate(
+            product_count=Count("products")
+        )
+        .filter(product_count__gt=0)
     )
 
     return render(
