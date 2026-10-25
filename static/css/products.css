@@ -94,6 +94,11 @@
     flex-direction: column;
     align-items: center;
 }
+.top-panel-button-row {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+}
 .top-panel-button:hover{
     background-color: var(--bg-card);
 }

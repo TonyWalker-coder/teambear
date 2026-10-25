@@ -39,7 +39,10 @@ start 12/10/26
             </div>
         </div>
 
+
         {% for team in teams %}
+        
+        
 
         <div class="category-card-container">
 
@@ -53,25 +56,32 @@ start 12/10/26
                             Products</span></button>
 
                 </div>
+
+
                 <div id="{{team.team_name}}-panel" class="proditems hidden">
 
                     <div class="product-grid">
+                        
                         <button class="product-button" data-product-id="all-teams"><span class="product-name">All </span><span
-                                class="product-stock">{{ team.product_count }} Products</span></button>
-                        {% for product in team.products.all %}
-
-                        <button class="product-button" data-product-id="{{ product.id }}"><span class="product-name">{{ product.bear_name }}</span><span
-                                class="product-stock">{{ product.stock }} In Stock</span></button>
+                                class="product-stock">{{ product_type.product_count }} Products</span></button>
+                        
+                        {% for product_type in team.product_types %}
+                        <button class="product-button" data-product-id="{{ product.id }}"><span class="product-name">{{ product_type.name }}</span><span
+                                class="product-stock">{{ product_type.product_count }} In Stock</span></button>
 
                         {% endfor %}
+                        
+                        
                     </div>
                 </div>
+                
 
             </div>
 
         </div>
-
         {% endfor %}
+
+        
 
         <div class="category-card-container">
 
@@ -81,13 +91,17 @@ start 12/10/26
 
                     <button class="top-panel-button category-button" aria-controls="Browse_Product-panel"
                         data-product="Browse_Product" aria-label="Browse all the product" aria-expanded="false">
-                        Browse all <span>{{ product_types|length }} Product</span>
+                        Browse Products
                     </button>
                 </div>
                 <div id="Browse_Product-panel" class="proditems hidden">
 
                     <div class="category-grid">
-                        <button class="top-panel-button category-button">All<span> 10 Products</span></button>
+                        <button class="product-button">
+                            <span class="product-name">
+                                Browse all {{description_count }}
+                            </span>
+                            </button>
                     </div>
                 </div>
             </div>
@@ -103,7 +117,7 @@ start 12/10/26
                     <button class="top-panel-button category-button" aria-controls="{{ product_type.name }}-panel"
                         data-product="{{ product_type.name }}"
                         aria-label="Expand {{ product_type.name }} product categories" aria-expanded="false">
-                        {{product_type.name }} <span>{{ product_type.product_count }} Products</span>
+                        {{product_type.name }}
                     </button>
 
                 </div>
@@ -112,9 +126,8 @@ start 12/10/26
                     <div class="product-grid">
 
                         <button class="product-button" data-product-id="all-{{product_type.name }}">
-                            <span class="product-name">All</span>
-                            <span class="product-stock">
-                                {{ product_type.product_count }} Products
+                            <span class="product-name">
+                                Browse all {{ product_type.product_count }}
                             </span>
                         </button>
 

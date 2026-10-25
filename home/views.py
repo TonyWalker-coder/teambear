@@ -29,25 +29,42 @@ def specials(request):
 # Product_grid topPanel cards
 def products(request):
 
+
+
+
     teams = (
         Team.objects
-        .prefetch_related("products")
         .annotate(
-            product_count=Count("products")
+            product_count=Count("products", distinct=True)
         )
         .filter(product_count__gt=0)
         .order_by("team_name")
     )
 
+
+
     product_types = (
         ProductType.objects
         .prefetch_related("descriptions")
         .annotate(
-            product_count=Count("products")
+            product_count=Count("descriptions", distinct=True)
         )
         
         .filter(product_count__gt=0)
     )
+
+    for team in teams:
+        team.product_types = (
+            ProductType.objects
+            .filter(products__team=team)
+            .annotate(
+                product_count=Count(
+                    "products",
+                    distinct=True
+                )
+            )
+        .order_by("name")
+        )
 
     descriptions = (
         ProductDescription.objects
@@ -57,14 +74,22 @@ def products(request):
         .filter(product_count__gt=0)
     )
 
+    description_count = (
+        ProductDescription.objects
+        .filter(products__isnull=False)
+        .distinct()
+        .count()
+    )
+
     return render(
         request,
         "products/products_grid.html",
         {
+            
             "teams": teams,
             "product_types": product_types,
+            "descriptions": descriptions,
+            "description_count": description_count,
         }
+
     )
-
-
-

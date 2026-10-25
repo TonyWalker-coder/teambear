@@ -23,14 +23,6 @@ class ProductType(models.Model):
         unique=True
     )
 
-    created_on = models.DateTimeField(
-        auto_now_add=True
-    )
-
-    updated_on = models.DateTimeField(
-        auto_now=True
-    )
-
     class Meta:
         ordering = ["name"]
 
@@ -75,24 +67,24 @@ class Product(models.Model):
         ProductDescription,
         on_delete=models.PROTECT,
         related_name="products",
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
 
     product_type = models.ForeignKey(
         ProductType,
         on_delete=models.PROTECT,
         related_name="products",
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
 
     team = models.ForeignKey(
         Team,
         on_delete=models.CASCADE,
         related_name="products",
-        null=True,
-        blank=True,
+        null=False,
+        blank=False,
     )
 
 
