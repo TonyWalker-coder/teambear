@@ -162,3 +162,17 @@ if (isOpening) {
         }
     });
 });
+//read the product grid buttuns for data-product-id our bearcard search
+document.addEventListener("click", (event) => {
+
+    const button = event.target.closest("[data-product-id]");
+
+    if (!button) {
+        return;
+    }
+
+    const productId = button.dataset.productId;
+
+    console.log(productId);
+
+});
