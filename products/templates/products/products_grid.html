@@ -21,8 +21,8 @@ start 12/10/26
 
                 <div class="inside-category-card">
 
-                    <button class="top-panel-button category-button" aria-controls="Browse_Teams-panel"
-                        data-product="Browse_Teams" aria-label="Browse all the teams" aria-expanded="false">Browse all Teams</button>
+                    <button  class="top-panel-button category-button" aria-controls="Browse_Teams-panel"
+                         aria-label="Browse all the teams" aria-expanded="false">Browse all Teams</button>
 
 
 
@@ -30,7 +30,7 @@ start 12/10/26
                 <div id="Browse_Teams-panel" class="proditems hidden">
 
                     <div class="category-grid">
-                        <button class="product-button" aria-label="Browse all the teams bear cards" data-product-id="Browse_Teams">Browse all Teams</button>
+                        <button class="product-button" data-product-id="" aria-label="Browse all the teams bear cards" data-product-id="" data-team="all" data-type="" data-desc="">Browse all Teams</button>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@ start 12/10/26
                 <div class="inside-category-card">
 
                     <button class="top-panel-button category-button" aria-controls="{{team.team_name}}-panel"
-                        data-product-id="{{team.team_name}}" aria-label="Expand {{ team.team_name }} product categories"
+                         aria-label="Expand {{ team.team_name }} product categories"
                         aria-expanded="false">{{ team.team_name }} </button>
 
                 </div>
@@ -59,10 +59,10 @@ start 12/10/26
 
                     <div class="product-grid">
                         
-                        <button class="product-button" data-product-id="{{ team.team_name }}-products"><span class="product-name">All Products</span></button>
+                        <button class="product-button" data-product-id="" data-team="{{ team.team_name }}" data-type="all" data-desc="all"><span class="product-name">All Products</span></button>
                         
                         {% for product_type in team.product_types %}
-                        <button class="product-button" data-product-id="{{ team.team_name }}-{{ product_type.name }}"><span class="product-name">{{ product_type.name }}</span></button>
+                        <button class="product-button" data-product-id="" data-team="{{ team.team_name }}" data-type="{{ product_type.name }}" data-desc="all"><span class="product-name">{{ product_type.name }}</span></button>
 
                         {% endfor %}
                         
@@ -85,14 +85,14 @@ start 12/10/26
                 <div class="inside-category-card">
 
                     <button class="top-panel-button category-button" aria-controls="Browse_Product-panel"
-                        data-product="Browse_Product" aria-label="Browse all the product" aria-expanded="false">
+                        data-product="" aria-label="Browse all the product" aria-expanded="false">
                         Browse Products
                     </button>
                 </div>
                 <div id="Browse_Product-panel" class="proditems hidden">
 
                     <div class="category-grid">
-                        <button data-product-id="Browse_Product_by_type_desc" aria-label="Click to browse all the bear cards by product type"  class="product-button">
+                        <button data-product-id="" data-team="" data-type="all" data-desc="all" aria-label="Click to browse all the bear cards by product type"  class="product-button">
                             <span class="product-name">
                                 Browse all {{description_count }}
                             </span>
@@ -110,7 +110,7 @@ start 12/10/26
                 <div class="inside-category-card">
 
                     <button class="top-panel-button category-button" aria-controls="{{ product_type.name }}-panel"
-                        data-product="{{ product_type.name }}"
+                        data-product=""
                         aria-label="Expand {{ product_type.name }} product categories" aria-expanded="false">
                         {{product_type.name }}
                     </button>
@@ -120,7 +120,7 @@ start 12/10/26
 
                     <div class="product-grid">
 
-                        <button class="product-button" data-product-id="all-{{product_type.name }}">
+                        <button class="product-button" data-product-id="" data-team="" data-type="{{ product_type.name }}" data-desc="all">
                             <span class="product-name">
                                 Browse all {{ product_type.product_count }}
                             </span>
@@ -129,7 +129,7 @@ start 12/10/26
                         {% for description in product_type.descriptions.all %}
                         {% if description.products.count > 0 %}
 
-                        <button class="product-button" data-product-id="{{ description.item_name}}">
+                        <button class="product-button" data-product-id="" data-team="" data-type="" data-desc="{{ description.item_name}}">
                             <span class="product-name">
                                 {{ description.item_name }}
                             </span>

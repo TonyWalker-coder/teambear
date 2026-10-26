@@ -172,7 +172,11 @@ document.addEventListener("click", (event) => {
     }
 
     const productId = button.dataset.productId;
+    const team = button.dataset.team;
+    const type = button.dataset.type;
+    const desc = button.dataset.desc;
 
-    console.log(productId);
+    console.log("click");
+    console.log("data-team:",team, "data-type:",type, "data-desc:",desc);
 
 });

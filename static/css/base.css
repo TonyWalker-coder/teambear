@@ -199,6 +199,12 @@
 #navbar a::after {
     color: var(--dark-text-primary);
 }
+.navbar {
+        display: block;
+    }
+    .desk-navbar {
+        display: none;
+    }
 /* end desktop navbar*/
 
 /*BREAK POINTS*/
@@ -259,7 +265,7 @@
 }
 
 /* Tablet Landscape */
-@media (min-width: 1280px) and (max-height: 800px) {
+@media (min-width: 1280px) and (max-height: 801px) {
     .hero-404 {
         background-image: url("/static/images/hero/404.webp");
     }
@@ -276,12 +282,21 @@
     .navbar {
         display: none;
     }
+    .desk-navbar {
+        display: block;
+    }
 }
 
 /* Desktop */
 @media (min-width: 1600px) {
     .hero-404 {
         background-image: url("/static/images/hero/404.webp");
+    }
+    .navbar {
+        display: none;
+    }
+    .desk-navbar {
+        display: block;
     }
 }
 /*standard sizing for site*/
