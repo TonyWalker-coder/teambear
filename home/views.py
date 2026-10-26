@@ -1,7 +1,10 @@
 from django.shortcuts import render 
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Count
-from products.models import Team, ProductType, ProductDescription
+from products.models import Team, ProductType, ProductDescription, Product
+
+from django.http import JsonResponse
+
 
 def home(request):
     return render(request, "home/home.html")
@@ -93,3 +96,35 @@ def products(request):
         }
 
     )
+
+
+
+# Product_grid bear cards
+def product_search(request):
+
+    team = request.GET.get("team")
+    product_type = request.GET.get("type")
+    desc = request.GET.get("desc")
+
+    print("Search:", team, product_type, desc)
+
+    products = Product.objects.all()
+
+    if team and team != "all":
+        products = products.filter(
+            team__team_name=team
+        )
+
+    if product_type and product_type != "all":
+        products = products.filter(
+            product_type__name=product_type
+        )
+
+    if desc and desc != "all":
+        products = products.filter(
+            product_description__item_name=desc
+        )
+
+    return JsonResponse({
+        "count": products.count(),
+    })

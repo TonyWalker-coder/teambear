@@ -128,26 +128,26 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
             btn.setAttribute('aria-expanded', 'false');
 
         });
-// remove active from all buttons
-document
-    .querySelectorAll('.category-button')
-    .forEach(button => {
-        button.classList.remove('active');
-    });
+        // remove active from all buttons
+        document
+            .querySelectorAll('.category-button')
+            .forEach(button => {
+                button.classList.remove('active');
+            });
 
-if (isOpening) {
+        if (isOpening) {
 
-    current.classList.remove('hidden');
+            current.classList.remove('hidden');
 
-    button.setAttribute('aria-expanded', 'true');
+            button.setAttribute('aria-expanded', 'true');
 
-    button.classList.add('active');
+            button.classList.add('active');
 
-} else {
+        } else {
 
-    button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-expanded', 'false');
 
-}
+        }
         if (isOpening) {
             current.classList.remove('hidden');
 
@@ -162,7 +162,7 @@ if (isOpening) {
         }
     });
 });
-//read the product grid buttuns for data-product-id our bearcard search
+//read the product grid buttons for data-product-id our bearcard search
 document.addEventListener("click", (event) => {
 
     const button = event.target.closest("[data-product-id]");
@@ -177,6 +177,33 @@ document.addEventListener("click", (event) => {
     const desc = button.dataset.desc;
 
     console.log("click");
-    console.log("data-team:",team, "data-type:",type, "data-desc:",desc);
+    console.log("data-team:", team, "data-type:", type, "data-desc:", desc);
 
-});
+    fetch(
+        `/product-search/?team=${team}&type=${type}&desc=${desc}`
+    )
+        .then(response => {
+
+            if (!response.ok) {
+                throw new Error(
+                    `HTTP Error: ${response.status}`
+                );
+            }
+
+            return response.json();
+
+        })
+        .then(data => {
+
+            console.log(data);
+
+        })
+        .catch(error => {
+
+            console.error(
+                "Product search failed:",
+                error
+            );
+
+        });
+}); 
