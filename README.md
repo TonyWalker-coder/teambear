@@ -693,6 +693,11 @@ During development, guest user journeys became a key consideration. Rather than 
 
 <a id="data"></a>
 
+## Responsive Design
+This project uses a custom CSS grid and custom breakpoints.
 
+Breakpoint values were determined from real device testing and viewport measurements using a screen-size utility, rather than adopting framework defaults. Testing was carried out across phone, tablet and laptop devices to ensure layouts reflected actual user viewing conditions.
+
+The responsive strategy focuses on content behaviour and available viewport space rather than device type alone.
 
 <a id="data"></a>
