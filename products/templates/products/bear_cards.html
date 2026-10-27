@@ -1,0 +1,19 @@
+{% load static %}
+{% for product in products %}
+
+<div class="bear-card">
+
+    <p>ID: {{ product.id }}</p>
+    <p>Name: {{ product.bear_name }}</p>
+    <p>Team: {{ product.team.team_name }}</p>
+    <p>Type: {{ product.product_type.name }}</p>
+    <p>Description: {{ product.product_description.item_name}}</p>
+    <img
+    src="{% static 'images/bears/' %}{{ product.image }}"
+    alt="{{ product.alt_text}}"
+    onerror="this.src='{% static 'images/bears/noimage.webp' %}'">
+
+
+</div>
+
+{% endfor %}

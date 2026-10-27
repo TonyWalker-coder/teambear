@@ -196,6 +196,7 @@ document.addEventListener("click", (event) => {
         .then(data => {
 
             console.log(data);
+            document.getElementById("bear-cards").innerHTML = data.html;
 
         })
         .catch(error => {

@@ -4,6 +4,7 @@ from django.db.models import Count
 from products.models import Team, ProductType, ProductDescription, Product
 
 from django.http import JsonResponse
+from django.template.loader import render_to_string
 
 
 def home(request):
@@ -125,6 +126,12 @@ def product_search(request):
             product_description__item_name=desc
         )
 
+    html = render_to_string(
+        "products/bear_cards.html",
+        {"products": products}
+    )
+
     return JsonResponse({
+        "html": html,
         "count": products.count(),
     })

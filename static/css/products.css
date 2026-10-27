@@ -183,3 +183,40 @@
     align-items: start;
     padding: 15px;
 }
+
+.beargrid{
+    margin-top: var(--navbar-height-desktop);
+    padding:15px 0;
+}
+.bear-card {
+    width: 300px;
+    min-height: 550px;
+
+    border: 1px solid #ccc;
+    background: white;
+}
+.bear-card img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+#bear-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 300px);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* desktop 
+grid-template-columns: repeat(4, 300px);
+
+/* laptop 
+grid-template-columns: repeat(3, 300px);
+
+/* tablet 
+grid-template-columns: repeat(2, 300px);
+
+/* mobile 
+grid-template-columns: 1fr;*/
