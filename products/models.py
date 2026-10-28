@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django.core.exceptions import ValidationError
+    
+
 
 class Team(models.Model):
     team_name = models.CharField(max_length=100, unique=True)
@@ -46,7 +49,9 @@ class ProductDescription(models.Model):
     def __str__(self):
         return self.item_name
 
+
 class Product(models.Model):
+
     bear_name = models.CharField(max_length=100)
 
     slug = models.SlugField(
@@ -61,8 +66,13 @@ class Product(models.Model):
         max_length=255
     )
 
+    promo_text = models.CharField(
+            max_length=50,
+            blank=True
+        )
+
     description = models.TextField()
-    
+
 
     product_description = models.ForeignKey(
         ProductDescription,
@@ -107,8 +117,25 @@ class Product(models.Model):
         default=0
     )
 
+    def clean(self):
+        if (
+            self.product_description
+            and self.product_type
+            and self.product_description.product_type != self.product_type
+        ):
+            raise ValidationError(
+                {
+                    "product_description":
+                    "Description must belong to the selected product type."
+                }
+            )
+        
     class Meta:
         ordering = ["bear_name"]
+
+    def save(self, *args, **kwargs):
+            self.full_clean()
+            super().save(*args, **kwargs)   
 
     def __str__(self):
         return self.bear_name
