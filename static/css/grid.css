@@ -1,0 +1,119 @@
+/*BREAK POINTS*/
+/* Mobile Portrait */
+@media (max-width: 400px) {
+    .hero-404 {
+        background-image: url("/static/images/hero/404-mobile.webp");
+    }
+
+    .message-modal {
+        width: min(95%, 24rem);
+        padding: 1rem;
+    }
+
+    .message-icon {
+        width: 3rem;
+    }
+
+    .message-modal-content {
+        gap: 0.75rem;
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(1, 300px);
+    }
+
+}
+
+/* Mobile Landscape */
+/* Short screens: mobile landscape, foldables, small embedded browsers */
+@media (max-width: 699px) and (max-height: 400px) {
+    .hero {
+        background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+    /*small height add scrollbar*/
+    .hero,
+    .error-pages {
+        min-height: 90vh;
+    }
+
+    body {
+        height: 700px;
+        overflow-y: auto;
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+
+
+}
+
+/* Tablet Portrait */
+@media (min-width: 700px) and (min-height: 400px) {
+
+
+    .hero {
+        background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404-mobile.webp");
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(3, 300px);
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1280px) and (max-height: 801px) {
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(4, 300px);
+    }
+}
+
+/* Laptop */
+@media (min-width: 1280px) and (min-height: 801px) {
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(4, 300px);
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+    .desk-navbar {
+        display: block;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
+    .bear-cards {
+        grid-template-columns: repeat(5, 300px);
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .desk-navbar {
+        display: block;
+    }
+}

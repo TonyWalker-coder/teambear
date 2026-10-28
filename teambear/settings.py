@@ -34,10 +34,19 @@ DEBUG = os.getenv("DEBUG") == "True"
 CSS_VERSION = "1.0"
 
 
+SECURE_SSL_REDIRECT = os.getenv("SECURE_SSL_REDIRECT") == "True"
+CSRF_COOKIE_SECURE = os.getenv("CSRF_COOKIE_SECURE") == "True"
+SESSION_COOKIE_SECURE = os.getenv("SESSION_COOKIE_SECURE") == "True"
+
+if os.getenv("SECURE_PROXY_SSL_HEADER") == "True":
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+else:
+    SECURE_PROXY_SSL_HEADER = None
+
 ALLOWED_HOSTS = [
-"teambear-tonywalker.pythonanywhere.com",
-"localhost",
-"127.0.0.1",
+    "teambear-tonywalker.pythonanywhere.com",
+    "localhost",
+    "127.0.0.1",
 ]
 
 

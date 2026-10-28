@@ -101,7 +101,10 @@ def products(request):
 
 
 # Product_grid bear cards
+
 def product_search(request):
+
+    
 
     team = request.GET.get("team")
     product_type = request.GET.get("type")
@@ -110,6 +113,8 @@ def product_search(request):
     print("Search:", team, product_type, desc)
 
     products = Product.objects.all()
+
+
 
     if team and team != "all":
         products = products.filter(
@@ -121,10 +126,17 @@ def product_search(request):
             product_type__name=product_type
         )
 
+
     if desc and desc != "all":
         products = products.filter(
             product_description__item_name=desc
         )
+
+    products = products.order_by(
+        "product_type__name",
+        "product_description__item_name",
+        "team__team_name",
+    )
 
     html = render_to_string(
         "products/bear_cards.html",

@@ -62,6 +62,7 @@ class Product(models.Model):
     )
 
     description = models.TextField()
+    
 
     product_description = models.ForeignKey(
         ProductDescription,
