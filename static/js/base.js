@@ -207,4 +207,17 @@ document.addEventListener("click", (event) => {
             );
 
         });
+});
+//get the individual bear card
+document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-bear-id]");
+
+    if (!button) {
+        return;
+    }
+
+    const bearId = button.dataset.bearId;
+
+    console.log("clicked");
+    console.log(bearId);
 }); 

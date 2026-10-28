@@ -253,14 +253,10 @@
     }
 
 }
-/* desktop 
-grid-template-columns: repeat(4, 300px);
-
-/* laptop 
-grid-template-columns: repeat(3, 300px);
-
-/* tablet 
-grid-template-columns: repeat(2, 300px);
-
-/* mobile 
-grid-template-columns: 1fr;*/
+.bear-card-button {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}

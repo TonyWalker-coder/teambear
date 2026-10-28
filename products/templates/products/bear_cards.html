@@ -1,4 +1,5 @@
 {% load static %}
+
 <head>
     <link rel="stylesheet" href="{% static 'css/products.css' %}?v=2">
 </head>
@@ -7,14 +8,15 @@
 <div class="bear-card">
 
     <p>ID: {{ product.id }}</p>
-    <p>Name: {{ product.bear_name }}</p>
+    <!--<p>Name: {{ product.bear_name }}</p>
     <p>Team: {{ product.team.team_name }}</p>
     <p>Type: {{ product.product_type.name }}</p>
-    <p>Description: {{ product.product_description.item_name}}</p>
-    <img
-    src="{% static 'images/bears/' %}{{ product.image }}"
-    alt="{{ product.alt_text}}"
-    onerror="this.src='{% static 'images/bears/noimage.webp' %}'">
+    <p>Description: {{ product.product_description.item_name}}</p>-->
+    <button class="bear-card-button" data-bear-id="{{ product.id }}" aria-label="View details for {{ product.bear_name }}">
+
+        <img src="{% static 'images/bears/' %}{{ product.image }}" alt="{{ product.alt_text}}"
+            onerror="this.src='{% static 'images/bears/noimage.webp' %}'">
+    </button>
 
 
 </div>
