@@ -192,6 +192,8 @@
 
     width: 380px;
     min-height: 550px;
+    /*⚠️*/
+    min-height: 600px;
 
     border: 1px solid #ccc;
     background: var(--bg-card);
@@ -212,6 +214,8 @@
     align-items: center;
 
     border-radius: 1rem;
+
+    position: relative;
 }
 
 .bear-card img {
@@ -220,7 +224,7 @@
 
     object-fit: cover;
 
-    border: 10px solid var(--border-dark);
+    border: 5px solid var(--border-light);
 
     filter:
         drop-shadow(1px 1px 1px rgb(0 0 0 / 0.15))
@@ -240,6 +244,44 @@
     background: transparent;
     cursor: pointer;
     width: 100%;
+}
+.bearprice {
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 50%;
+    color: red;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 200;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    transform: rotate(-15deg);
+}
+.bearheading{
+    background-color: var(--bg-page);
+    max-width: 340px;
+    padding: 15px;
+    color:var( --text-heading);
+    justify-content: left;
+    margin:10px;
+
+}
+
+.promoarea {
+    min-height: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
 }
 /*BREAK POINTS*/
 /* Mobile Portrait */

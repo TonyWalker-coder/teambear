@@ -10,24 +10,40 @@
     <p>Type: {{ product.product_type.name }}</p>
     <p>Description: {{ product.product_description.item_name}}</p>-->
     <div class="bearimage-layer">
+        <div class="bearprice">
+            £{{product.price}}
+        </div>
         <button class="bear-card-button" data-bear-id="{{ product.id }}"
             aria-label="View details for {{ product.bear_name }}">
 
             <img src="{% static 'images/bears/' %}{{ product.image }}" alt="{{ product.alt_text}}"
                 onerror="this.src='{% static 'images/bears/noimage.webp' %}'">
+
+
         </button>
     </div>
-    {% if product.special_price %}
-    <span class="offer-badge">
-        🔥 Special Offer
-    </span>
-    {% endif %}
+    <div class="promoarea">
+        <div class="bearheading">
+            {{ product.bear_name }}
+        </div>
+        {% if product.special_price %}
+        <span class="offer-badge">
+            🔥 Special Offer
+        </span>
+        {% endif %}
 
-    {% if product.discount_percent %}
-    <span class="member-badge">
-        ⭐ Member Discount
-    </span>
-    {% endif %}
+        {% if product.discount_percent %}
+        <span class="member-badge">
+            🗝️ Member Discount {{product.discount_percent}}%
+        </span>
+        {% endif %}
+        {% if product.promo_text %}
+        <span class="member-badge">
+            {{product.promo_text}}
+        </span>
+        {% endif %}
+    </div>
+
 
 
 </div>
