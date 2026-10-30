@@ -34,6 +34,7 @@
 - [User Feedback Strategy](#feedback)
 - [Testing Stripe Notice:](#stripe)
 - [Design Reflection](#reflection)
+- [User Account Features](#users)
 
 <a id="userstory"></a>
 
@@ -278,6 +279,8 @@ As a visitor, I want to create an account so that I can access my order history,
 ### Acceptance Criteria
 
 - Visitors can register for an account using a valid email address and password.
+- A verification email is sent to the registered email address.
+- The account must be verified before full access is granted.
 - Registered users can securely log in and log out.
 - Registered users can view their previous orders.
 - Registered users can access any available member discounts or special offers.
@@ -691,13 +694,13 @@ TeamBear uses Stripe's publicly available test card numbers for development and 
 
 During development, guest user journeys became a key consideration. Rather than restricting core functionality behind authentication, the project adopted the principle "Registration enhances the experience. It does not unlock the basic experience." This influenced the design of navigation, product browsing, contact forms, special offers, and checkout functionality.
 
-<a id="data"></a>
+<a id="users"></a>
 
-## Responsive Design
-This project uses a custom CSS grid and custom breakpoints.
+## User Account Features
 
-Breakpoint values were determined from real device testing and viewport measurements using a screen-size utility, rather than adopting framework defaults. Testing was carried out across phone, tablet and laptop devices to ensure layouts reflected actual user viewing conditions.
-
-The responsive strategy focuses on content behaviour and available viewport space rather than device type alone.
+- User registration
+- User login/logout
+- Password reset via email
+- Email verification required for account activation
 
 <a id="data"></a>

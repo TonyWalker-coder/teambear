@@ -32,7 +32,8 @@ start 12/10/26
 
                     <div class="category-grid">
                         <button class="product-button" data-product-id="" aria-label="Browse all the teams bear cards"
-                            data-product-id="" data-team="all" data-type="" data-desc=""><span class="product-name">Browse Teams</span></button>
+                            data-product-id="" data-team="all" data-type="" data-desc=""><span
+                                class="product-name">Browse Teams</span></button>
                     </div>
                 </div>
 
@@ -42,8 +43,6 @@ start 12/10/26
         <!--The teams button-->
         {% for team in teams %}
 
-
-
         <div class="category-card-container">
 
             <div class="category-card">
@@ -51,7 +50,7 @@ start 12/10/26
                 <div class="inside-category-card">
 
                     <button class="top-panel-button category-button" aria-controls="{{team.team_name}}-panel"
-                        aria-label="Expand {{ team.team_name }} product categories" aria-expanded="false">{{ team.team_name }} </button>
+                        aria-label="Expand {{ team.team_name }} product categories" aria-expanded="false">{{team.team_name }} </button>
 
                 </div>
 
@@ -65,7 +64,7 @@ start 12/10/26
 
                         {% for product_type in team.product_types %}
                         <button class="product-button" data-product-id="" data-team="{{ team.team_name }}"
-                            data-type="{{ product_type.name }}" data-desc="all"><span class="product-name">{{ product_type.name }}</span></button>
+                            data-type="{{ product_type.name }}" data-desc="all"><span class="product-name">{{product_type.name }}</span></button>
 
                         {% endfor %}
 
@@ -155,9 +154,19 @@ start 12/10/26
         {% endfor %}
     </div>
 
-    <div id="beargrid" class="beargrid ">
+
+    <div id="beargrid" class="beargrid hidden">
+
+        <button id="closebutton" type="button" class="close" aria-label="Close Bear Cards">&times;</button>
+
+        
+
+
+
 
         <div id="bear-cards">
+            
+
 
             {% include "products/bear_cards.html" %}
 
@@ -166,7 +175,8 @@ start 12/10/26
 
     </div>
 
+
+
+
 </div>
-
-
 {% endblock %}

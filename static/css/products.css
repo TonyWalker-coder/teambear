@@ -283,49 +283,31 @@
     align-items: center;
     gap: .5rem;
 }
-/*BREAK POINTS*/
-/* Mobile Portrait */
-@media (max-width: 400px) {
-    #bear-cards {
-        grid-template-columns: repeat(1, 300px);
-    }
+.close {
+    all: unset; /* reset all inherited styles */
+    top: 14px;
+    right: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+
+    display: block;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    background-color: rgb(240, 240, 240);
+    border: 1.1px outset rgb(0, 0, 0);
+    border-radius: 4px;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/* Mobile Landscape */
-/* Short screens: mobile landscape, foldables, small embedded browsers */
-@media (max-width: 699px) and (max-height: 400px) {
-
-    #bear-cards {
-        grid-template-columns: repeat(2, 300px);
-    }
+.close:hover {
+    animation: shake 0.4s ease-in-out;
 }
 
-/* Tablet Portrait */
-@media (min-width: 700px) and (min-height: 400px) {
-    #bear-cards {
-        grid-template-columns: repeat(3, 300px);
-    }
-}
-
-/* Tablet Landscape */
-@media (min-width: 1280px) and (max-height: 801px) {
-    #bear-cards {
-        grid-template-columns: repeat(4, 300px);
-    }
-}
-
-/* Laptop */
-@media (min-width: 1280px) and (min-height: 801px) {
-    .bear-cards {
-        grid-template-columns: repeat(4, 300px);
-    }
-
-}
-
-/* Desktop */
-@media (min-width: 1600px) {
-    #bear-cards {
-        grid-template-columns: repeat(5, 380px);
-    }
-
-}

@@ -164,6 +164,9 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
 });
 //read the product grid buttons for data-product-id our bearcard search
 document.addEventListener("click", (event) => {
+    document.querySelectorAll('.beargrid').forEach((item) => {
+            item.classList.remove('hidden');
+        })
 
     const button = event.target.closest("[data-product-id]");
 
@@ -221,3 +224,15 @@ document.addEventListener("click", (event) => {
     console.log("clicked");
     console.log(bearId);
 }); 
+document.addEventListener("click", (event) => {
+    const button = event.target.closest("#closebutton");
+    
+    // Only run the code if a close button was actually clicked
+    if (button) {
+        console.log("close");
+
+        document.querySelectorAll('.beargrid').forEach((item) => {
+            item.classList.add('hidden');
+        });
+    }
+});

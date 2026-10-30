@@ -22,6 +22,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
@@ -80,6 +81,8 @@ AUTHENTICATION_BACKENDS = (
 
 
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 
 LOGIN_REDIRECT_URL = "account"
 LOGOUT_REDIRECT_URL = "/"
@@ -87,7 +90,7 @@ LOGOUT_REDIRECT_URL = "/"
 
 ACCOUNT_LOGIN_METHODS = {"email"}
 ACCOUNT_SESSION_REMEMBER = False
-DEFAULT_FROM_EMAIL = "TeamBear <teambear.products@gmail.com>"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -184,8 +187,20 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
+
+DEFAULT_FROM_EMAIL = "TeamBear <teambear.products@gmail.com>"
+
+
+
 MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+    "default": {
+        "BACKEND": "django.core.mail.backends.smtp.EmailBackend",
+        "OPTIONS": {
+            "host": "smtp.gmail.com",
+            "port": 587,
+            "use_tls": True,
+            "username": os.getenv("EMAIL_HOST_USER"),
+            "password": os.getenv("EMAIL_HOST_PASSWORD"),
+        },
     },
 }

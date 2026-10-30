@@ -1,0 +1,46 @@
+/*BREAK POINTS*/
+/* Mobile Portrait */
+@media (max-width: 400px) {
+    #bear-cards {
+        grid-template-columns: repeat(1, 300px);
+    }
+}
+
+/* Mobile Landscape */
+/* Short screens: mobile landscape, foldables, small embedded browsers */
+@media (max-width: 699px) and (max-height: 400px) {
+
+    #bear-cards {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 700px) and (min-height: 400px) {
+    #bear-cards {
+        grid-template-columns: repeat(3, 300px);
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1280px) and (max-height: 801px) {
+    #bear-cards {
+        grid-template-columns: repeat(4, 300px);
+    }
+}
+
+/* Laptop */
+@media (min-width: 1280px) and (min-height: 801px) {
+    .bear-cards {
+        grid-template-columns: repeat(4, 300px);
+    }
+
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    #bear-cards {
+        grid-template-columns: repeat(5, 380px);
+    }
+
+}
