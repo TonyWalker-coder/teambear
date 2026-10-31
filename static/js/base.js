@@ -1,5 +1,5 @@
 //ensure we have a theme to load on a new system
-const themes = ["light", "lightblue", "dark", "grey"];
+const themes = ["light", "lightblue", "dark", "grey","automblue",];
 
 let theme = localStorage.getItem("theme");
 

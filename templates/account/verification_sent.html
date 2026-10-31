@@ -9,18 +9,75 @@ start 8/10/26
 {% endblock %}
 
 {% block content %}
+
 <div class="pagefiller">
 
+    <section class="auth-layout account-wrapper">
 
-{% load i18n %}
+        <div class="auth-info auth-form">
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+            <section class="user-toggle register-benefits">
 
-
-    <h2>{% trans "Verify Your E-mail Address" %}</h2>
-
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification e-mail in your main inbox, check your spam folder. Please contact us if you do not receive the verification e-mail within a few minutes.{% endblocktrans %}</p>
+                <h2>Welcome to TeamBear</h2>
 
 
+                <hr>
+
+                <h3>Check Your Email</h3>
+
+                <hr>
+
+                <p>
+                    Thanks for creating an account! We've sent a verification email to the
+                    address you registered with.
+                </p>
+
+                <p>
+                    Simply click the link in that email to activate your account and start
+                    enjoying everything TeamBear has to offer.
+                </p>
+
+                <p>
+                    Verification emails can occasionally take a few minutes to arrive.
+                </p>
+
+                <p>
+                    If you can't see the email, please check your spam or junk folder as it
+                    sometimes likes to hide there.
+                </p>
+
+                <p>
+                    Need help? Feel free to contact:
+                    <a href="mailto:tonywalkersmail@gmail.com">Admin</a>
+                </p>
+
+
+
+            </section>
+
+
+        </div>
+
+        <div class="auth-form">
+
+
+            <section class="user-toggle register-benefits">
+
+                <p>
+                    While you're waiting for your email to arrive, feel free to continue
+                    exploring TeamBear and meet some of our bears.
+                </p>
+
+                <a href="{% url 'home' %}" aria-label="Return to homepage">
+                    <span class="ico">🛖</span>
+                    <span class="lnk">Visit Home</span>
+                </a>
+            </section>
+
+
+        </div>
+
+    </section>
 </div>
+
 {% endblock %}

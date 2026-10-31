@@ -1,4 +1,26 @@
-:root[data-theme="grey"] {
+:root[data-theme="automblue"] {
+        --bg-page: #9d98f2;
+        --bg-card: #fff7e8;
+
+        --dark-banner: #eccfe6;
+
+
+        --text-heading: #000000;
+        --dark-text-heading: #bd3737;
+
+        --text-primary: #222020;
+        --dark-text-primary: #800707;
+
+
+        --border-light: #c592b7;
+        --border-dark: #1124a3;
+
+        --button-primary: #1C6BB5;
+        --button-text:#F5EFBE;
+        --button-primary-hover: #217ed6ab;
+    /*dont use --dark-text-heading: and --dark-text-heading: on page*/
+    }
+    :root[data-theme="grey"] {
     --bg-page: #cfd0d2;
     --bg-card: #d8d8d8;
 
