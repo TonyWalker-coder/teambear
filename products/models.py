@@ -183,3 +183,34 @@ class SaleItem(models.Model):
         return f"{self.product} x {self.qty}"
 
 
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+    theme = models.CharField(
+        max_length=20,
+        default="lightblue"
+    )
+
+    title = models.CharField(
+        max_length=20,
+        blank=True
+    )
+
+    first_name = models.CharField(
+        max_length=100,
+        blank=True
+    )
+
+    surname = models.CharField(
+        max_length=100,
+        blank=True
+    )
+
+    address = models.TextField(
+        blank=True
+    )
+
+    phone = models.CharField(
+        max_length=20,
+        blank=True
+    )

@@ -1,10 +1,12 @@
 from django.shortcuts import render 
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db.models import Count
-from products.models import Team, ProductType, ProductDescription, Product
+from products.models import Team, ProductType, ProductDescription, Product, UserProfile
 
 from django.http import JsonResponse
 from django.template.loader import render_to_string
+
+from .forms import UserProfileForm
 
 
 def home(request):
@@ -147,3 +149,37 @@ def product_search(request):
         "html": html,
         "count": products.count(),
     })
+
+
+
+
+@login_required
+def account_view(request):
+
+    profile, created = UserProfile.objects.get_or_create(
+        user=request.user
+    )
+
+    if request.method == "POST":
+
+        form = UserProfileForm(
+            request.POST,
+            instance=profile
+        )
+
+        if form.is_valid():
+            form.save()
+
+    else:
+
+        form = UserProfileForm(
+            instance=profile
+        )
+
+    return render(
+        request,
+        "account/account.html",
+        {
+        "form": form,
+        }
+    )

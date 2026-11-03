@@ -14,7 +14,12 @@
     --font-body: Tahoma, sans-serif;
     --font-brand: "DynaPuff", cursive;
 
+--navbar-height: 145px;
+
+    
 }
+
+
 
 * {
     margin: 0;
@@ -630,4 +635,44 @@ body {
 
 main {
     flex: 1;
+}
+
+.auth-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.auth-message.success {
+    background: #dff6dd;
+    border: 2px solid #75b798;
+    color: #0f5132;
+}
+
+.auth-message.error {
+    background: #f8d7da;
+    border: 2px solid #ea868f;
+    color: #842029;
+}
+
+.auth-message.warning {
+    background: #fff3cd;
+    border: 2px solid #ffda6a;
+    color: #664d03;
+}
+.errorlist {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.errorlist li {
+    background: #f8d7da;
+    color: #842029;
+    border: 2px solid #ea868f;
+    border-radius: 8px;
+    padding: .75rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
 }

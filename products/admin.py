@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Team, ProductType, ProductDescription, Product
+from .models import Team, ProductType, ProductDescription, Product, UserProfile
 
 
 admin.site.register(Product)
@@ -27,4 +27,13 @@ class TeamAdmin(admin.ModelAdmin):
     list_display = [
         "id",
         'team_name',
+    ]
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = [
+        "user",
+        "theme",
+        "title",
+        "phone",
     ]

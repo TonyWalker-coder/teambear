@@ -27,26 +27,39 @@ start 8/10/26
 
                 <h3 class="intro">Personal Information.</h3>
 
-
                 <hr>
 
+                <form method="post">
 
-                <h3 class="intro">Account Management.</h3>
-
-                <form method="post" action="{% url 'account_change_password' %}">
                     {% csrf_token %}
+
+                    {{ form.theme.label_tag }}
+                    {{ form.theme }}
+
+                    {{ form.title.label_tag }}
+                    {{ form.title }}
+
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name }}
+
+                    {{ form.surname.label_tag }}
+                    {{ form.surname }}
+
+                    {{ form.address.label_tag }}
+                    {{ form.address }}
+
+                    {{ form.phone.label_tag }}
+                    {{ form.phone }}
+
                     <button type="submit" class="btn">
-                        Change Password
+                        Update Profile
                     </button>
+
                 </form>
 
 
-                <form method="post" action="{% url 'account_logout' %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn">
-                        Sign Out
-                    </button>
-                </form>
+                <hr>
+                
             </section>
 
 
@@ -57,7 +70,25 @@ start 8/10/26
 
             <section class="user-toggle register-benefits">
 
-                <h3>place holder</h3>
+                <h3 class="intro">Account Management.</h3>
+
+                <a href="{% url 'account_change_password' %}" class="btn">
+                    Change Password
+                </a>
+
+                {% if messages %}
+                {% for message in messages %}
+                <!-- temporary discard -->
+                {% endfor %}
+                {% endif %}
+
+
+                <form method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">
+                        Sign Out
+                    </button>
+                </form>
             </section>
 
 

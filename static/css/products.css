@@ -184,10 +184,7 @@
     padding: 15px;
 }
 
-.beargrid{
-    margin-top: var(--navbar-height-desktop);
-    padding:15px 0;
-}
+
 .bear-card {
 
     width: 380px;
@@ -311,3 +308,10 @@
     animation: shake 0.4s ease-in-out;
 }
 
+.beargrid {
+    scroll-margin-top: 110px;
+}
+.beargrid{
+    margin-top: var(--navbar-height);
+    padding:15px 0;
+}

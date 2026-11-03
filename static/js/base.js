@@ -1,5 +1,5 @@
 //ensure we have a theme to load on a new system
-const themes = ["light", "lightblue", "dark", "grey","automblue",];
+const themes = ["light", "lightblue", "dark", "grey", "automblue",];
 
 let theme = localStorage.getItem("theme");
 
@@ -149,24 +149,31 @@ document.querySelectorAll('.inside-category-card').forEach(card => {
 
         }
         if (isOpening) {
+
             current.classList.remove('hidden');
 
-            // update the clicked button
             button.setAttribute('aria-expanded', 'true');
 
-            button.classList.add("active");
+            button.classList.add('active');
 
-
-            // ⚠️ state check for future refresh call
             console.log('Category opened');
+
+        } else {
+
+            document.getElementById('beargrid')
+                .classList.add('hidden');
+
+            document.getElementById('bear-cards')
+                .innerHTML = '';
+
         }
     });
 });
 //read the product grid buttons for data-product-id our bearcard search
 document.addEventListener("click", (event) => {
     document.querySelectorAll('.beargrid').forEach((item) => {
-            item.classList.remove('hidden');
-        })
+        item.classList.remove('hidden');
+    })
 
     const button = event.target.closest("[data-product-id]");
 
@@ -178,6 +185,8 @@ document.addEventListener("click", (event) => {
     const team = button.dataset.team;
     const type = button.dataset.type;
     const desc = button.dataset.desc;
+
+    const beargrid = document.getElementById("beargrid");
 
     console.log("click");
     console.log("data-team:", team, "data-type:", type, "data-desc:", desc);
@@ -198,10 +207,17 @@ document.addEventListener("click", (event) => {
         })
         .then(data => {
 
-            console.log(data);
             document.getElementById("bear-cards").innerHTML = data.html;
 
+            beargrid.classList.remove("hidden");
+
+            beargrid.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
         })
+
         .catch(error => {
 
             console.error(
@@ -223,10 +239,10 @@ document.addEventListener("click", (event) => {
 
     console.log("clicked");
     console.log(bearId);
-}); 
+});
 document.addEventListener("click", (event) => {
     const button = event.target.closest("#closebutton");
-    
+
     // Only run the code if a close button was actually clicked
     if (button) {
         console.log("close");

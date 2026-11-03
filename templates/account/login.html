@@ -38,6 +38,11 @@ start 8/10/26
         <div class="auth-form">
 
             <section login-toggle nothidden>
+                {% if messages %}
+    {% for message in messages %}
+        <!-- temporary discard -->
+    {% endfor %}
+{% endif %}
 
                 <form method="post">
                     {% csrf_token %}
