@@ -100,7 +100,7 @@
 /* Desktop */
 @media (min-width: 1600px) {
     #bear-cards {
-        grid-template-columns: repeat(5, 380px);
+        grid-template-columns: repeat(5, 350px);
     }
 
     .hero-404 {
