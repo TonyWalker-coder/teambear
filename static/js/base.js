@@ -252,3 +252,27 @@ document.addEventListener("click", (event) => {
         });
     }
 });
+//debug info for the bear grid
+document.addEventListener("DOMContentLoaded", () => {
+
+    const debug = document.getElementById("debug-info");
+
+    const card = document.querySelector(".bear-card");
+    const grid = document.querySelector("#bear-cards");
+
+    debug.innerHTML = `
+        Width: ${window.innerWidth}<br>
+        Height: ${window.innerHeight}<br>
+        DPR: ${window.devicePixelRatio}<br>
+        <hr>
+        Card Width: ${card?.getBoundingClientRect().width}px<br>
+        Card Height: ${card?.getBoundingClientRect().height}px<br>
+        <hr>
+        Grid Columns:<br>
+        ${getComputedStyle(grid).gridTemplateColumns}<br>
+        <hr>
+        Body Font:<br>
+        ${getComputedStyle(document.body).fontFamily}
+    `;
+
+});

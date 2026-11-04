@@ -315,3 +315,14 @@
     margin-top: var(--navbar-height);
     padding:15px 0;
 }
+/*⚠️*/
+#debug-info{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: black;
+    color: lime;
+    padding: 10px;
+    z-index: 99999;
+    font-size: 12px;
+}
