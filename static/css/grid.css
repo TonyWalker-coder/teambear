@@ -1,9 +1,27 @@
-/*BREAK POINTS*/
+/*BREAK POINTS */
 /* Mobile Portrait */
 @media (max-width: 400px) {
     #bear-cards {
         grid-template-columns: repeat(1, 300px);
     }
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404-mobile.webp");
+    }
+
+    .message-modal {
+        width: min(95%, 24rem);
+        padding: 1rem;
+    }
+
+    .message-icon {
+        width: 3rem;
+    }
+
+    .message-modal-content {
+        gap: 0.75rem;
+    }
+
 }
 
 /* Mobile Landscape */
@@ -13,6 +31,22 @@
     #bear-cards {
         grid-template-columns: repeat(2, 300px);
     }
+
+    .hero {
+        background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+    /*small height add scrollbar*/
+    .hero,
+    .error-pages {
+        min-height: 90vh;
+    }
+
+    body {
+        height: 700px;
+        overflow-y: auto;
+    }
+
 }
 
 /* Tablet Portrait */
@@ -20,6 +54,15 @@
     #bear-cards {
         grid-template-columns: repeat(3, 300px);
     }
+
+    .hero {
+        background-image: url("/static/images/hero/mobil-portrait.webp");
+    }
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404-mobile.webp");
+    }
+
 }
 
 /* Tablet Landscape */
@@ -27,6 +70,11 @@
     #bear-cards {
         grid-template-columns: repeat(4, 300px);
     }
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
 }
 
 /* Laptop */
@@ -35,12 +83,37 @@
         grid-template-columns: repeat(4, 300px);
     }
 
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .desk-navbar {
+        display: block;
+    }
+
 }
 
 /* Desktop */
 @media (min-width: 1600px) {
     #bear-cards {
         grid-template-columns: repeat(5, 380px);
+    }
+
+    .hero-404 {
+        background-image: url("/static/images/hero/404.webp");
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+    .desk-navbar {
+        display: block;
     }
 
 }
