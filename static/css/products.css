@@ -216,8 +216,9 @@
 }
 
 .bear-card img {
-    width: 300px;
-    height: 350px;
+
+    max-width: 300px;
+    height: auto;
 
     object-fit: cover;
 

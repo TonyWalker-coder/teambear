@@ -2,7 +2,7 @@
 /* Mobile Portrait */
 @media (max-width: 400px) {
     #bear-cards {
-        grid-template-columns: repeat(1, 300px);
+        grid-template-columns: repeat(1, 350px);
     }
 
     .hero-404 {
@@ -29,7 +29,7 @@
 @media (max-width: 699px) and (max-height: 400px) {
 
     #bear-cards {
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(2, 350px);
     }
 
     .hero {
@@ -52,7 +52,7 @@
 /* Tablet Portrait */
 @media (min-width: 700px) and (min-height: 400px) {
     #bear-cards {
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: repeat(3, 350px);
     }
 
     .hero {
@@ -68,7 +68,7 @@
 /* Tablet Landscape */
 @media (min-width: 1280px) and (max-height: 801px) {
     #bear-cards {
-        grid-template-columns: repeat(4, 300px);
+        grid-template-columns: repeat(4, 350px);
     }
 
     .hero-404 {
@@ -80,7 +80,7 @@
 /* Laptop */
 @media (min-width: 1280px) and (min-height: 801px) {
     #bear-cards {
-        grid-template-columns: repeat(4, 300px);
+        grid-template-columns: repeat(4, 350px);
     }
 
     .hero-404 {
