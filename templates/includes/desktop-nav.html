@@ -183,7 +183,6 @@
             <a href="{% url 'products' %}" aria-label="Link to the product search page"><span>🐻</span><span class="lnk">Meet The Bears:</span></a>
             <a href="{% url 'about' %}" aria-label="About us"><span class="ico">ℹ️</span><span class="lnk">AboutUs:</span></a>
             <a href="{% url 'contact' %}" aria-label="Contact us"><span class="ico">📩</span><span class="lnk">ContactUs:</span></a>
-            <a href="{% url 'specials' %}" aria-label="Special offers"><span class="ico">🔥</span><span class="lnk">Specials:</span></a>
             {% if user.is_authenticated %}
             <!-- Account signout -->
             <a href="{% url 'logout' %}" aria-label="Account sign in for registered users"><span>👋</span><span class="lnk">Sign Out:</a>
