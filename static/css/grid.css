@@ -79,7 +79,7 @@
 
 /* Laptop */
 @media (min-width: 1280px) and (min-height: 801px) {
-    .bear-cards {
+    #bear-cards {
         grid-template-columns: repeat(4, 300px);
     }
 
@@ -94,6 +94,11 @@
     .desk-navbar {
         display: block;
     }
+
+        .pagefiller {
+
+    background-color: green;
+}
 
 }
 
@@ -115,5 +120,10 @@
     .desk-navbar {
         display: block;
     }
+
+    .pagefiller {
+
+    background-color: yellow;
+}
 
 }
